@@ -11,6 +11,6 @@ public class SpawnPlayer : MonoBehaviour
 
     void Start()
     {
-        Instantiate(playerToSpawn, spawnPosition.position, Quaternion.identity);
+        Instantiate(playerToSpawn, spawnPosition.position, spawnPosition.rotation);
     }
 }

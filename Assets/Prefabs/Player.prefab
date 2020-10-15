@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2667823122874527285}
   - component: {fileID: 2667823122874527282}
+  - component: {fileID: -8813022471313982802}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -43,8 +44,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f99d60f8c129b52a1f039ba540f302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNumber: 0
   animals:
   - {fileID: 7447934691792820152, guid: 4d531c36cdc54a42d8213563134a09be, type: 3}
   - {fileID: 6951006039407600987, guid: b3ee92ab35e3a15579a4510ad9b7e252, type: 3}
-  activeAnimal: 0
+  currentNum: 0
+--- !u!114 &-8813022471313982802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2667823122874527283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d345479c9587f22497a4a0587e0a7b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
