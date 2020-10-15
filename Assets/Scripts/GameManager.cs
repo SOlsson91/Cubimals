@@ -1,29 +1,72 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 //-- TODO --
-// > Keep track of what level is currently on
-// > Load and Unload scenes
-// > Keep track of what state the game is in
-// > Generate other persistent systems
+// > Keep track of what state the game is in [DONE]
+// > Generate other persistent systems [DONE]
+
+[System.Serializable] public class EventGameState : UnityEvent<GameManager.GameState, GameManager.GameState> { }
 
 public class GameManager : Singleton<GameManager>
 {
+    public enum GameState
+    {
+        PREGAME,
+        ONGAME,
+        PAUSED
+    }
+
     public GameObject[] SystemPrefabs;
+    public EventGameState OnGameStateChange;
 
     private List<GameObject> instancedSystems;
+    private List<AsyncOperation> loadOperations; // <-- Stacks operations that is being loaded additively
 
-    private string currentSceneName = string.Empty;
+    private GameState currentGameState = GameState.PREGAME; // <-- GameState default state is PREGAME
 
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
-        LoadScene("DummyScene");
 
         InstantiateSystemPrefabs();
     }
+
+    // -- Accessors -- //
+
+    public GameState getCurrentGameState
+    {
+        get { return currentGameState; }
+        private set { currentGameState = value; }
+    }
+
+    // -- Game State Handling -- //
+
+    public void UpdateGameState(GameState newState)
+    {
+        GameState previousGameState = currentGameState;
+        currentGameState = newState;
+
+        switch(currentGameState)
+        {
+            case GameState.PREGAME:
+                break;
+
+            case GameState.ONGAME:
+                break;
+
+            case GameState.PAUSED:
+                break;
+
+            default:
+                break;
+        }
+
+        OnGameStateChange.Invoke(currentGameState, previousGameState); // <-- This sends a message to those who listens to this method
+    }
+
+    // -- Manager Handling -- //
 
     private void InstantiateSystemPrefabs()
     {
@@ -45,35 +88,5 @@ public class GameManager : Singleton<GameManager>
         }
 
         instancedSystems.Clear();
-    }
-
-    public void LoadScene(string sceneName)
-    {
-        AsyncOperation asyncOp = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
-        if(asyncOp == null)
-        {
-            Debug.LogError("Could not find " + sceneName + " | Make sure the scene is added to the build list");
-            return;
-        }
-
-        asyncOp.completed += OnLoadComplete;
-
-        currentSceneName = sceneName;
-    }
-
-    public void UnloadScene(string sceneName)
-    {
-        AsyncOperation asyncOp = SceneManager.UnloadSceneAsync(sceneName);
-        asyncOp.completed += OnUnloadComplete;
-    }
-
-    private void OnLoadComplete(AsyncOperation asyncOp)
-    {
-        Debug.Log("Load Complete");
-    }
-
-    private void OnUnloadComplete(AsyncOperation asyncOp)
-    {
-        Debug.Log("Load Complete");
     }
 }
