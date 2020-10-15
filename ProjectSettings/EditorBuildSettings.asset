@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Boot.unity
     guid: e4b65ba6b2f86af25877bd519bc8fa74
   - enabled: 1
-    path: Assets/Scenes/TestScenes/Sebastian.unity
+    path: Assets/Scenes/TestScenes/Jojo.unity
     guid: 47d5b32b10842ea2ea586763a64bf884
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
