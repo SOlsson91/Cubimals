@@ -11,19 +11,60 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
+    public enum GameState
+    {
+        PREGAME,
+        ONGAME,
+        PAUSED
+    }
+
     public GameObject[] SystemPrefabs;
 
     private List<GameObject> instancedSystems;
+    private List<AsyncOperation> loadOperations;
 
-    private string currentSceneName = string.Empty;
+    //private string currentSceneName = string.Empty;
+    private GameState currentGameState = GameState.PREGAME;
 
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
-        LoadScene("DummyScene");
+        //LoadScene("DummyScene");
 
         InstantiateSystemPrefabs();
     }
+
+    // -- Accessors -- //
+
+    public GameState getCurrentGameState
+    {
+        get { return currentGameState; }
+        private set { currentGameState = value; }
+    }
+
+    // -- Game State Handling -- //
+
+    private void UpdateGameState(GameState newState)
+    {
+        currentGameState = newState;
+
+        switch(currentGameState)
+        {
+            case GameState.PREGAME:
+                break;
+
+            case GameState.ONGAME:
+                break;
+
+            case GameState.PAUSED:
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    // -- Manager Handling -- //
 
     private void InstantiateSystemPrefabs()
     {
@@ -47,7 +88,9 @@ public class GameManager : Singleton<GameManager>
         instancedSystems.Clear();
     }
 
-    public void LoadScene(string sceneName)
+    // -- Will be erased --
+
+    /*public void LoadScene(string sceneName)
     {
         AsyncOperation asyncOp = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
         if(asyncOp == null)
@@ -75,5 +118,5 @@ public class GameManager : Singleton<GameManager>
     private void OnUnloadComplete(AsyncOperation asyncOp)
     {
         Debug.Log("Load Complete");
-    }
+    }*/
 }
