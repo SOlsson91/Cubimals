@@ -9541,7 +9541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1227223115}
   m_Layer: 0
-  m_Name: SpawnLocation
+  m_Name: SpawnLocation1
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -13088,9 +13088,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba719f02702064dc8ad409bdbaf5822f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerToSpawn: {fileID: 2667823122874527282, guid: f1d24395a6810412a9aff4a8500961a9,
-    type: 3}
-  spawnPosition: {fileID: 1227223115}
+  playerToSpawn:
+  - {fileID: 2667823122874527282, guid: f1d24395a6810412a9aff4a8500961a9, type: 3}
+  spawnPosition:
+  - {fileID: 1227223115}
 --- !u!4 &1612635672
 Transform:
   m_ObjectHideFlags: 0
