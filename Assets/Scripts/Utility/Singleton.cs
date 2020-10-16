@@ -1,9 +1,6 @@
 ﻿using UnityEngine;
 
 
-/// <summary>
-/// This class is used for making a single instance of a type( <typeparamref name="T"/> ) which should only have one instance of itself
-/// </summary>
 public class Singleton<T> : MonoBehaviour where T : Singleton<T>
 {
     private static T instance;
@@ -13,9 +10,6 @@ public class Singleton<T> : MonoBehaviour where T : Singleton<T>
         get { return instance; }
     }
 
-    /// <summary>
-    /// Will return wether or not an instance already exists of the type
-    /// </summary>
     public static bool IsInitialized
     {
         get { return instance != null; }
