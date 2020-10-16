@@ -15,11 +15,13 @@ public class Player : MonoBehaviour
     public Animal[] animals;
     public Animal currentAnimal = null;
     public int currentNum  = 0;
+    public Animator animator;
 
     void Start()
     {
         //NOTE: Only to test the functionallity of changing
         ChangeAnimal((int)Animals.Duck);
+        animator = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -43,6 +45,7 @@ public class Player : MonoBehaviour
             // Put the animal as child to player
             currentAnimal = Instantiate(animals[newAnimal], transform.position, transform.rotation);
             currentAnimal.transform.parent = transform;
+            animator = GetComponentInChildren<Animator>();
         }
     }
 }
