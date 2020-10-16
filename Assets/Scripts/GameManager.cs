@@ -25,10 +25,14 @@ public class GameManager : Singleton<GameManager>
     private List<AsyncOperation> loadOperations; // <-- Stacks operations that is being loaded additively
 
     private GameState currentGameState = GameState.PREGAME; // <-- GameState default state is PREGAME
+    LevelManager levelManager;
+    [SerializeField] string levelToBoot;
 
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
+        levelManager = GetComponent<LevelManager>();
+        LoadLevel(levelToBoot);
 
         InstantiateSystemPrefabs();
     }
@@ -82,11 +86,23 @@ public class GameManager : Singleton<GameManager>
     {
         base.OnDestroy();
 
-        for(int i = 0; i < instancedSystems.Count; i++)
+        if (instancedSystems != null)
         {
-            Destroy(instancedSystems[i]);
+            for(int i = 0; i < instancedSystems.Count; i++)
+            {
+                Destroy(instancedSystems[i]);
+            }
+            instancedSystems.Clear();
         }
+    }
 
-        instancedSystems.Clear();
+    public void LoadLevel(string levelName)
+    {
+        levelManager.LoadLevel(levelName);
+    }
+
+    public void UnloadLevel(string levelName)
+    {
+        levelManager.UnloadLevel(levelName);
     }
 }
