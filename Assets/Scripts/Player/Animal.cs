@@ -7,5 +7,10 @@
 public class Animal : MonoBehaviour
 {
     public float jumpForce;
-    public float walkingSpeed;
+    public float movementSpeed;
+    public bool canSwim;
+    [Header("Charge Jump")]
+    public bool canChargeJump;
+    [HideInInspector] public float currentCharge;
+    public float maxCharge = 10;
 }

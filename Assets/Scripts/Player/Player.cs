@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
         Dog
     };
     public Animal[] animals;
-    Animal currentAnimal = null;
+    public Animal currentAnimal = null;
     public int currentNum  = 0;
 
     void Start()
@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         //NOTE: Only to test the functionallity of changing
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.E))
         {
             currentNum = currentNum == 0 ? 1 : 0;
             ChangeAnimal(currentNum);
