@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Boot.unity
+    guid: e4b65ba6b2f86af25877bd519bc8fa74
+  - enabled: 1
+    path: Assets/Scenes/TestScenes/Jojo.unity
+    guid: 47d5b32b10842ea2ea586763a64bf884
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: b833c7e5d43e8c4eab78575551e4861c
+  - enabled: 1
+    path: Assets/Scenes/TestScenes/DummyScene.unity
+    guid: 5df3222d9f6a5a244869402ef06288fd
   m_configObjects: {}
