@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 758106898253660602}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,6 +49,7 @@ MonoBehaviour:
   animals:
   - {fileID: 6483565599515160935, guid: 3bfa1903a43b4fbc99884c26e254db8a, type: 3}
   - {fileID: -5673942757390107340, guid: d13ce7ccf91b4953b5dd864e3b497f2a, type: 3}
+  currentAnimal: {fileID: 0}
   currentNum: 0
 --- !u!114 &-8813022471313982802
 MonoBehaviour:
