@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 
 [RequireComponent(typeof(Rigidbody))]
@@ -18,6 +16,7 @@ public class AnimalMove : MonoBehaviour
         playerRb = GetComponent<Rigidbody>();
         animalAnim = GetComponent<Animator>();
     }
+
     void Update()
     {
         Move();
@@ -35,4 +34,19 @@ public class AnimalMove : MonoBehaviour
     }
 
 
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Water")
+        {
+            Animal animal = gameObject.GetComponentInChildren<Animal>();
+            if (animal != null)
+            {
+                other.collider.isTrigger = !animal.canSwim ? true : false;
+            }
+            else
+            {
+                Debug.LogError("[AnimalMove] Missing Animal class in child");
+            }
+        }
+    }
 }

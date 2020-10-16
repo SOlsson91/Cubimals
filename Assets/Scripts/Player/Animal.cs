@@ -8,4 +8,5 @@ public class Animal : MonoBehaviour
 {
     public float jumpForce;
     public float walkingSpeed;
+    public bool canSwim;
 }
