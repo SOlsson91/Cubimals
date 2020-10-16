@@ -32,7 +32,8 @@ public class GameManager : Singleton<GameManager>
     {
         DontDestroyOnLoad(gameObject);
         levelManager = GetComponent<LevelManager>();
-        LoadLevel(levelToBoot);
+        if (levelToBoot != string.Empty)
+            LoadLevel(levelToBoot);
 
         InstantiateSystemPrefabs();
     }
