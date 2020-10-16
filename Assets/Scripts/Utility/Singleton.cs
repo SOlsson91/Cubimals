@@ -7,6 +7,7 @@ public class Singleton<T> : MonoBehaviour where T : Singleton<T>
     public static T Instance { get; private set; }
 
     /// Will return wether or not an instance already exists of the type
+
     public static bool IsInitialized
     {
         get { return Instance != null; }
