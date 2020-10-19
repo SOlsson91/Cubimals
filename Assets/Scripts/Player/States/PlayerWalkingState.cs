@@ -17,6 +17,7 @@ public class PlayerWalkingState : PlayerBaseState
         if (Mathf.Abs(controller.move.movement.x) <= 0 && Mathf.Abs(controller.move.movement.z) <= 0)
         {
             controller.TransitionToState(controller.idleState);
+            controller.animator.SetBool("isIdle", true);
         }
     }
 }

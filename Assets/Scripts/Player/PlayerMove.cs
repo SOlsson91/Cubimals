@@ -37,6 +37,7 @@ public class PlayerMove : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) && canJump || Input.GetButtonDown("Fire1"))
             {
+                canJump = false;
                 playerRb.velocity = Vector3.up * player.currentAnimal.jumpForce;
             }
         }

@@ -479,7 +479,7 @@ Animator:
   m_GameObject: {fileID: 1514781368367630}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: c7ee8295279c4f958738595485ebfb99, type: 3}
-  m_Controller: {fileID: 22100000, guid: db77e80a18d64790b2fb10a1355c44b4, type: 2}
+  m_Controller: {fileID: 22100000, guid: 57960f2a10237844f869150baf5f5772, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -504,6 +504,8 @@ MonoBehaviour:
   movementSpeed: 7
   canSwim: 0
   canChargeJump: 1
+  currentCharge: 0
+  maxCharge: 10
 --- !u!65 &-6978667244791297395
 BoxCollider:
   m_ObjectHideFlags: 0
