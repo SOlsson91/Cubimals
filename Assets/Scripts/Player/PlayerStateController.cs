@@ -4,7 +4,7 @@ public class PlayerStateController : MonoBehaviour
 {
     #region
     //[HideInInspector] public Animator animator;
-    public PlayerMove move;
+    [HideInInspector] public PlayerMove move;
     [HideInInspector] public Player player;
     PlayerBaseState currentState;
     #endregion

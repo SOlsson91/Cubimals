@@ -6,14 +6,15 @@
 
 public class SpawnPlayer : MonoBehaviour
 {
-    [SerializeField] Player[] playerToSpawn;
+    [SerializeField] Player playerToSpawn;
     [SerializeField] Transform[] spawnPosition;
 
     void Start()
     {
-        for (int i = 0; i < playerToSpawn.Length; ++i)
+        for (int i = 0; i < spawnPosition.Length; ++i)
         {
-            Instantiate(playerToSpawn[i], spawnPosition[i].position, spawnPosition[i].rotation);
+           Player p = Instantiate(playerToSpawn, spawnPosition[i].position, spawnPosition[i].rotation);
+           p.playerNumber = i;
         }
     }
 }

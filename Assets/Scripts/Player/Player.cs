@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
 {
     [HideInInspector] public Animator animator;
     [HideInInspector] public SwapAnimal animalSwapper;
+    [HideInInspector] public int playerNumber;
 
     void Start()
     {

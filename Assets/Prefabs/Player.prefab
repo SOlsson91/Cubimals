@@ -65,6 +65,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   animalSwapper: {fileID: 0}
+  playerNumber: 0
 --- !u!114 &1902905168621801670
 MonoBehaviour:
   m_ObjectHideFlags: 0
