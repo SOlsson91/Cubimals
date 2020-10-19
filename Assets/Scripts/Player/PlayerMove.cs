@@ -70,6 +70,7 @@ public class PlayerMove : MonoBehaviour
             }
             if (Input.GetKeyUp(KeyCode.Space) && canJump || Input.GetButtonUp("Fire1"))
             {
+                canJump = false;
                 rb.velocity = Vector3.up * player.animalSwapper.currentAnimal.currentCharge;
                 player.animalSwapper.currentAnimal.currentCharge  = player.animalSwapper.currentAnimal.jumpForce;
             }
