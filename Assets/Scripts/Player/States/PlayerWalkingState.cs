@@ -5,7 +5,8 @@ public class PlayerWalkingState : PlayerBaseState
     public override void EnterState(PlayerStateController controller)
     {
         Debug.Log("Walking state entered");
-        controller.animator.SetBool("isIdle", false);
+        controller.player.UpdateAnimator();
+        controller.player.animator.SetBool("isIdle", false);
     }
 
     public override void OnCollisionEnter(PlayerStateController controller)
@@ -17,7 +18,7 @@ public class PlayerWalkingState : PlayerBaseState
         if (Mathf.Abs(controller.move.movement.x) <= 0 && Mathf.Abs(controller.move.movement.z) <= 0)
         {
             controller.TransitionToState(controller.idleState);
-            controller.animator.SetBool("isIdle", true);
+            controller.player.animator.SetBool("isIdle", true);
         }
     }
 }

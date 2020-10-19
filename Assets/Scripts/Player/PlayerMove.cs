@@ -4,8 +4,7 @@
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMove : MonoBehaviour
 {
-    Rigidbody playerRb;
-    [HideInInspector] public Animator animator;
+    Rigidbody rb;
     Player player;
 
     public Vector3 movement;
@@ -14,9 +13,8 @@ public class PlayerMove : MonoBehaviour
 
     void Awake()
     {
-        playerRb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
         player = GetComponent<Player>();
-        animator = player.animator;
     }
 
     void Update()
@@ -28,39 +26,10 @@ public class PlayerMove : MonoBehaviour
     {
         inputDir.Set(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
 
-        if (inputDir != Vector3.zero)
-        {
-            transform.rotation = Quaternion.LookRotation(inputDir);
-        }
-
-        if (!player.currentAnimal.canChargeJump)
-        {
-            if (Input.GetKeyDown(KeyCode.Space) && canJump || Input.GetButtonDown("Fire1"))
-            {
-                canJump = false;
-                playerRb.velocity = Vector3.up * player.currentAnimal.jumpForce;
-            }
-        }
-        else
-        {
-            float currentCharge = player.currentAnimal.currentCharge;
-            float maxCharge = player.currentAnimal.maxCharge;
-
-            if (Input.GetKey(KeyCode.Space) && canJump || Input.GetButton("Fire1"))
-            {
-                player.currentAnimal.currentCharge = currentCharge > maxCharge ? 
-                    maxCharge : currentCharge + Time.deltaTime * player.currentAnimal.jumpForce;
-            }
-            if (Input.GetKeyUp(KeyCode.Space) && canJump || Input.GetButtonUp("Fire1"))
-            {
-                playerRb.velocity = Vector3.up * player.currentAnimal.currentCharge;
-                player.currentAnimal.currentCharge  = player.currentAnimal.jumpForce;
-            }
-        }
-
+        Jumping();
         movement.Set(Input.GetAxis("Horizontal"), Input.GetAxis("Mouse X"), Input.GetAxis("Vertical"));
 
-        playerRb.position = Vector3.MoveTowards(transform.position, playerRb.position + movement * player.currentAnimal.movementSpeed * Time.deltaTime, 1);
+        rb.position = Vector3.MoveTowards(transform.position, rb.position + movement * player.animalSwapper.currentAnimal.movementSpeed * Time.deltaTime, 1);
     }
 
 
@@ -70,7 +39,40 @@ public class PlayerMove : MonoBehaviour
         // If in water check if animal can swim. If not change to trigger
         if (other.gameObject.tag == "Water")
         {
-            other.collider.isTrigger = !player.currentAnimal.canSwim ? true : false;
+            other.collider.isTrigger = !player.animalSwapper.currentAnimal.canSwim ? true : false;
+        }
+    }
+
+    void Jumping()
+    {
+        if (inputDir != Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(inputDir);
+        }
+
+        if (!player.animalSwapper.currentAnimal.canChargeJump)
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && canJump || Input.GetButtonDown("Fire1"))
+            {
+                canJump = false;
+                rb.velocity = Vector3.up * player.animalSwapper.currentAnimal.jumpForce;
+            }
+        }
+        else
+        {
+            float currentCharge = player.animalSwapper.currentAnimal.currentCharge;
+            float maxCharge = player.animalSwapper.currentAnimal.maxCharge;
+
+            if (Input.GetKey(KeyCode.Space) && canJump || Input.GetButton("Fire1"))
+            {
+                player.animalSwapper.currentAnimal.currentCharge = currentCharge > maxCharge ? 
+                    maxCharge : currentCharge + Time.deltaTime * player.animalSwapper.currentAnimal.jumpForce;
+            }
+            if (Input.GetKeyUp(KeyCode.Space) && canJump || Input.GetButtonUp("Fire1"))
+            {
+                rb.velocity = Vector3.up * player.animalSwapper.currentAnimal.currentCharge;
+                player.animalSwapper.currentAnimal.currentCharge  = player.animalSwapper.currentAnimal.jumpForce;
+            }
         }
     }
 }

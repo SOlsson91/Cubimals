@@ -4,8 +4,8 @@ public class PlayerJumpState : PlayerBaseState
 {
     public override void EnterState(PlayerStateController controller)
     {
+        controller.player.UpdateAnimator();
         Debug.Log("Jump state entered");
-        
     }
 
     public override void OnCollisionEnter(PlayerStateController controller)

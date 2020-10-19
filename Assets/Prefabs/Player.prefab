@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2667823122874527282}
   - component: {fileID: 1902905168621801670}
   - component: {fileID: -6492925156581515531}
+  - component: {fileID: -6360215235358255144}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -62,11 +63,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f99d60f8c129b52a1f039ba540f302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animals:
-  - {fileID: 6483565599515160935, guid: 3bfa1903a43b4fbc99884c26e254db8a, type: 3}
-  - {fileID: -5673942757390107340, guid: d13ce7ccf91b4953b5dd864e3b497f2a, type: 3}
-  currentAnimal: {fileID: 0}
-  currentNum: 0
+  animator: {fileID: 0}
+  animalSwapper: {fileID: 0}
 --- !u!114 &1902905168621801670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,5 +90,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1004472a95ae5946848f7a0df6b862c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalAnim: {fileID: 0}
-  animalMove: {fileID: 0}
+  move: {fileID: 0}
+  player: {fileID: 0}
+--- !u!114 &-6360215235358255144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2667823122874527283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd6641decc03410ea5e1d2c7155c056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animals:
+  - {fileID: 6483565599515160935, guid: 3bfa1903a43b4fbc99884c26e254db8a, type: 3}
+  - {fileID: -5673942757390107340, guid: d13ce7ccf91b4953b5dd864e3b497f2a, type: 3}
+  - {fileID: -690350712913536014, guid: 56381cfa46e44335a689e99f2cf49b4c, type: 3}
+  - {fileID: -4094050583211433832, guid: 1f7d832dd4d847fe9e6177ba21bcaf64, type: 3}
+  - {fileID: 3246322756049759723, guid: db337cd6af3d4e7c8c9e6cc979897853, type: 3}
+  currentAnimal: {fileID: 0}
+  currentAnimalNumber: 0
