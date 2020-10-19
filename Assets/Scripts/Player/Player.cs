@@ -6,46 +6,17 @@
 
 public class Player : MonoBehaviour
 {
-    //NOTE: Only to help out. Might use, not sure
-    enum Animals
-    {
-        Duck,
-        Dog
-    };
-    public Animal[] animals;
-    public Animal currentAnimal = null;
-    public int currentNum  = 0;
-    public Animator animator;
+    [HideInInspector] public Animator animator;
+    [HideInInspector] public SwapAnimal animalSwapper;
 
     void Start()
     {
-        //NOTE: Only to test the functionallity of changing
-        ChangeAnimal((int)Animals.Duck);
+        animalSwapper = GetComponent<SwapAnimal>();
+        animalSwapper.ChangeAnimal(0);
+    }
+
+    public void UpdateAnimator()
+    {
         animator = GetComponentInChildren<Animator>();
-    }
-
-    void Update()
-    {
-        //NOTE: Only to test the functionallity of changing
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-            currentNum = currentNum == 0 ? 1 : 0;
-            ChangeAnimal(currentNum);
-        }
-    }
-
-    void ChangeAnimal(int newAnimal)
-    {
-        if (newAnimal >= 0 && newAnimal <= animals.Length)
-        {
-            if (currentAnimal != null)
-            {
-                Destroy(currentAnimal.gameObject);
-            }
-            // Put the animal as child to player
-            currentAnimal = Instantiate(animals[newAnimal], transform.position, transform.rotation);
-            currentAnimal.transform.parent = transform;
-            animator = GetComponentInChildren<Animator>();
-        }
     }
 }

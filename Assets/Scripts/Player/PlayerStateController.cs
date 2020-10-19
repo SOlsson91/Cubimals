@@ -3,9 +3,9 @@
 public class PlayerStateController : MonoBehaviour
 {
     #region
-    [HideInInspector] public Animator animator;
+    //[HideInInspector] public Animator animator;
     public PlayerMove move;
-    Player player;
+    [HideInInspector] public Player player;
     PlayerBaseState currentState;
     #endregion
 
@@ -25,7 +25,7 @@ public class PlayerStateController : MonoBehaviour
     }
     void Start()
     {
-        animator = GetComponentInChildren<Animator>();
+        //animator = GetComponentInChildren<Animator>();
         TransitionToState(idleState);
     }
 
@@ -33,9 +33,9 @@ public class PlayerStateController : MonoBehaviour
     void Update()
     {
         //TODO: Fix animator when switching animal
-        if (animator == null)
-            UpdateAnimator();
-        else
+        //if (animator == null)
+            //UpdateAnimator();
+        //else
             currentState.Update(this);
     }
 
@@ -52,6 +52,6 @@ public class PlayerStateController : MonoBehaviour
 
     public void UpdateAnimator()
     {
-        animator = player.animator;
+        //animator = player.animator;
     }
 }

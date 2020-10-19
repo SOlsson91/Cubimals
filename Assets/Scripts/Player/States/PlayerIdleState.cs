@@ -5,7 +5,8 @@ public class PlayerIdleState : PlayerBaseState
     public override void EnterState(PlayerStateController controller)
     {
         Debug.Log("Entering idle state");
-        controller.animator.SetBool("isIdle", true);
+        controller.player.UpdateAnimator();
+        controller.player.animator.SetBool("isIdle", true);
     }
 
     public override void OnCollisionEnter(PlayerStateController controller)
