@@ -5,8 +5,8 @@ using UnityEngine.UIElements;
 
 public class Dash : MonoBehaviour
 {
-    public float dashSpeed = 100;
-    public float dashTime = 1;
+    public float dashSpeed = 1000;
+    public float dashTime = 0.2f;
     public float cooldownValue = 1;
 
     private float dashNext = 0;
@@ -47,14 +47,6 @@ public class Dash : MonoBehaviour
         if (dashing == true)
         {
             gameObject.GetComponent<Rigidbody>().velocity = gameObject.transform.forward * dashSpeed * Time.deltaTime;
-        }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "Pushable")
-        {
-            
         }
     }
 }
