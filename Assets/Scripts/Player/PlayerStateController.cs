@@ -25,7 +25,6 @@ public class PlayerStateController : MonoBehaviour
     }
     void Start()
     {
-        //animator = GetComponentInChildren<Animator>();
         TransitionToState(idleState);
     }
 
@@ -36,7 +35,7 @@ public class PlayerStateController : MonoBehaviour
         //if (animator == null)
             //UpdateAnimator();
         //else
-            currentState.Update(this);
+        currentState.Update(this);
     }
 
     private void OnCollisionEnter(Collision collision)
