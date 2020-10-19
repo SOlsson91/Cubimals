@@ -29,6 +29,7 @@ public class SwapAnimal : MonoBehaviour
         {
             currentAnimalNumber = currentAnimalNumber + 1 > animals.Length - 1 ? 0 : currentAnimalNumber + 1;
             ChangeAnimal(currentAnimalNumber);
+            ChangeAnimal(currentAnimalNumber);
         }
     }
 

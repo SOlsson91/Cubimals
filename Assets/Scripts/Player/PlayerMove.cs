@@ -6,10 +6,10 @@ public class PlayerMove : MonoBehaviour
 {
     Rigidbody rb;
     Player player;
-
-    public Vector3 movement;
     Vector3 inputDir;
-    bool canJump;
+
+    [HideInInspector]public Vector3 movement;
+    [HideInInspector]public bool canJump;
 
     void Awake()
     {
