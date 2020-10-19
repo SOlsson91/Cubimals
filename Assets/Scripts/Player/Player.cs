@@ -12,7 +12,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         animalSwapper = GetComponent<SwapAnimal>();
-        animalSwapper.ChangeAnimal(0);
+        animalSwapper.currentAnimalNumber = 0;
+        animalSwapper.ChangeAnimal(animalSwapper.currentAnimalNumber);
     }
 
     public void UpdateAnimator()

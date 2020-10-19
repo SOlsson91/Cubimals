@@ -27,8 +27,8 @@ public class SwapAnimal : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            int newAnimal = currentAnimalNumber + 1 > animals.Length ? 0 : currentAnimalNumber + 1;
-            ChangeAnimal(newAnimal);
+            currentAnimalNumber = currentAnimalNumber + 1 > animals.Length - 1 ? 0 : currentAnimalNumber + 1;
+            ChangeAnimal(currentAnimalNumber);
         }
     }
 
