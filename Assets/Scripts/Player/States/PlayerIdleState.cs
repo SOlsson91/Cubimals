@@ -16,6 +16,7 @@ public class PlayerIdleState : PlayerBaseState
 
     public override void Update(PlayerStateController controller)
     {
+        /*
         if (Input.GetKeyDown(KeyCode.Q))
         {
             controller.TransitionToState(controller.jumpState);     
@@ -24,5 +25,6 @@ public class PlayerIdleState : PlayerBaseState
         {
             controller.TransitionToState(controller.walkingState);
         }     
+        */
     }
 }

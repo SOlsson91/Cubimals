@@ -24,10 +24,10 @@ public class PlayerMove : MonoBehaviour
 
     void Move()
     {
-        inputDir.Set(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+        //inputDir.Set(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
 
         Jumping();
-        movement.Set(Input.GetAxis("Horizontal"), Input.GetAxis("Mouse X"), Input.GetAxis("Vertical"));
+        //movement.Set(Input.GetAxis("Horizontal"), Input.GetAxis("Mouse X"), Input.GetAxis("Vertical"));
 
         rb.position = Vector3.MoveTowards(transform.position, rb.position + movement * player.animalSwapper.currentAnimal.movementSpeed * Time.deltaTime, 1);
     }
@@ -52,17 +52,19 @@ public class PlayerMove : MonoBehaviour
 
         if (!player.animalSwapper.currentAnimal.canChargeJump)
         {
+            /*
             if (Input.GetKeyDown(KeyCode.Space) && canJump || Input.GetButtonDown("Fire1"))
             {
                 canJump = false;
                 rb.velocity = Vector3.up * player.animalSwapper.currentAnimal.jumpForce;
             }
+            */
         }
         else
         {
             float currentCharge = player.animalSwapper.currentAnimal.currentCharge;
             float maxCharge = player.animalSwapper.currentAnimal.maxCharge;
-
+/*
             if (Input.GetKey(KeyCode.Space) && canJump || Input.GetButton("Fire1"))
             {
                 player.animalSwapper.currentAnimal.currentCharge = currentCharge > maxCharge ? 
@@ -74,6 +76,7 @@ public class PlayerMove : MonoBehaviour
                 rb.velocity = Vector3.up * player.animalSwapper.currentAnimal.currentCharge;
                 player.animalSwapper.currentAnimal.currentCharge  = player.animalSwapper.currentAnimal.jumpForce;
             }
+*/
         }
     }
 }
