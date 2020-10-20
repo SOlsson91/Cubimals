@@ -7,15 +7,15 @@
             "actions": [
                 {
                     "name": "Move",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "90f36962-f671-4cfc-85c6-0c3738b43804",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
                 },
                 {
                     "name": "Jump",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "da9a9cf3-0c81-420b-b379-e97b3e119b82",
                     "expectedControlType": "Button",
                     "processors": "",
@@ -96,7 +96,7 @@
                 },
                 {
                     "name": "WASD",
-                    "id": "e26d3994-01a6-4b52-9ca3-e927640481a1",
+                    "id": "c9d2ee45-d318-415c-99ae-b94d7f8caee1",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -107,7 +107,7 @@
                 },
                 {
                     "name": "up",
-                    "id": "41d16042-c6ef-429b-b3a0-e36b5f1a96ee",
+                    "id": "a59da349-61f5-45fa-a5ff-6221da190044",
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
@@ -118,7 +118,7 @@
                 },
                 {
                     "name": "down",
-                    "id": "66118d65-4313-4a3c-b0a4-3f575f7818e3",
+                    "id": "ad8d0b75-f9de-48da-ae67-d9d292039e22",
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
@@ -129,7 +129,7 @@
                 },
                 {
                     "name": "left",
-                    "id": "0cd686b5-449a-4dfa-a7f5-ba212d59d022",
+                    "id": "6d2385d8-1472-4a15-903a-973d2d40ecee",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
@@ -140,7 +140,7 @@
                 },
                 {
                     "name": "right",
-                    "id": "124c96db-2afa-4fc8-8c1d-6b49c8933b90",
+                    "id": "d6438052-90e9-4ec1-9160-ebcb5d568459",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
@@ -186,7 +186,7 @@
                     "name": "",
                     "id": "7f21d66a-41f9-4487-8a61-d074b346bfa3",
                     "path": "<Keyboard>/q",
-                    "interactions": "",
+                    "interactions": "Press(behavior=1)",
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "Swap",

@@ -3,7 +3,6 @@
 public class PlayerStateController : MonoBehaviour
 {
     #region
-    //[HideInInspector] public Animator animator;
     [HideInInspector] public PlayerMove move;
     [HideInInspector] public Player player;
     PlayerBaseState currentState;
@@ -25,18 +24,12 @@ public class PlayerStateController : MonoBehaviour
     }
     void Start()
     {
-        //animator = GetComponentInChildren<Animator>();
         TransitionToState(idleState);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //TODO: Fix animator when switching animal
-        //if (animator == null)
-            //UpdateAnimator();
-        //else
-            currentState.Update(this);
+        currentState.Update(this);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -48,10 +41,5 @@ public class PlayerStateController : MonoBehaviour
     {
         currentState = state;
         CurrentState.EnterState(this);
-    }
-
-    public void UpdateAnimator()
-    {
-        //animator = player.animator;
     }
 }

@@ -15,7 +15,7 @@ public class PlayerWalkingState : PlayerBaseState
 
     public override void Update(PlayerStateController controller)
     {
-        if (Mathf.Abs(controller.move.movement.x) <= 0 && Mathf.Abs(controller.move.movement.z) <= 0)
+        if (Mathf.Abs(controller.move.Movement.x) <= 0 && Mathf.Abs(controller.move.Movement.z) <= 0)
         {
             controller.TransitionToState(controller.idleState);
             controller.player.animator.SetBool("isIdle", true);

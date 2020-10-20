@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 1902905168621801670}
   - component: {fileID: -6492925156581515531}
   - component: {fileID: -6360215235358255144}
+  - component: {fileID: 8866188666976817583}
+  - component: {fileID: -2605146425332120041}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -78,7 +80,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df18802e81d50f30c8410e82e5668de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {x: 0, y: 0, z: 0}
 --- !u!114 &-6492925156581515531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,3 +114,95 @@ MonoBehaviour:
   - {fileID: 3246322756049759723, guid: db337cd6af3d4e7c8c9e6cc979897853, type: 3}
   currentAnimal: {fileID: 0}
   currentAnimalNumber: 0
+--- !u!114 &8866188666976817583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2667823122874527283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127263c87e8f9df6fa35ac7e0b246c96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2605146425332120041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2667823122874527283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: cc6b79805d6cb3809a120fbd228dca49,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8866188666976817583}
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 90f36962-f671-4cfc-85c6-0c3738b43804
+    m_ActionName: Player/Move[/Gamepad/leftStick/up,/Gamepad/leftStick/down,/Gamepad/leftStick/left,/Gamepad/leftStick/right,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8866188666976817583}
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: da9a9cf3-0c81-420b-b379-e97b3e119b82
+    m_ActionName: Player/Jump[/Gamepad/buttonSouth,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8866188666976817583}
+        m_MethodName: OnSwap
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 946801c7-eefd-47c7-aa9e-43ea3d8ae8fb
+    m_ActionName: Player/Swap[/Gamepad/buttonNorth,/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7dee4dd4-086f-4400-8ecc-53fddf026bec
+    m_ActionName: Player/Ability[/Gamepad/buttonWest,/Keyboard/e]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
