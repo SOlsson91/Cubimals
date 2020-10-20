@@ -14882,6 +14882,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Horse
       objectReference: {fileID: 0}
+    - target: {fileID: 1457399783220848, guid: db337cd6af3d4e7c8c9e6cc979897853, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4115821965670878, guid: db337cd6af3d4e7c8c9e6cc979897853, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.56306
