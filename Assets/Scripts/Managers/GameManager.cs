@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -20,6 +19,7 @@ public class GameManager : Singleton<GameManager>
 
     public GameObject[] SystemPrefabs;
     public EventGameState OnGameStateChange;
+    public List<Player> players;
 
     private List<GameObject> instancedSystems;
     private List<AsyncOperation> loadOperations; // <-- Stacks operations that is being loaded additively
@@ -34,6 +34,7 @@ public class GameManager : Singleton<GameManager>
         levelManager = GetComponent<LevelManager>();
         if (levelToBoot != string.Empty)
             LoadLevel(levelToBoot);
+        players = new List<Player>();
 
         InstantiateSystemPrefabs();
     }

@@ -6,15 +6,29 @@
 
 public class SpawnPlayer : MonoBehaviour
 {
-    [SerializeField] Player playerToSpawn;
+    [SerializeField] Player playerPrefab;
     [SerializeField] Transform[] spawnPosition;
+    GameManager manager;
+    public int numberOfPlayers = 2;
+
+    void Awake()
+    {
+        manager = GetComponent<GameManager>();
+    }
 
     void Start()
     {
-        for (int i = 0; i < spawnPosition.Length; ++i)
+        for (int i = 0; i < numberOfPlayers; ++i)
         {
-           Player p = Instantiate(playerToSpawn, spawnPosition[i].position, spawnPosition[i].rotation);
-           p.playerNumber = i;
+            Spawn(i);
         }
+    }
+
+    public void Spawn(int playerNumber)
+    {
+           Player player = Instantiate(playerPrefab, spawnPosition[playerNumber].position, 
+                                               spawnPosition[playerNumber].rotation);
+           player.playerNumber = playerNumber;
+           manager.players.Add(player);
     }
 }
