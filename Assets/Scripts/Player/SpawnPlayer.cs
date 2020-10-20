@@ -9,7 +9,6 @@ public class SpawnPlayer : MonoBehaviour
     [SerializeField] Player playerPrefab;
     [SerializeField] Transform[] spawnPosition;
     GameManager manager;
-    public int numberOfPlayers = 2;
 
     void Awake()
     {
@@ -18,7 +17,7 @@ public class SpawnPlayer : MonoBehaviour
 
     void Start()
     {
-        for (int i = 0; i < numberOfPlayers; ++i)
+        for (int i = 0; i < spawnPosition.Length; ++i)
         {
             Spawn(i);
         }

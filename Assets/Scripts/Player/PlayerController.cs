@@ -31,6 +31,11 @@ public class PlayerController : MonoBehaviour
         if (ctx.started)
             swapper.Swap();
     }
+
+    public void OnAbility(InputAction.CallbackContext ctx)
+    {
+        //Input for ability here.
+    }
     
     public void OnJump(InputAction.CallbackContext ctx)
     {

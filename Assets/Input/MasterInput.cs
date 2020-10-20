@@ -36,7 +36,7 @@ public class @MasterInput : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""Swap"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""946801c7-eefd-47c7-aa9e-43ea3d8ae8fb"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
@@ -44,7 +44,7 @@ public class @MasterInput : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""Ability"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""7dee4dd4-086f-4400-8ecc-53fddf026bec"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
