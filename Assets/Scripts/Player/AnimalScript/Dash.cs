@@ -34,7 +34,8 @@ public class Dash : MonoBehaviour
         {
             dashing = false;
 
-            gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            //Edit: changed to InParet since we put the rigidbody component on the player parent
+            gameObject.GetComponentInParent<Rigidbody>().velocity = Vector3.zero;
         }
         else if(dashing == true)
         {
@@ -46,7 +47,8 @@ public class Dash : MonoBehaviour
     {
         if (dashing == true)
         {
-            gameObject.GetComponent<Rigidbody>().velocity = gameObject.transform.forward * dashSpeed * Time.deltaTime;
+            //Edit: changed to InParet since we put the rigidbody component on the player parent
+            gameObject.GetComponentInParent<Rigidbody>().velocity = gameObject.transform.forward * dashSpeed * Time.deltaTime;
         }
     }
 }

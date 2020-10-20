@@ -1,50 +1,127 @@
 fileFormatVersion: 2
 guid: 3e1e4fc4087a46e69c0d339eb31e68e0
-timeCreated: 1505746454
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: Body
-    100002: //RootNode
-    100004: Chicken
-    100006: Chicken_Root
-    100008: Eye_L
-    100010: Eye_R
-    100012: head
-    100014: Leg_L
-    100016: Leg_R
-    100018: Tail
-    100020: Wing_L
-    100022: Wing_R
-    400000: Body
-    400002: //RootNode
-    400004: Chicken
-    400006: Chicken_Root
-    400008: Eye_L
-    400010: Eye_R
-    400012: head
-    400014: Leg_L
-    400016: Leg_R
-    400018: Tail
-    400020: Wing_L
-    400022: Wing_R
-    4300000: Chicken
-    7400000: Idle
-    7400002: Jump
-    7400004: Attack
-    7400006: Hit
-    7400008: FlyStart
-    7400010: Fly
-    7400012: FlyEnd
-    7400014: Jump Inplace
-    7400016: Fly Inplace
-    9500000: //RootNode
-    13700000: Chicken
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Body
+  - first:
+      1: 100002
+    second: //RootNode
+  - first:
+      1: 100004
+    second: Chicken
+  - first:
+      1: 100006
+    second: Chicken_Root
+  - first:
+      1: 100008
+    second: Eye_L
+  - first:
+      1: 100010
+    second: Eye_R
+  - first:
+      1: 100012
+    second: head
+  - first:
+      1: 100014
+    second: Leg_L
+  - first:
+      1: 100016
+    second: Leg_R
+  - first:
+      1: 100018
+    second: Tail
+  - first:
+      1: 100020
+    second: Wing_L
+  - first:
+      1: 100022
+    second: Wing_R
+  - first:
+      4: 400000
+    second: Body
+  - first:
+      4: 400002
+    second: //RootNode
+  - first:
+      4: 400004
+    second: Chicken
+  - first:
+      4: 400006
+    second: Chicken_Root
+  - first:
+      4: 400008
+    second: Eye_L
+  - first:
+      4: 400010
+    second: Eye_R
+  - first:
+      4: 400012
+    second: head
+  - first:
+      4: 400014
+    second: Leg_L
+  - first:
+      4: 400016
+    second: Leg_R
+  - first:
+      4: 400018
+    second: Tail
+  - first:
+      4: 400020
+    second: Wing_L
+  - first:
+      4: 400022
+    second: Wing_R
+  - first:
+      43: 4300000
+    second: Chicken
+  - first:
+      74: 7400000
+    second: Idle
+  - first:
+      74: 7400002
+    second: Jump
+  - first:
+      74: 7400004
+    second: Attack
+  - first:
+      74: 7400006
+    second: Hit
+  - first:
+      74: 7400008
+    second: FlyStart
+  - first:
+      74: 7400010
+    second: Fly
+  - first:
+      74: 7400012
+    second: FlyEnd
+  - first:
+      74: 7400014
+    second: Jump Inplace
+  - first:
+      74: 7400016
+    second: Fly Inplace
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Chicken
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CubeAnimals_SHDR
+    second: {fileID: 2100000, guid: 6e494e65902c4d058104285116e11f82, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -57,16 +134,20 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: Idle
       takeName: Take 001
+      internalID: 0
       firstFrame: 0
       lastFrame: 39
       wrapMode: 0
@@ -119,6 +200,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Jump
       takeName: Take 001
+      internalID: 0
       firstFrame: 40
       lastFrame: 58
       wrapMode: 0
@@ -127,7 +209,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -171,6 +253,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Attack
       takeName: Take 001
+      internalID: 0
       firstFrame: 58
       lastFrame: 72
       wrapMode: 0
@@ -223,6 +306,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Hit
       takeName: Take 001
+      internalID: 0
       firstFrame: 72
       lastFrame: 103
       wrapMode: 0
@@ -275,6 +359,7 @@ ModelImporter:
     - serializedVersion: 16
       name: FlyStart
       takeName: Take 001
+      internalID: 0
       firstFrame: 103
       lastFrame: 113
       wrapMode: 0
@@ -327,6 +412,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Fly
       takeName: Take 001
+      internalID: 0
       firstFrame: 114
       lastFrame: 131
       wrapMode: 0
@@ -379,6 +465,7 @@ ModelImporter:
     - serializedVersion: 16
       name: FlyEnd
       takeName: Take 001
+      internalID: 0
       firstFrame: 133
       lastFrame: 141
       wrapMode: 0
@@ -431,6 +518,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Jump Inplace
       takeName: Take 001
+      internalID: 0
       firstFrame: 141
       lastFrame: 159
       wrapMode: 0
@@ -483,6 +571,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Fly Inplace
       takeName: Take 001
+      internalID: 0
       firstFrame: 160
       lastFrame: 179
       wrapMode: 0
@@ -538,13 +627,24 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -554,10 +654,14 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -567,14 +671,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

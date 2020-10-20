@@ -254,6 +254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4459887229682706}
+  - component: {fileID: 4602997980975757767}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -281,6 +282,19 @@ Transform:
   m_Father: {fileID: 4090713006181868}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4602997980975757767
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295298085007436}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.91922164, y: 1.0662687, z: 1}
+  m_Center: {x: -0.024200559, y: 0.44654667, z: 0}
 --- !u!1 &1315656899233584
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,7 +459,6 @@ GameObject:
   - component: {fileID: 4199314772912790}
   - component: {fileID: 95822780922764916}
   - component: {fileID: -5673942757390107340}
-  - component: {fileID: -6978667244791297395}
   m_Layer: 0
   m_Name: Bunny
   m_TagString: Untagged
@@ -505,20 +518,7 @@ MonoBehaviour:
   canSwim: 0
   canChargeJump: 1
   currentCharge: 0
-  maxCharge: 10
---- !u!65 &-6978667244791297395
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1514781368367630}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  maxCharge: 8
 --- !u!1 &1522742383014232
 GameObject:
   m_ObjectHideFlags: 0
