@@ -9,7 +9,7 @@ public class Pushables : MonoBehaviour
         foreach(GameObject push in GameObject.FindGameObjectsWithTag("Pushable"))
         {
             push.AddComponent<Rigidbody>();
-            push.GetComponent<Rigidbody>().mass = 100;
+            push.GetComponent<Rigidbody>().mass=100;
             push.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
         }
     }
