@@ -6,10 +6,10 @@ public class PlayerMove : MonoBehaviour
 {
     Rigidbody rb;
     Player player;
-
-    public Vector3 movement;
     Vector3 inputDir;
-    bool canJump;
+
+    [HideInInspector]public Vector3 movement;
+    [HideInInspector]public bool canJump;
 
     void Awake()
     {
@@ -54,6 +54,7 @@ public class PlayerMove : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) && canJump || Input.GetButtonDown("Fire1"))
             {
+                canJump = false;
                 rb.velocity = Vector3.up * player.animalSwapper.currentAnimal.jumpForce;
             }
         }
@@ -69,6 +70,7 @@ public class PlayerMove : MonoBehaviour
             }
             if (Input.GetKeyUp(KeyCode.Space) && canJump || Input.GetButtonUp("Fire1"))
             {
+                canJump = false;
                 rb.velocity = Vector3.up * player.animalSwapper.currentAnimal.currentCharge;
                 player.animalSwapper.currentAnimal.currentCharge  = player.animalSwapper.currentAnimal.jumpForce;
             }

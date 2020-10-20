@@ -288,9 +288,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1d57edbc6ed9f2a907ff91f070705a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 0
-  walkingSpeed: 0
+  jumpForce: 5
+  movementSpeed: 3
   canSwim: 0
+  canChargeJump: 0
+  currentCharge: 0
+  maxCharge: 10
 --- !u!65 &-8055608698471420762
 BoxCollider:
   m_ObjectHideFlags: 0
