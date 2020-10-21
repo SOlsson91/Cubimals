@@ -68,6 +68,8 @@ MonoBehaviour:
   animator: {fileID: 0}
   animalSwapper: {fileID: 0}
   playerNumber: 0
+  currentAnimal: {fileID: 0}
+  currentAnimalNumber: 0
 --- !u!114 &1902905168621801670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,8 +115,6 @@ MonoBehaviour:
   - {fileID: -690350712913536014, guid: 56381cfa46e44335a689e99f2cf49b4c, type: 3}
   - {fileID: -4094050583211433832, guid: 1f7d832dd4d847fe9e6177ba21bcaf64, type: 3}
   - {fileID: 3246322756049759723, guid: db337cd6af3d4e7c8c9e6cc979897853, type: 3}
-  currentAnimal: {fileID: 0}
-  currentAnimalNumber: 0
 --- !u!114 &8866188666976817583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,7 +199,18 @@ MonoBehaviour:
     m_ActionId: 946801c7-eefd-47c7-aa9e-43ea3d8ae8fb
     m_ActionName: Player/Swap[/Gamepad/buttonNorth,/Keyboard/q]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8866188666976817583}
+        m_MethodName: OnAbility
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 7dee4dd4-086f-4400-8ecc-53fddf026bec
     m_ActionName: Player/Ability[/Gamepad/buttonWest,/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0

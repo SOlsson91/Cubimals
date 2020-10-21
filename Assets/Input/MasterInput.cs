@@ -229,6 +229,33 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""GUI"",
+            ""id"": ""21f11774-6c37-48f3-bbcb-5860d0e550f7"",
+            ""actions"": [
+                {
+                    ""name"": ""MouseClick"",
+                    ""type"": ""Button"",
+                    ""id"": ""26f157e0-8c1e-4ccb-8bbb-3f74c1427854"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""d4c8faeb-409e-4e31-930b-2547f799838e"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""MouseClick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -238,6 +265,11 @@ public class @MasterInput : IInputActionCollection, IDisposable
             ""devices"": [
                 {
                     ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                },
+                {
+                    ""devicePath"": ""<Mouse>"",
                     ""isOptional"": false,
                     ""isOR"": false
                 }
@@ -262,6 +294,9 @@ public class @MasterInput : IInputActionCollection, IDisposable
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Swap = m_Player.FindAction("Swap", throwIfNotFound: true);
         m_Player_Ability = m_Player.FindAction("Ability", throwIfNotFound: true);
+        // GUI
+        m_GUI = asset.FindActionMap("GUI", throwIfNotFound: true);
+        m_GUI_MouseClick = m_GUI.FindAction("MouseClick", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -364,6 +399,39 @@ public class @MasterInput : IInputActionCollection, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
+
+    // GUI
+    private readonly InputActionMap m_GUI;
+    private IGUIActions m_GUIActionsCallbackInterface;
+    private readonly InputAction m_GUI_MouseClick;
+    public struct GUIActions
+    {
+        private @MasterInput m_Wrapper;
+        public GUIActions(@MasterInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @MouseClick => m_Wrapper.m_GUI_MouseClick;
+        public InputActionMap Get() { return m_Wrapper.m_GUI; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(GUIActions set) { return set.Get(); }
+        public void SetCallbacks(IGUIActions instance)
+        {
+            if (m_Wrapper.m_GUIActionsCallbackInterface != null)
+            {
+                @MouseClick.started -= m_Wrapper.m_GUIActionsCallbackInterface.OnMouseClick;
+                @MouseClick.performed -= m_Wrapper.m_GUIActionsCallbackInterface.OnMouseClick;
+                @MouseClick.canceled -= m_Wrapper.m_GUIActionsCallbackInterface.OnMouseClick;
+            }
+            m_Wrapper.m_GUIActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @MouseClick.started += instance.OnMouseClick;
+                @MouseClick.performed += instance.OnMouseClick;
+                @MouseClick.canceled += instance.OnMouseClick;
+            }
+        }
+    }
+    public GUIActions @GUI => new GUIActions(this);
     private int m_KeyboardSchemeIndex = -1;
     public InputControlScheme KeyboardScheme
     {
@@ -388,5 +456,9 @@ public class @MasterInput : IInputActionCollection, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnSwap(InputAction.CallbackContext context);
         void OnAbility(InputAction.CallbackContext context);
+    }
+    public interface IGUIActions
+    {
+        void OnMouseClick(InputAction.CallbackContext context);
     }
 }

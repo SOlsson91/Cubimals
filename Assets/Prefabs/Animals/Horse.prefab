@@ -308,6 +308,7 @@ MonoBehaviour:
   canChargeJump: 0
   currentCharge: 0
   maxCharge: 10
+  ability: {fileID: 416491667425304366}
 --- !u!114 &416491667425304366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,7 +323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashSpeed: 1000
   dashTime: 0.2
-  cooldownValue: 1
+  cooldownValue: 2
 --- !u!1 &1480608929319458
 GameObject:
   m_ObjectHideFlags: 0

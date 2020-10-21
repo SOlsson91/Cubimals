@@ -13,4 +13,5 @@ public class Animal : MonoBehaviour
     public bool canChargeJump;
     [HideInInspector] public float currentCharge;
     public float maxCharge = 10;
+    public Ability ability;
 }
