@@ -359,7 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 5
-  movementSpeed: 2
+  movementSpeed: 3
   canSwim: 0
   canChargeJump: 0
   currentCharge: 0
