@@ -240,6 +240,11 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""devicePath"": ""<Keyboard>"",
                     ""isOptional"": false,
                     ""isOR"": false
+                },
+                {
+                    ""devicePath"": ""<Mouse>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
                 }
             ]
         },
