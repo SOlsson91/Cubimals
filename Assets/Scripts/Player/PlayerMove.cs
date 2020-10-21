@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Linq;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMove : MonoBehaviour
@@ -18,8 +20,8 @@ public class PlayerMove : MonoBehaviour
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody>();
         player = GetComponent<Player>();
+        rb = GetComponent<Rigidbody>();
     }
 
     public void OnMove(Vector2 direction)
@@ -30,6 +32,8 @@ public class PlayerMove : MonoBehaviour
 
     public void Move()
     {
+        if (player.currentAnimal == null)
+            return;
         rb.position = Vector3.MoveTowards(transform.position, rb.position + movement * player.currentAnimal.movementSpeed * Time.deltaTime, 1);
 
         if (movement != Vector3.zero)
@@ -37,7 +41,6 @@ public class PlayerMove : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(movement);
         }
     }
-
     void Update()
     {
         Move();

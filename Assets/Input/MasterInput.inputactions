@@ -150,6 +150,61 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "LeftStick",
+                    "id": "1f9d1183-e52c-4201-bace-6f57c7bb0456",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "85a345da-b17c-412f-8fe9-740aa3596efd",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox One",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "be99fe9c-4104-4d2c-bfae-4b967e3cf269",
+                    "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox One",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "f56a7dbb-264f-4a96-a9f4-9c58404b825d",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox One",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "73006ad8-ac2c-4452-9ab7-5e1b158ede4f",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox One",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "5dd82a90-1b3d-4b5b-b38e-ee9315363d31",
                     "path": "<Gamepad>/buttonSouth",
@@ -167,6 +222,17 @@
                     "interactions": "Hold",
                     "processors": "",
                     "groups": "Keyboard",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1fb64a50-c67b-444e-b4bd-c61f5882dcd2",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox One",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -195,6 +261,17 @@
                 },
                 {
                     "name": "",
+                    "id": "74655d8f-2609-493e-8652-6ff9f38dc0c7",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox One",
+                    "action": "Swap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "8c4b9dec-7fc1-41b0-bb34-7d5e8533c6f6",
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "Press",
@@ -214,31 +291,15 @@
                     "action": "Ability",
                     "isComposite": false,
                     "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "GUI",
-            "id": "21f11774-6c37-48f3-bbcb-5860d0e550f7",
-            "actions": [
-                {
-                    "name": "MouseClick",
-                    "type": "Button",
-                    "id": "26f157e0-8c1e-4ccb-8bbb-3f74c1427854",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                }
-            ],
-            "bindings": [
+                },
                 {
                     "name": "",
-                    "id": "d4c8faeb-409e-4e31-930b-2547f799838e",
-                    "path": "<Mouse>/leftButton",
+                    "id": "906c1e41-4b42-464a-b76b-fce5ab4f44bf",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard",
-                    "action": "MouseClick",
+                    "groups": "Xbox One",
+                    "action": "Ability",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -254,11 +315,6 @@
                     "devicePath": "<Keyboard>",
                     "isOptional": false,
                     "isOR": false
-                },
-                {
-                    "devicePath": "<Mouse>",
-                    "isOptional": false,
-                    "isOR": false
                 }
             ]
         },
@@ -268,6 +324,17 @@
             "devices": [
                 {
                     "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Xbox One",
+            "bindingGroup": "Xbox One",
+            "devices": [
+                {
+                    "devicePath": "<XInputController>",
                     "isOptional": false,
                     "isOR": false
                 }

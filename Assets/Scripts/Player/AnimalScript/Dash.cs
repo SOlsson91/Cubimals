@@ -10,9 +10,8 @@ public class Dash : Ability
     float timeDashing = 0;
     bool dashing = false;
     Rigidbody parentRigidbody;
-    Player player;
 
-    void Awake()
+    void Start()
     {
         parentRigidbody = GetComponentInParent<Rigidbody>();
     }
@@ -31,14 +30,12 @@ public class Dash : Ability
     {
         if (dashing == true)
         {
-            parentRigidbody = GetComponentInParent<Rigidbody>();
             if (Time.time >= timeDashing)
             {
                 dashing = false;
                 parentRigidbody.velocity = Vector3.zero;
                 return;
             }
-            //Edit: changed to InParet since we put the rigidbody component on the player parent
             parentRigidbody.velocity = gameObject.transform.forward * dashSpeed * Time.deltaTime;
         }
     }

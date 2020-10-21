@@ -11,16 +11,18 @@ public class PlayerController : MonoBehaviour
     SwapAnimal swapper;
     PlayerStateController stateController;
     Player player;
+    PlayerInput input;
 
     Vector2 movement;
 
     void Awake()
     {
-        controls = new MasterInput();
         player = GetComponent<Player>();
-        stateController = GetComponent<PlayerStateController>();
         mover = GetComponent<PlayerMove>();
         swapper = GetComponent<SwapAnimal>();
+        input = GetComponent<PlayerInput>();
+        stateController = GetComponent<PlayerStateController>();
+        controls = new MasterInput();
     }
 
     void OnEnable() => controls.Enable();
@@ -36,13 +38,10 @@ public class PlayerController : MonoBehaviour
 
     public void OnAbility(InputAction.CallbackContext ctx)
     {
-        Debug.Log("PC ");
         if (player.currentAnimal.ability != null)
         {
-            Debug.Log("PC not null");
             if (ctx.started)
             {
-                Debug.Log("PC In if");
                 player.currentAnimal.ability.DoAbility();
             }
         }

@@ -163,6 +163,61 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""LeftStick"",
+                    ""id"": ""1f9d1183-e52c-4201-bace-6f57c7bb0456"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""85a345da-b17c-412f-8fe9-740aa3596efd"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox One"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""be99fe9c-4104-4d2c-bfae-4b967e3cf269"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox One"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""f56a7dbb-264f-4a96-a9f4-9c58404b825d"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox One"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""73006ad8-ac2c-4452-9ab7-5e1b158ede4f"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox One"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": """",
                     ""id"": ""5dd82a90-1b3d-4b5b-b38e-ee9315363d31"",
                     ""path"": ""<Gamepad>/buttonSouth"",
@@ -180,6 +235,17 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""interactions"": ""Hold"",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1fb64a50-c67b-444e-b4bd-c61f5882dcd2"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox One"",
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -208,6 +274,17 @@ public class @MasterInput : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""74655d8f-2609-493e-8652-6ff9f38dc0c7"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox One"",
+                    ""action"": ""Swap"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""8c4b9dec-7fc1-41b0-bb34-7d5e8533c6f6"",
                     ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": ""Press"",
@@ -227,31 +304,15 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""action"": ""Ability"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""GUI"",
-            ""id"": ""21f11774-6c37-48f3-bbcb-5860d0e550f7"",
-            ""actions"": [
-                {
-                    ""name"": ""MouseClick"",
-                    ""type"": ""Button"",
-                    ""id"": ""26f157e0-8c1e-4ccb-8bbb-3f74c1427854"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                }
-            ],
-            ""bindings"": [
+                },
                 {
                     ""name"": """",
-                    ""id"": ""d4c8faeb-409e-4e31-930b-2547f799838e"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""id"": ""906c1e41-4b42-464a-b76b-fce5ab4f44bf"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""MouseClick"",
+                    ""groups"": ""Xbox One"",
+                    ""action"": ""Ability"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -267,11 +328,6 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""devicePath"": ""<Keyboard>"",
                     ""isOptional"": false,
                     ""isOR"": false
-                },
-                {
-                    ""devicePath"": ""<Mouse>"",
-                    ""isOptional"": false,
-                    ""isOR"": false
                 }
             ]
         },
@@ -285,6 +341,17 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""isOR"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Xbox One"",
+            ""bindingGroup"": ""Xbox One"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<XInputController>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
         }
     ]
 }");
@@ -294,9 +361,6 @@ public class @MasterInput : IInputActionCollection, IDisposable
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Swap = m_Player.FindAction("Swap", throwIfNotFound: true);
         m_Player_Ability = m_Player.FindAction("Ability", throwIfNotFound: true);
-        // GUI
-        m_GUI = asset.FindActionMap("GUI", throwIfNotFound: true);
-        m_GUI_MouseClick = m_GUI.FindAction("MouseClick", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -399,39 +463,6 @@ public class @MasterInput : IInputActionCollection, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
-
-    // GUI
-    private readonly InputActionMap m_GUI;
-    private IGUIActions m_GUIActionsCallbackInterface;
-    private readonly InputAction m_GUI_MouseClick;
-    public struct GUIActions
-    {
-        private @MasterInput m_Wrapper;
-        public GUIActions(@MasterInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @MouseClick => m_Wrapper.m_GUI_MouseClick;
-        public InputActionMap Get() { return m_Wrapper.m_GUI; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(GUIActions set) { return set.Get(); }
-        public void SetCallbacks(IGUIActions instance)
-        {
-            if (m_Wrapper.m_GUIActionsCallbackInterface != null)
-            {
-                @MouseClick.started -= m_Wrapper.m_GUIActionsCallbackInterface.OnMouseClick;
-                @MouseClick.performed -= m_Wrapper.m_GUIActionsCallbackInterface.OnMouseClick;
-                @MouseClick.canceled -= m_Wrapper.m_GUIActionsCallbackInterface.OnMouseClick;
-            }
-            m_Wrapper.m_GUIActionsCallbackInterface = instance;
-            if (instance != null)
-            {
-                @MouseClick.started += instance.OnMouseClick;
-                @MouseClick.performed += instance.OnMouseClick;
-                @MouseClick.canceled += instance.OnMouseClick;
-            }
-        }
-    }
-    public GUIActions @GUI => new GUIActions(this);
     private int m_KeyboardSchemeIndex = -1;
     public InputControlScheme KeyboardScheme
     {
@@ -450,15 +481,20 @@ public class @MasterInput : IInputActionCollection, IDisposable
             return asset.controlSchemes[m_GamepadSchemeIndex];
         }
     }
+    private int m_XboxOneSchemeIndex = -1;
+    public InputControlScheme XboxOneScheme
+    {
+        get
+        {
+            if (m_XboxOneSchemeIndex == -1) m_XboxOneSchemeIndex = asset.FindControlSchemeIndex("Xbox One");
+            return asset.controlSchemes[m_XboxOneSchemeIndex];
+        }
+    }
     public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnSwap(InputAction.CallbackContext context);
         void OnAbility(InputAction.CallbackContext context);
-    }
-    public interface IGUIActions
-    {
-        void OnMouseClick(InputAction.CallbackContext context);
     }
 }

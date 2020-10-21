@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-
 /*
  * Following the player with a small smoothing/dampening on the camera
  * Important to change project settings to run SpawnPlayer before CameraController
@@ -11,6 +10,7 @@ public class CameraController : MonoBehaviour
     Vector3 offset;
     Vector3 cameraPosition;
     public Vector3 smoothness = new Vector3(3, 1, 3);
+    bool playerFound;
 
     void Start()
     {
@@ -23,6 +23,7 @@ public class CameraController : MonoBehaviour
             Debug.LogWarning("[CameraController] Cannot find Player");
             Debug.LogWarning("Have you changed the project settings to have SpawnPlayer before CameraController?");
             target = null;
+            playerFound = false;
             return;
         }
         offset = transform.position - target.position;

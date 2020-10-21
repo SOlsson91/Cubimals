@@ -1,32 +1,36 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ActivateButton : MonoBehaviour
 {
-    public GameObject player;
+    GameObject[] players;
     public GameObject target;
 
     public float interactiveRadius = 1;
 
     private bool isActive;
 
-    private void Start()
+    void Start()
     {
         isActive = false;
+        players = GameObject.FindGameObjectsWithTag("Player");
     }
 
     void Update()
     {
-        if (Vector3.Distance(gameObject.transform.position, player.transform.position) <= interactiveRadius && Input.GetKeyDown(KeyCode.E) && isActive == false)
+        foreach (GameObject player in players)
         {
-            isActive = true;
+            if (Vector3.Distance(gameObject.transform.position, player.transform.position) <=
+                    interactiveRadius && (Keyboard.current.eKey.isPressed || Gamepad.current.buttonWest.isPressed) && isActive == false)
+            {
+                isActive = true;
+            }
+            else if (Vector3.Distance(gameObject.transform.position, player.transform.position) <= 
+                    interactiveRadius && (Keyboard.current.eKey.isPressed || Gamepad.current.buttonWest.isPressed))
+            {
+                isActive = false;
+            }
         }
-        else if (Vector3.Distance(gameObject.transform.position, player.transform.position) <= interactiveRadius && Input.GetKeyDown(KeyCode.E))
-        {
-            isActive = false;
-        }
-
         target.SetActive(isActive);
     }
 }

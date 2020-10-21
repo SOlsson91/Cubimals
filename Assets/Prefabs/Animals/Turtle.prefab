@@ -66,11 +66,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 5
-  movementSpeed: 2
+  movementSpeed: 4
   canSwim: 1
   canChargeJump: 0
   currentCharge: 0
   maxCharge: 10
+  ability: {fileID: 0}
 --- !u!1 &1101676031073298
 GameObject:
   m_ObjectHideFlags: 0

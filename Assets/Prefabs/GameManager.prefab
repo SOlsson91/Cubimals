@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 4337406054006232581}
   - component: {fileID: 4337406054006232580}
   - component: {fileID: 4337406054006232583}
-  - component: {fileID: 442890350832320510}
+  - component: {fileID: 460296302602590077}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -111,6 +111,7 @@ MonoBehaviour:
   OnGameStateChange:
     m_PersistentCalls:
       m_Calls: []
+  players: []
   levelToBoot: 
 --- !u!114 &4337406054006232583
 MonoBehaviour:
@@ -124,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d345479c9587f22497a4a0587e0a7b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &442890350832320510
+--- !u!114 &460296302602590077
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba719f02702064dc8ad409bdbaf5822f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerToSpawn: {fileID: 2667823122874527282, guid: f1d24395a6810412a9aff4a8500961a9,
+  playerPrefab: {fileID: 2667823122874527282, guid: f1d24395a6810412a9aff4a8500961a9,
     type: 3}
   spawnPosition:
   - {fileID: 6640728609675675333}
