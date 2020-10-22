@@ -1,8 +1,12 @@
 ﻿using UnityEngine;
 
+/*
+ * If player hits collider respawn it at the latest checkpoint
+ * TODO: Maybe add only respawn if other player is nearby?
+ */
+
 public class DeadCollider : MonoBehaviour
 {
-    public Transform respawnPoint;
     public Vector3 spawnOffset = new Vector3(0.0f, 1.25f, 0.0f);
 
     void OnCollisionEnter(Collision other)
@@ -11,9 +15,12 @@ public class DeadCollider : MonoBehaviour
         {
             GameManager.Instance.players.ForEach(delegate(Player player) {
                 int playerNumber = other.gameObject.GetComponent<Player>().playerNumber;
+
+                // Only update the player that entered the collider and not both
                 if (player.playerNumber == playerNumber)
                 {
-                    other.transform.position = respawnPoint.position + (spawnOffset * playerNumber);
+                    Vector3 respawnPoint = player.checkpoint.GetCheckpoint();
+                    other.transform.position = respawnPoint + (spawnOffset * playerNumber);
                 }
             });
         }

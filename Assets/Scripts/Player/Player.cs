@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     [HideInInspector] public int playerNumber;
     [HideInInspector] public Animal currentAnimal = null;
     [HideInInspector] public int currentAnimalNumber;
+    public Checkpoint checkpoint;
     PlayerInput input;
 
     void Awake()
@@ -21,6 +22,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        checkpoint = new Checkpoint(transform.position);
         currentAnimalNumber = 0;
         animalSwapper.ChangeAnimal(currentAnimalNumber);
     }

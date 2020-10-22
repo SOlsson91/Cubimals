@@ -26,7 +26,7 @@ public class GameManager : Singleton<GameManager>
 
     private GameState currentGameState = GameState.PREGAME; // <-- GameState default state is PREGAME
     LevelManager levelManager;
-    [SerializeField] string levelToBoot;
+    [SerializeField] string levelToBoot = string.Empty;
 
     protected override void Awake()
     {
