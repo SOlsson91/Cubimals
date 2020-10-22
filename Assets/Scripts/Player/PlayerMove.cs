@@ -48,11 +48,38 @@ public class PlayerMove : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        canJump = true;
-        // If in water check if animal can swim. If not change to trigger
+        string currTag= other.gameObject.tag;
+        Debug.Log("Tag:"+ other.gameObject.tag);
+
+        //switch (currTag)
+        //{
+        //    case "Water":
+
+        //    other.collider.isTrigger = !player.animalSwapper.currentAnimal.canSwim ? true : false;
+        //        Debug.Log("Your in water");
+        //        break;
+
+        //    case "Ground":
+
+        //    canJump = true;
+        //    Debug.Log("Your on floor");
+        //        break;
+
+        //    default:
+        //        break;
+        //}
+        //If in water check if animal can swim. If not change to trigger
         if (other.gameObject.tag == "Water")
         {
             other.collider.isTrigger = !player.animalSwapper.currentAnimal.canSwim ? true : false;
+        }
+
+        if (other.gameObject.tag == "Ground"&&other.gameObject.transform.TransformPoint(other.gameObject.transform.position).y < transform.position.y)
+        {
+            Debug.Log("The position of the ground block: " + other.gameObject.transform.TransformPoint(other.gameObject.transform.position).y);
+            Debug.Log("The position of the player: " + transform.position.y);
+            canJump = true;
+            Debug.Log("Can jump");
         }
     }
 
@@ -79,7 +106,6 @@ public class PlayerMove : MonoBehaviour
             }
         }
     }
-
     public void StartCharging()
     {
         if (canJump)

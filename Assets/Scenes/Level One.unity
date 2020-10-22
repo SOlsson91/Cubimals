@@ -444,6 +444,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 37914851}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &38004521 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 31907596976325225, guid: 241914b92c1ee874ab5b60696af3d531,
+    type: 3}
+  m_PrefabInstance: {fileID: 1435173365}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &38004522
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38004521}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9592, y: 2.002924, z: 2.9401994}
+  m_Center: {x: 0.90962887, y: 0.058309555, z: -0.101854324}
 --- !u!1001 &43949020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -877,8 +896,8 @@ GameObject:
   - component: {fileID: 86690102}
   - component: {fileID: 86690101}
   m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
+  m_Name: GroundColliderParent
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1059,7 +1078,7 @@ GameObject:
   - component: {fileID: 97651441}
   m_Layer: 0
   m_Name: stonecollider
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1166,7 +1185,7 @@ GameObject:
   - component: {fileID: 103353802}
   m_Layer: 0
   m_Name: Pole (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1474,7 +1493,7 @@ GameObject:
   - component: {fileID: 148858516}
   m_Layer: 0
   m_Name: Pole
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4834,6 +4853,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EmptyPlot (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5618952689735352480, guid: 3973fd9304286204aa7c4cf3de357f05,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 5618952689735352481, guid: 3973fd9304286204aa7c4cf3de357f05,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5368,7 +5392,7 @@ GameObject:
   - component: {fileID: 472576373}
   m_Layer: 0
   m_Name: Pole (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6963,9 +6987,10 @@ GameObject:
   m_Component:
   - component: {fileID: 557121385}
   - component: {fileID: 557121384}
+  - component: {fileID: 557121386}
   m_Layer: 0
   m_Name: Pole (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6981,8 +7006,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 3, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.075568676, z: 1}
+  m_Center: {x: 0, y: 1.4622157, z: 0}
 --- !u!4 &557121385
 Transform:
   m_ObjectHideFlags: 0
@@ -6997,6 +7022,19 @@ Transform:
   m_Father: {fileID: 1495181503}
   m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &557121386
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557121383}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.7648158, z: 1}
+  m_Center: {x: 0, y: -0.08324599, z: 0}
 --- !u!1001 &557998223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8328,6 +8366,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EmptyPlot
       objectReference: {fileID: 0}
+    - target: {fileID: 5618952689735352480, guid: 3973fd9304286204aa7c4cf3de357f05,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 5618952689735352481, guid: 3973fd9304286204aa7c4cf3de357f05,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9315,7 +9358,7 @@ GameObject:
   - component: {fileID: 702573402}
   m_Layer: 0
   m_Name: grasscolider1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9628,7 +9671,7 @@ GameObject:
   - component: {fileID: 714537308}
   m_Layer: 0
   m_Name: Mountain One
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9644,8 +9687,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 4, z: 3}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3, y: 0.96790504, z: 3}
+  m_Center: {x: 0, y: 1.5160475, z: 0}
 --- !u!4 &714537309
 Transform:
   m_ObjectHideFlags: 0
@@ -10132,7 +10175,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741014467}
-  m_Material: {fileID: 13400000, guid: 38b43f8886b1fca4db34e35edc82a5fc, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -11383,6 +11426,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EmptyPlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618952689735352480, guid: 3973fd9304286204aa7c4cf3de357f05,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 5618952689735352481, guid: 3973fd9304286204aa7c4cf3de357f05,
         type: 3}
@@ -13007,7 +13055,7 @@ GameObject:
   - component: {fileID: 1070689013}
   m_Layer: 0
   m_Name: wallcolider4
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16439,6 +16487,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EmptyPlot
       objectReference: {fileID: 0}
+    - target: {fileID: 5618952689735352480, guid: 3973fd9304286204aa7c4cf3de357f05,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 5618952689735352481, guid: 3973fd9304286204aa7c4cf3de357f05,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19839,7 +19892,7 @@ GameObject:
   - component: {fileID: 1549134079}
   m_Layer: 0
   m_Name: Mountain One (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22002,7 +22055,7 @@ GameObject:
   - component: {fileID: 1746680514}
   m_Layer: 0
   m_Name: wallcolider3
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24013,7 +24066,7 @@ GameObject:
   - component: {fileID: 1851206724}
   m_Layer: 0
   m_Name: grasscolider5
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24392,7 +24445,7 @@ GameObject:
   - component: {fileID: 1865695463}
   m_Layer: 0
   m_Name: Mountain One (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27469,6 +27522,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EmptyPlot (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5618952689735352480, guid: 3973fd9304286204aa7c4cf3de357f05,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 5618952689735352481, guid: 3973fd9304286204aa7c4cf3de357f05,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28249,7 +28307,7 @@ GameObject:
   - component: {fileID: 2138097488}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
