@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Linq;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMove : MonoBehaviour
@@ -18,8 +20,8 @@ public class PlayerMove : MonoBehaviour
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody>();
         player = GetComponent<Player>();
+        rb = GetComponent<Rigidbody>();
     }
 
     public void OnMove(Vector2 direction)
@@ -30,14 +32,15 @@ public class PlayerMove : MonoBehaviour
 
     public void Move()
     {
-        rb.position = Vector3.MoveTowards(transform.position, rb.position + movement * player.animalSwapper.currentAnimal.movementSpeed * Time.deltaTime, 1);
+        if (player.currentAnimal == null)
+            return;
+        rb.position = Vector3.MoveTowards(transform.position, rb.position + movement * player.currentAnimal.movementSpeed * Time.deltaTime, 1);
 
         if (movement != Vector3.zero)
         {
             transform.rotation = Quaternion.LookRotation(movement);
         }
     }
-
     void Update()
     {
         Move();
@@ -71,7 +74,7 @@ public class PlayerMove : MonoBehaviour
         //If in water check if animal can swim. If not change to trigger
         if (other.gameObject.tag == "Water")
         {
-            other.collider.isTrigger = !player.animalSwapper.currentAnimal.canSwim ? true : false;
+            other.collider.isTrigger = !player.currentAnimal.canSwim ? true : false;
         }
 
         if (other.gameObject.tag == "Ground"&&other.gameObject.transform.TransformPoint(other.gameObject.transform.position).y < transform.position.y)
@@ -85,21 +88,21 @@ public class PlayerMove : MonoBehaviour
 
     public void Jump()
     {
-        if (!player.animalSwapper.currentAnimal.canChargeJump && canJump)
+        if (!player.currentAnimal.canChargeJump && canJump)
         {
             canJump = false;
             player.UpdateAnimator();
             player.animator.SetBool("isJumping", true);
-            rb.velocity = Vector3.up * player.animalSwapper.currentAnimal.jumpForce;
+            rb.velocity = Vector3.up * player.currentAnimal.jumpForce;
         }
         else
         {
             if (canJump)
             {
-                float currentCharge = player.animalSwapper.currentAnimal.currentCharge;
-                float maxCharge = player.animalSwapper.currentAnimal.maxCharge;
-                rb.velocity = Vector3.up * player.animalSwapper.currentAnimal.currentCharge;
-                player.animalSwapper.currentAnimal.currentCharge  = player.animalSwapper.currentAnimal.jumpForce;
+                float currentCharge = player.currentAnimal.currentCharge;
+                float maxCharge = player.currentAnimal.maxCharge;
+                rb.velocity = Vector3.up * player.currentAnimal.currentCharge;
+                player.currentAnimal.currentCharge  = player.currentAnimal.jumpForce;
 
                 canJump = false;
                 charing = false;
@@ -114,9 +117,9 @@ public class PlayerMove : MonoBehaviour
 
     void Charging()
     {
-        float currentCharge = player.animalSwapper.currentAnimal.currentCharge;
-        float maxCharge = player.animalSwapper.currentAnimal.maxCharge;
-        player.animalSwapper.currentAnimal.currentCharge = currentCharge > maxCharge ? 
-            maxCharge : currentCharge + Time.deltaTime * player.animalSwapper.currentAnimal.jumpForce;
+        float currentCharge = player.currentAnimal.currentCharge;
+        float maxCharge = player.currentAnimal.maxCharge;
+        player.currentAnimal.currentCharge = currentCharge > maxCharge ? 
+            maxCharge : currentCharge + Time.deltaTime * player.currentAnimal.jumpForce;
     }
 }

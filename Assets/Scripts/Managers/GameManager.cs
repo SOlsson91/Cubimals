@@ -28,13 +28,18 @@ public class GameManager : Singleton<GameManager>
     LevelManager levelManager;
     [SerializeField] string levelToBoot;
 
+    protected override void Awake()
+    {
+        players = new List<Player>();
+        instancedSystems = new List<GameObject>();
+    }
+
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
         levelManager = GetComponent<LevelManager>();
         if (levelToBoot != string.Empty)
             LoadLevel(levelToBoot);
-        players = new List<Player>();
 
         InstantiateSystemPrefabs();
     }

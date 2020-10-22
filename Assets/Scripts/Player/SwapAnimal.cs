@@ -14,10 +14,8 @@ public class SwapAnimal : MonoBehaviour
 
     Player player;
     public Animal[] animals;
-    [HideInInspector] public Animal currentAnimal;
-    [HideInInspector] public int currentAnimalNumber;
 
-    void Start()
+    void Awake()
     {
         player = GetComponent<Player>();
     }
@@ -25,21 +23,21 @@ public class SwapAnimal : MonoBehaviour
     // Update is called once per frame
     public void Swap()
     {
-        currentAnimalNumber = currentAnimalNumber + 1 > animals.Length - 1 ? 0 : currentAnimalNumber + 1;
-        ChangeAnimal(currentAnimalNumber);
+        player.currentAnimalNumber = player.currentAnimalNumber + 1 > animals.Length - 1 ? 0 : player.currentAnimalNumber + 1;
+        ChangeAnimal(player.currentAnimalNumber);
     }
 
     public void ChangeAnimal(int newAnimal)
     {
         if (newAnimal >= 0 && newAnimal <= animals.Length)
         {
-            if (currentAnimal != null)
+            if (player.currentAnimal != null)
             {
-                Destroy(currentAnimal.gameObject);
+                Destroy(player.currentAnimal.gameObject);
             }
             // Put the animal as a child to player
-            currentAnimal = Instantiate(animals[newAnimal], transform.position, transform.rotation);
-            currentAnimal.transform.parent = transform;
+            player.currentAnimal = Instantiate(animals[newAnimal], transform.position, transform.rotation);
+            player.currentAnimal.transform.parent = transform;
         }
     }
 }

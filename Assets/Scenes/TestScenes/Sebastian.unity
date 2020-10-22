@@ -4853,6 +4853,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 690569895}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &696668564 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 268015478, guid: 616bfb04bb576eba8bb04cef63c4427f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3779531004674916324}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &703418583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14882,6 +14888,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Horse
       objectReference: {fileID: 0}
+    - target: {fileID: 1457399783220848, guid: db337cd6af3d4e7c8c9e6cc979897853, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4115821965670878, guid: db337cd6af3d4e7c8c9e6cc979897853, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.56306
@@ -15295,12 +15305,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 442890350832320510, guid: 616bfb04bb576eba8bb04cef63c4427f,
+    - target: {fileID: 460296302602590077, guid: 616bfb04bb576eba8bb04cef63c4427f,
         type: 3}
-      propertyPath: playerPrefab
+      propertyPath: spawnPosition.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 460296302602590077, guid: 616bfb04bb576eba8bb04cef63c4427f,
+        type: 3}
+      propertyPath: spawnPosition.Array.data[1]
       value: 
-      objectReference: {fileID: 2667823122874527282, guid: f1d24395a6810412a9aff4a8500961a9,
-        type: 3}
+      objectReference: {fileID: 696668564}
     - target: {fileID: 4337406054006232581, guid: 616bfb04bb576eba8bb04cef63c4427f,
         type: 3}
       propertyPath: m_LocalPosition.x

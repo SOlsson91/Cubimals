@@ -10,15 +10,19 @@ public class PlayerController : MonoBehaviour
     PlayerMove mover;
     SwapAnimal swapper;
     PlayerStateController stateController;
+    Player player;
+    PlayerInput input;
 
     Vector2 movement;
 
     void Awake()
     {
-        controls = new MasterInput();
-        stateController = GetComponent<PlayerStateController>();
+        player = GetComponent<Player>();
         mover = GetComponent<PlayerMove>();
         swapper = GetComponent<SwapAnimal>();
+        input = GetComponent<PlayerInput>();
+        stateController = GetComponent<PlayerStateController>();
+        controls = new MasterInput();
     }
 
     void OnEnable() => controls.Enable();
@@ -34,7 +38,13 @@ public class PlayerController : MonoBehaviour
 
     public void OnAbility(InputAction.CallbackContext ctx)
     {
-        //Input for ability here.
+        if (player.currentAnimal.ability != null)
+        {
+            if (ctx.started)
+            {
+                player.currentAnimal.ability.DoAbility();
+            }
+        }
     }
     
     public void OnJump(InputAction.CallbackContext ctx)
@@ -49,7 +59,6 @@ public class PlayerController : MonoBehaviour
             stateController.player.animator.SetBool("isJumping", true);
             stateController.TransitionToState(stateController.jumpState);
             mover.Jump();
-            
         }
     }
 }
