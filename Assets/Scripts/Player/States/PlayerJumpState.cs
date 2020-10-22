@@ -12,7 +12,11 @@ public class PlayerJumpState : PlayerBaseState
     {
         if (controller.move.canJump) 
         {
-            controller.player.animator.SetBool("isJumping", false);
+            if (controller.player.animator != null) 
+            {
+                controller.player.animator.SetBool("isJumping", false);
+            }
+            
             controller.TransitionToState(controller.idleState);  
         }
            
