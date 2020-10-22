@@ -1,38 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
 
-public class Testing : MonoBehaviour, IPointerClickHandler
+public class Testing : MonoBehaviour
 {
-    public Button button;
+    public Button btn;
 
-    public void OnPointerClick(PointerEventData ped)
+    private void Start()
     {
-        if (ped.button == PointerEventData.InputButton.Right)
-        {
-            Debug.Log("Right");
-        }
-        if (ped.button == PointerEventData.InputButton.Left)
-        {
-            Debug.Log("Left");
-        }
+        btn.onClick.AddListener(Onclick);
+        
     }
 
-    void Test()
-    {
-        Debug.Log("Test");
-    }
-    
     // Update is called once per frame
     void Update()
     {
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void Onclick()
     {
-        Debug.Log("I hit " + collision.gameObject.tag);
+        Debug.Log("Button Input Recieved!");
     }
 }
