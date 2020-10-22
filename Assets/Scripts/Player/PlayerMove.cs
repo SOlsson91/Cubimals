@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMove : MonoBehaviour
 {
-    Rigidbody rb;
+    public Rigidbody rb;
     Player player;
 
     Vector3 movement;
@@ -54,35 +54,14 @@ public class PlayerMove : MonoBehaviour
         string currTag= other.gameObject.tag;
         Debug.Log("Tag:"+ other.gameObject.tag);
 
-        //switch (currTag)
-        //{
-        //    case "Water":
-
-        //    other.collider.isTrigger = !player.animalSwapper.currentAnimal.canSwim ? true : false;
-        //        Debug.Log("Your in water");
-        //        break;
-
-        //    case "Ground":
-
-        //    canJump = true;
-        //    Debug.Log("Your on floor");
-        //        break;
-
-        //    default:
-        //        break;
-        //}
-        //If in water check if animal can swim. If not change to trigger
         if (other.gameObject.tag == "Water")
         {
             other.collider.isTrigger = !player.currentAnimal.canSwim ? true : false;
         }
 
-        if (other.gameObject.tag == "Ground"&&other.gameObject.transform.TransformPoint(other.gameObject.transform.position).y < transform.position.y)
+        if (other.gameObject.tag == "Ground")
         {
-            Debug.Log("The position of the ground block: " + other.gameObject.transform.TransformPoint(other.gameObject.transform.position).y);
-            Debug.Log("The position of the player: " + transform.position.y);
             canJump = true;
-            Debug.Log("Can jump");
         }
     }
 

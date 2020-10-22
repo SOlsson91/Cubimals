@@ -17,5 +17,14 @@ public class PlayerJumpState : PlayerBaseState
 
     public override void Update(PlayerStateController controller)
     {
+
+        if (controller.move.rb.velocity.y < 0)
+        {
+            controller.move.rb.velocity += Vector3.up * Physics.gravity.y * (2.5f - 1) * Time.deltaTime;
+        }
+        else if (controller.move.rb.velocity.y > 0)
+        {
+            controller.move.rb.velocity += Vector3.up * Physics.gravity.y * (2f - 1) * Time.deltaTime;
+        }
     }
 }

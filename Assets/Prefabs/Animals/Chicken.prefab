@@ -50,7 +50,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 1, z: 0.6}
+  m_Size: {x: 0.6, y: 1, z: 0.9894426}
   m_Center: {x: 0, y: 0.5041319, z: 0}
 --- !u!1 &1166036472285628
 GameObject:
@@ -358,7 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1d57edbc6ed9f2a907ff91f070705a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
+  jumpForce: 7
   movementSpeed: 5
   canSwim: 0
   canChargeJump: 0
