@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Testing : MonoBehaviour
 {
     public Button btn;
+    public MasterInput userInput;
 
     private void Start()
     {
