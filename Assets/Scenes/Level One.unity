@@ -6244,6 +6244,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1495181503}
     m_Modifications:
+    - target: {fileID: -6360215235358255144, guid: f1d24395a6810412a9aff4a8500961a9,
+        type: 3}
+      propertyPath: animals.Array.data[0]
+      value: 
+      objectReference: {fileID: -2235062226523476176, guid: 3bfa1903a43b4fbc99884c26e254db8a,
+        type: 3}
     - target: {fileID: 2667823122874527283, guid: f1d24395a6810412a9aff4a8500961a9,
         type: 3}
       propertyPath: m_Name
@@ -20985,8 +20991,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.6817192, z: 1}
-  m_Center: {x: -0.000000074505806, y: 0.3408596, z: -0.00000031789145}
+  m_Size: {x: 1.0562088, y: 0.6817192, z: 1}
+  m_Center: {x: -0.009315163, y: 0.3408596, z: -0.00000031789145}
 --- !u!1001 &1647004851
 PrefabInstance:
   m_ObjectHideFlags: 0

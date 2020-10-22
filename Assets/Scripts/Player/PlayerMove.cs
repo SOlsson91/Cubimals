@@ -62,7 +62,6 @@ public class PlayerMove : MonoBehaviour
         //use velocity margin .5 since the animation velocity is between 0 -.5
         if (other.gameObject.tag == "Ground"&&rb.velocity.y <= .5)
         {
-            Debug.Log("Can jump trigger");
             canJump = true;
         }
     }

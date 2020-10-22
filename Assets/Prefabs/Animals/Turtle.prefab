@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4881557845238512}
   - component: {fileID: 95639156149104580}
-  - component: {fileID: 6483565599515160935}
+  - component: {fileID: -2235062226523476176}
   m_Layer: 0
   m_Name: Turtle
   m_TagString: Untagged
@@ -53,7 +53,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6483565599515160935
+--- !u!114 &-2235062226523476176
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -66,11 +66,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 4
+  jumpGravityMulti: 2
   movementSpeed: 4
   canSwim: 1
   canChargeJump: 0
   currentCharge: 0
-  maxCharge: 30
+  maxCharge: 10
   ability: {fileID: 0}
 --- !u!1 &1101676031073298
 GameObject:

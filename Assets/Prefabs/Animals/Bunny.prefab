@@ -514,6 +514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 7
+  jumpGravityMulti: 3
   movementSpeed: 5.4
   canSwim: 0
   canChargeJump: 1

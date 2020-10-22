@@ -10,11 +10,12 @@ public class PlayerJumpState : PlayerBaseState
 
     public override void OnCollisionEnter(PlayerStateController controller)
     {
-        if (controller.player.animator != null) 
+        if (controller.move.canJump) 
         {
             controller.player.animator.SetBool("isJumping", false);
+            controller.TransitionToState(controller.idleState);  
         }
-        controller.TransitionToState(controller.idleState);    
+           
     }
 
     public override void Update(PlayerStateController controller)
@@ -22,11 +23,11 @@ public class PlayerJumpState : PlayerBaseState
 
         if (controller.move.rb.velocity.y < 0)
         {
-            controller.move.rb.velocity += Vector3.up * Physics.gravity.y * (2.5f - 1) * Time.deltaTime;
+            controller.move.rb.velocity += Vector3.up * Physics.gravity.y * (controller.player.currentAnimal.jumpGravityMulti - 1) * Time.deltaTime;
         }
-        //else if (controller.move.rb.velocity.y > 0)
-        //{
-        //    controller.move.rb.velocity += Vector3.up * Physics.gravity.y * (2f - 1) * Time.deltaTime;
-        //}
+        else if (controller.move.rb.velocity.y > 0) 
+        {
+            controller.move.rb.velocity += Vector3.up * Physics.gravity.y * (controller.player.currentAnimal.jumpGravityMulti/2 - 1) * Time.deltaTime;
+        }
     }
 }
