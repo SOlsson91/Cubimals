@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     public void OnMove(InputAction.CallbackContext ctx) => mover.OnMove(ctx.ReadValue<Vector2>());
     public void OnSwap(InputAction.CallbackContext ctx)
     {
-        if (ctx.started)
+        if (ctx.started&&mover.Movement==Vector3.zero)
             swapper.Swap();
     }
 
