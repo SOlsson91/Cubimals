@@ -4039,7 +4039,7 @@ Transform:
   - {fileID: 635352140}
   - {fileID: 500304161}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &621964248
 BoxCollider:
@@ -5851,12 +5851,17 @@ PrefabInstance:
     - target: {fileID: 460296302602590077, guid: 616bfb04bb576eba8bb04cef63c4427f,
         type: 3}
       propertyPath: offset.y
-      value: 1.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 460296302602590077, guid: 616bfb04bb576eba8bb04cef63c4427f,
         type: 3}
       propertyPath: playersToSpawn
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 460296302602590077, guid: 616bfb04bb576eba8bb04cef63c4427f,
+        type: 3}
+      propertyPath: offset.z
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 4337406054006232581, guid: 616bfb04bb576eba8bb04cef63c4427f,
         type: 3}
@@ -15457,7 +15462,7 @@ PrefabInstance:
     - target: {fileID: 7904025908076119690, guid: 0bc94d47efbee34a89fe71d5c8a12453,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7904025908076119690, guid: 0bc94d47efbee34a89fe71d5c8a12453,
         type: 3}

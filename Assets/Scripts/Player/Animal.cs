@@ -16,16 +16,8 @@ public class Animal : MonoBehaviour
     public float maxCharge = 10;
     [Header("Ability")]
     public Ability ability;
-
-    private Animator animator;
+    [Header("Interactions")]
     public float interactDistance = 1.0f; 
-    private SphereCollider interactionCollider;
-
-    void Awake()
-    {
-        animator = GetComponent<Animator>();
-        interactionCollider = GetComponentInParent<SphereCollider>();
-    }
 
     public void Interact()
     {
