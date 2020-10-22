@@ -8,15 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    public void LoadLevel(string levelName)
-    {
-        StartCoroutine(LoadAsync(levelName));
-    }
-
-    public void UnloadLevel(string levelName)
-    {
-        StartCoroutine(UnloadAsync(levelName));
-    }
+    public void LoadLevel(string levelName) => StartCoroutine(LoadAsync(levelName));
+    public void UnloadLevel(string levelName) => StartCoroutine(UnloadAsync(levelName));
 
     IEnumerator LoadAsync(string levelName)
     {

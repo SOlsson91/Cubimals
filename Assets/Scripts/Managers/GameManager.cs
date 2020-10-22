@@ -30,6 +30,7 @@ public class GameManager : Singleton<GameManager>
 
     protected override void Awake()
     {
+        base.Awake();
         players = new List<Player>();
         instancedSystems = new List<GameObject>();
     }
