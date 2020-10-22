@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.InputSystem;
 /*
  * Main player class, will add the other classes functionallity in this one.
  */
@@ -11,13 +10,11 @@ public class Player : MonoBehaviour
     [HideInInspector] public int playerNumber;
     [HideInInspector] public Animal currentAnimal = null;
     [HideInInspector] public int currentAnimalNumber;
-    public Checkpoint checkpoint;
-    PlayerInput input;
+    [HideInInspector] public Checkpoint checkpoint;
 
     void Awake()
     {
         animalSwapper = GetComponent<SwapAnimal>();
-        input = GetComponent<PlayerInput>();
     }
 
     void Start()
