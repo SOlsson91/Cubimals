@@ -39,6 +39,7 @@ public class PlayerStateController : MonoBehaviour
 
     public void TransitionToState(PlayerBaseState state) 
     {
+        
         currentState = state;
         CurrentState.EnterState(this);
     }

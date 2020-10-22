@@ -1,45 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UIElements;
+﻿using UnityEngine;
 
-public class Dash : MonoBehaviour
+public class Dash : Ability
 {
     public float dashSpeed = 1000;
     public float dashTime = 0.2f;
-    public float cooldownValue = 1;
+    public float cooldownValue = 3;
 
-    private float dashNext = 0;
-    private float cooldownNext = 0;
+    float timeToNextDash = 0;
+    float timeDashing = 0;
+    bool dashing = false;
+    Rigidbody parentRigidbody;
 
-    private bool dashing;
-
-    private void Start()
+    void Start()
     {
-        dashing = false;
+        parentRigidbody = GetComponentInParent<Rigidbody>();
     }
 
-    private void Update()
+    public override void DoAbility()
     {
-        if (Input.GetKeyDown(KeyCode.E) && Time.time > cooldownNext)
+        if (!dashing && Time.time >= timeToNextDash)
         {
-            Debug.Log("Dash");
-
             dashing = true;
-            dashNext = dashTime;
-
-            cooldownNext = Time.time + cooldownValue;
-        }
-        else if(dashNext <= 0 && dashing == true)
-        {
-            dashing = false;
-
-            //Edit: changed to InParet since we put the rigidbody component on the player parent
-            gameObject.GetComponentInParent<Rigidbody>().velocity = Vector3.zero;
-        }
-        else if(dashing == true)
-        {
-            dashNext -= Time.deltaTime;
+            timeToNextDash = Time.time + cooldownValue;
+            timeDashing = Time.time + dashTime;
         }
     }
 
@@ -47,8 +30,13 @@ public class Dash : MonoBehaviour
     {
         if (dashing == true)
         {
-            //Edit: changed to InParet since we put the rigidbody component on the player parent
-            gameObject.GetComponentInParent<Rigidbody>().velocity = gameObject.transform.forward * dashSpeed * Time.deltaTime;
+            if (Time.time >= timeDashing)
+            {
+                dashing = false;
+                parentRigidbody.velocity = Vector3.zero;
+                return;
+            }
+            parentRigidbody.velocity = gameObject.transform.forward * dashSpeed * Time.deltaTime;
         }
     }
 }
