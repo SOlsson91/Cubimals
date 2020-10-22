@@ -30,6 +30,8 @@ public class GameManager : Singleton<GameManager>
 
     protected override void Awake()
     {
+        base.Awake();
+
         players = new List<Player>();
         instancedSystems = new List<GameObject>();
     }
@@ -39,7 +41,11 @@ public class GameManager : Singleton<GameManager>
         DontDestroyOnLoad(gameObject);
         levelManager = GetComponent<LevelManager>();
         if (levelToBoot != string.Empty)
+        {
             LoadLevel(levelToBoot);
+            //UnloadLevel("Boot");
+        }
+
 
         InstantiateSystemPrefabs();
     }
