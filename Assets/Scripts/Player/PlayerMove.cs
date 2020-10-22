@@ -12,6 +12,8 @@ public class PlayerMove : MonoBehaviour
     [HideInInspector] public bool canJump;
     bool charing = false;
 
+    float jumpAnimTimer;
+
     public Vector3 Movement
     {
         get { return movement; }
@@ -52,7 +54,6 @@ public class PlayerMove : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         string currTag= other.gameObject.tag;
-        Debug.Log("Tag:"+ other.gameObject.tag);
 
         if (other.gameObject.tag == "Water")
         {
@@ -74,6 +75,13 @@ public class PlayerMove : MonoBehaviour
             player.UpdateAnimator();
             player.animator.SetBool("isJumping", true);
             rb.velocity = Vector3.up * player.currentAnimal.jumpForce;
+
+            //jumpAnimTimer = jumpAnimTimer > .7f ?
+            //    .7f : jumpAnimTimer;
+
+            player.animator.SetFloat("Speed", 2);
+
+            //jumpAnimTimer = 0;
         }
         else
         {
@@ -86,6 +94,15 @@ public class PlayerMove : MonoBehaviour
 
                 canJump = false;
                 charing = false;
+
+                //jumpAnimTimer = jumpAnimTimer > .7f ?
+                //.7f : jumpAnimTimer;
+
+                player.animator.SetFloat("Speed", 1);
+
+                ///jumpAnimTimer =0;
+
+                
             }
         }
     }
@@ -97,6 +114,8 @@ public class PlayerMove : MonoBehaviour
 
     void Charging()
     {
+        jumpAnimTimer += Time.deltaTime;
+
         float currentCharge = player.currentAnimal.currentCharge;
         float maxCharge = player.currentAnimal.maxCharge;
         player.currentAnimal.currentCharge = currentCharge > maxCharge ? 
