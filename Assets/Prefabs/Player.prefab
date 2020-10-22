@@ -213,6 +213,61 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 7dee4dd4-086f-4400-8ecc-53fddf026bec
     m_ActionName: Player/Ability[/Gamepad/buttonWest,/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c6614c4d-038d-4702-8476-3a1ecb0b8066
+    m_ActionName: UI/Navigate[/Gamepad/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/Gamepad/dpad/up,/Gamepad/dpad/down,/Gamepad/dpad/left,/Gamepad/dpad/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 28fc7822-9cec-48e1-a84f-775ddb4019e5
+    m_ActionName: UI/Submit[/Gamepad/buttonSouth,/Keyboard/enter,/Gamepad/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fd3a145f-1f2c-434b-b1d6-54f8a75149ba
+    m_ActionName: UI/Cancel[/Gamepad/buttonEast,/Keyboard/escape,/Gamepad/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6d337369-d46d-4bee-ad94-c30feee91f80
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6999ec6a-10a0-4daa-824e-a42feb0bae9e
+    m_ActionName: UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 57999ec1-a508-45ab-b7ad-ccb35a980e84
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8c82ab0e-d8ae-4c85-a8a5-b59b519bd20b
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 42c98776-d616-4cea-bbc2-910e10da2f73
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 75b63da8-7c10-4483-afc7-765730572827
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b18b3f77-61b8-4a05-95be-c1f26bb37bcd
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8866188666976817583}
+        m_MethodName: OnInteract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f0554445-1b72-4cc3-bf53-2029a5a7df25
+    m_ActionName: Player/Interact[/Keyboard/f,/Gamepad/buttonEast]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

@@ -36,14 +36,22 @@ public class PlayerController : MonoBehaviour
             swapper.Swap();
     }
 
+    public void OnInteract(InputAction.CallbackContext ctx)
+    {
+        Debug.Log("Button Clicked");
+        if (ctx.started)
+        {
+            Debug.Log("Interact called");
+            player.currentAnimal.Interact();
+        }
+    }
+
     public void OnAbility(InputAction.CallbackContext ctx)
     {
         if (player.currentAnimal.ability != null)
         {
             if (ctx.started)
-            {
                 player.currentAnimal.ability.DoAbility();
-            }
         }
     }
     

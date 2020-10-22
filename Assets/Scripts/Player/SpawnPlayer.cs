@@ -28,7 +28,7 @@ public class SpawnPlayer : MonoBehaviour
 
     public void Spawn(int playerNumber)
     {
-        Vector3 spawnOffsetPosition = spawnPosition.position + offset;
+        Vector3 spawnOffsetPosition = spawnPosition.position + (playerNumber * offset);
 
         Player player = Instantiate(playerPrefab, spawnOffsetPosition, spawnPosition.rotation);
         player.playerNumber = playerNumber;

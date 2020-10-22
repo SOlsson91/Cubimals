@@ -108,6 +108,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 2667823122874527282, guid: f1d24395a6810412a9aff4a8500961a9,
     type: 3}
-  spawnPosition: {fileID: 0}
+  spawnPosition: {fileID: 6640728609675675333}
   offset: {x: 0, y: 1.25, z: 0}
   playersToSpawn: 2

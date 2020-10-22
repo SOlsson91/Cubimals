@@ -18,9 +18,24 @@ public class Animal : MonoBehaviour
     public Ability ability;
 
     private Animator animator;
+    public float interactDistance = 1.0f; 
+    private SphereCollider interactionCollider;
 
     void Awake()
     {
         animator = GetComponent<Animator>();
+        interactionCollider = GetComponentInParent<SphereCollider>();
+    }
+
+    public void Interact()
+    {
+        foreach (Collider collider in Physics.OverlapSphere(transform.position, interactDistance))
+        {
+            if (collider.CompareTag("Interactable"))
+            {
+                collider.GetComponent<ActivateButton>().ActivateTarget();
+                return;
+            }
+        }
     }
 }
