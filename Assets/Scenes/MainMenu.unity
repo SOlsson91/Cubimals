@@ -971,8 +971,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 1aae5fe1abc32dc4bbcba289b2c21bca, type: 3}
-        m_MethodName: 
+      - m_Target: {fileID: 1195982679}
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1253,6 +1253,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1195982677}
+  - component: {fileID: 1195982679}
   m_Layer: 0
   m_Name: Menu
   m_TagString: Untagged
@@ -1277,6 +1278,18 @@ Transform:
   m_Father: {fileID: 1909645047}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1195982679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195982676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e770ec93bc595d45bd931b30117b010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1214004138
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,9 +1548,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4337406054006232580, guid: 616bfb04bb576eba8bb04cef63c4427f,
-          type: 3}
-        m_MethodName: LoadLevel
+      - m_Target: {fileID: 1195982679}
+        m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1545,6 +1557,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Level One
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1195982679}
+        m_MethodName: UnloadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1446054612
