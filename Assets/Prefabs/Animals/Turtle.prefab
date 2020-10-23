@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4881557845238512}
   - component: {fileID: 95639156149104580}
   - component: {fileID: -2235062226523476176}
+  - component: {fileID: 8032927585383658067}
   m_Layer: 0
   m_Name: Turtle
   m_TagString: Untagged
@@ -73,6 +74,20 @@ MonoBehaviour:
   currentCharge: 0
   maxCharge: 10
   ability: {fileID: 0}
+  interactDistance: 1
+--- !u!65 &8032927585383658067
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079714181109206}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9, y: 1.07, z: 0.9}
+  m_Center: {x: 0, y: 0.52, z: 0}
 --- !u!1 &1101676031073298
 GameObject:
   m_ObjectHideFlags: 0
@@ -82,7 +97,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4437844871489876}
-  - component: {fileID: 6778934683984795440}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -111,19 +125,6 @@ Transform:
   m_Father: {fileID: 4805388532423038}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6778934683984795440
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1101676031073298}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.6, y: 1.088928, z: 0.98652744}
-  m_Center: {x: -0.004182934, y: 0.3706956, z: -0.014602181}
 --- !u!1 &1166577598087798
 GameObject:
   m_ObjectHideFlags: 0

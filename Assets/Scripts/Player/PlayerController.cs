@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
     MasterInput controls;
     PlayerMove mover;
     SwapAnimal swapper;
-    PlayerStateController stateController;
     Player player;
     PlayerInput input;
 
@@ -19,7 +18,6 @@ public class PlayerController : MonoBehaviour
         mover = GetComponent<PlayerMove>();
         swapper = GetComponent<SwapAnimal>();
         input = GetComponent<PlayerInput>();
-        stateController = GetComponent<PlayerStateController>();
         controls = new MasterInput();
     }
 
@@ -61,9 +59,6 @@ public class PlayerController : MonoBehaviour
         }
         if (ctx.canceled)
         {
-            stateController.player.UpdateAnimator();
-            stateController.player.animator.SetBool("isJumping", true);
-            stateController.TransitionToState(stateController.jumpState);
             mover.Jump();
         }
     }
