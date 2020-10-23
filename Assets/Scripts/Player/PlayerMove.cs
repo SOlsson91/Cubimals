@@ -3,11 +3,12 @@
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMove : MonoBehaviour
 {
-    Rigidbody rb;
+    public Rigidbody rb;
     Player player;
 
     Vector3 movement;
     bool charging = false;
+    public bool isJumping = false;
 
     float jumpAnimTimer;
 
@@ -62,6 +63,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (CheckForGround())
         {
+            isJumping = true;
             if (!player.currentAnimal.canChargeJump)
             {
                 rb.velocity = Vector3.up * player.currentAnimal.jumpForce;
