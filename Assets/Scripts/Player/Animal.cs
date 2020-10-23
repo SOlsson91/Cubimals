@@ -19,7 +19,7 @@ public class Animal : MonoBehaviour
     [Header("Ability")]
     public Ability ability;
     [Header("Interactions")]
-    public float interactDistance = 1.0f; 
+    public float interactDistance = 1.0f;
 
     public void Interact()
     {

@@ -22656,26 +22656,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1763346664}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1764092043 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1745745854680214, guid: 8a72caf48a1acd54b95eb2e344050807,
-    type: 3}
-  m_PrefabInstance: {fileID: 1863890414}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1764092046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1764092043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e6e6bb017162fc4e800adb969371fb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 383736930}
-  interactiveRadius: 1
 --- !u!1001 &1774332874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24569,6 +24549,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1442659460}
     m_Modifications:
+    - target: {fileID: 1764092046, guid: 8a72caf48a1acd54b95eb2e344050807, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 383736930}
     - target: {fileID: 1745745854680214, guid: 8a72caf48a1acd54b95eb2e344050807, type: 3}
       propertyPath: m_Name
       value: MushroomYellow
@@ -24616,14 +24600,6 @@ PrefabInstance:
     - target: {fileID: 4283660790033420, guid: 8a72caf48a1acd54b95eb2e344050807, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4283660790033420, guid: 8a72caf48a1acd54b95eb2e344050807, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4283660790033420, guid: 8a72caf48a1acd54b95eb2e344050807, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a72caf48a1acd54b95eb2e344050807, type: 3}
