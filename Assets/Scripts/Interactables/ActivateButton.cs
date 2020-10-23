@@ -13,7 +13,14 @@ public class ActivateButton : MonoBehaviour
     void Start()
     {
         isActive = false;
-        target.SetActive(isActive);
+        if (target != null)
+        {
+            target.SetActive(isActive);
+        }
+        else
+        {
+            Debug.LogWarning("[ActivateButton]: Missing gameobject");
+        }
     }
 
     public void ActivateTarget()

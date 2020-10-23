@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4283660790033420}
   - component: {fileID: 33488292460039496}
   - component: {fileID: 23211039914895728}
-  - component: {fileID: 1764092046}
   - component: {fileID: 1947029428641253906}
+  - component: {fileID: 1764092046}
   m_Layer: 0
   m_Name: MushroomYellow
   m_TagString: Interactable
@@ -81,19 +81,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1764092046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1745745854680214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e6e6bb017162fc4e800adb969371fb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!65 &1947029428641253906
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -107,3 +94,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.45, y: 0.5, z: 0.47}
   m_Center: {x: -0.012461245, y: 0.33807647, z: 0.03540191}
+--- !u!114 &1764092046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745745854680214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6e6bb017162fc4e800adb969371fb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
