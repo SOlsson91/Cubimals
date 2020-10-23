@@ -172,8 +172,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.9422977, z: 1}
-  m_Center: {x: 0, y: 0.49664724, z: 0}
+  m_Size: {x: 0.6, y: 1, z: 0.9047921}
+  m_Center: {x: 0.014174581, y: 0.4265796, z: 0.007989779}
 --- !u!1 &1406185939450292
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,12 +302,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1d57edbc6ed9f2a907ff91f070705a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
-  movementSpeed: 3
+  jumpForce: 4
+  jumpGravityMulti: 3
+  movementSpeed: 5.5
   canSwim: 0
   canChargeJump: 0
   currentCharge: 0
   maxCharge: 10
+  ability: {fileID: 416491667425304366}
 --- !u!114 &416491667425304366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,7 +324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashSpeed: 1000
   dashTime: 0.2
-  cooldownValue: 1
+  cooldownValue: 2
 --- !u!1 &1480608929319458
 GameObject:
   m_ObjectHideFlags: 0

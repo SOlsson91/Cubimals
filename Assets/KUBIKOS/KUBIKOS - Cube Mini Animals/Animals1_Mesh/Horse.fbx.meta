@@ -1,59 +1,154 @@
 fileFormatVersion: 2
 guid: 3abd674a65e140719a82625a9535f8f2
-timeCreated: 1505758213
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: Body
-    100002: Ear_L
-    100004: Ear_R
-    100006: Eye_L
-    100008: Eye_R
-    100010: //RootNode
-    100012: Horse
-    100014: Horse_Root
-    100016: LegBack_L
-    100018: LegBack_R
-    100020: LegFront_L
-    100022: LegFront_R
-    100024: Tail_1
-    100026: Tail_2
-    100028: Tail_3
-    100030: Tail_4
-    100032: Tail_5
-    400000: Body
-    400002: Ear_L
-    400004: Ear_R
-    400006: Eye_L
-    400008: Eye_R
-    400010: //RootNode
-    400012: Horse
-    400014: Horse_Root
-    400016: LegBack_L
-    400018: LegBack_R
-    400020: LegFront_L
-    400022: LegFront_R
-    400024: Tail_1
-    400026: Tail_2
-    400028: Tail_3
-    400030: Tail_4
-    400032: Tail_5
-    4300000: Horse
-    7400000: Idle
-    7400002: Idle2
-    7400004: Walk
-    7400006: Run
-    7400008: Jump
-    7400010: Attack
-    7400012: Hit
-    7400014: Jump Inplace
-    9500000: //RootNode
-    13700000: Horse
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Body
+  - first:
+      1: 100002
+    second: Ear_L
+  - first:
+      1: 100004
+    second: Ear_R
+  - first:
+      1: 100006
+    second: Eye_L
+  - first:
+      1: 100008
+    second: Eye_R
+  - first:
+      1: 100010
+    second: //RootNode
+  - first:
+      1: 100012
+    second: Horse
+  - first:
+      1: 100014
+    second: Horse_Root
+  - first:
+      1: 100016
+    second: LegBack_L
+  - first:
+      1: 100018
+    second: LegBack_R
+  - first:
+      1: 100020
+    second: LegFront_L
+  - first:
+      1: 100022
+    second: LegFront_R
+  - first:
+      1: 100024
+    second: Tail_1
+  - first:
+      1: 100026
+    second: Tail_2
+  - first:
+      1: 100028
+    second: Tail_3
+  - first:
+      1: 100030
+    second: Tail_4
+  - first:
+      1: 100032
+    second: Tail_5
+  - first:
+      4: 400000
+    second: Body
+  - first:
+      4: 400002
+    second: Ear_L
+  - first:
+      4: 400004
+    second: Ear_R
+  - first:
+      4: 400006
+    second: Eye_L
+  - first:
+      4: 400008
+    second: Eye_R
+  - first:
+      4: 400010
+    second: //RootNode
+  - first:
+      4: 400012
+    second: Horse
+  - first:
+      4: 400014
+    second: Horse_Root
+  - first:
+      4: 400016
+    second: LegBack_L
+  - first:
+      4: 400018
+    second: LegBack_R
+  - first:
+      4: 400020
+    second: LegFront_L
+  - first:
+      4: 400022
+    second: LegFront_R
+  - first:
+      4: 400024
+    second: Tail_1
+  - first:
+      4: 400026
+    second: Tail_2
+  - first:
+      4: 400028
+    second: Tail_3
+  - first:
+      4: 400030
+    second: Tail_4
+  - first:
+      4: 400032
+    second: Tail_5
+  - first:
+      43: 4300000
+    second: Horse
+  - first:
+      74: 7400000
+    second: Idle
+  - first:
+      74: 7400002
+    second: Idle2
+  - first:
+      74: 7400004
+    second: Walk
+  - first:
+      74: 7400006
+    second: Run
+  - first:
+      74: 7400008
+    second: Jump
+  - first:
+      74: 7400010
+    second: Attack
+  - first:
+      74: 7400012
+    second: Hit
+  - first:
+      74: 7400014
+    second: Jump Inplace
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Horse
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CubeAnimals_SHDR
+    second: {fileID: 2100000, guid: 6e494e65902c4d058104285116e11f82, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -66,16 +161,20 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: Idle
       takeName: Take 001
+      internalID: 0
       firstFrame: 0
       lastFrame: 40
       wrapMode: 0
@@ -138,6 +237,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Idle2
       takeName: Take 001
+      internalID: 0
       firstFrame: 40
       lastFrame: 140
       wrapMode: 0
@@ -200,6 +300,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Walk
       takeName: Take 001
+      internalID: 0
       firstFrame: 141
       lastFrame: 161
       wrapMode: 0
@@ -262,6 +363,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Run
       takeName: Take 001
+      internalID: 0
       firstFrame: 162
       lastFrame: 172
       wrapMode: 0
@@ -324,6 +426,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Jump
       takeName: Take 001
+      internalID: 0
       firstFrame: 173
       lastFrame: 190
       wrapMode: 0
@@ -332,7 +435,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -386,6 +489,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Attack
       takeName: Take 001
+      internalID: 0
       firstFrame: 190
       lastFrame: 204
       wrapMode: 0
@@ -448,6 +552,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Hit
       takeName: Take 001
+      internalID: 0
       firstFrame: 204
       lastFrame: 235
       wrapMode: 0
@@ -510,6 +615,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Jump Inplace
       takeName: Take 001
+      internalID: 0
       firstFrame: 235
       lastFrame: 252
       wrapMode: 0
@@ -575,13 +681,24 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -591,10 +708,14 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -604,14 +725,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

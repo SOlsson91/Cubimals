@@ -6,18 +6,14 @@
 
 public class SpawnPlayer : MonoBehaviour
 {
-    [SerializeField] Player playerPrefab;
-    [SerializeField] Transform[] spawnPosition;
-    GameManager manager;
-
-    void Awake()
-    {
-        manager = GetComponent<GameManager>();
-    }
+    [SerializeField] Player playerPrefab = null;
+    [SerializeField] Transform spawnPosition = null;
+    public Vector3 offset = new Vector3(0.0f, 1.25f, 0.0f);
+    [Range(1,2), SerializeField] int playersToSpawn = 2;
 
     void Start()
     {
-        for (int i = 0; i < spawnPosition.Length; ++i)
+        for (int i = 0; i < playersToSpawn; ++i)
         {
             Spawn(i);
         }
@@ -25,9 +21,10 @@ public class SpawnPlayer : MonoBehaviour
 
     public void Spawn(int playerNumber)
     {
-           Player player = Instantiate(playerPrefab, spawnPosition[playerNumber].position, 
-                                               spawnPosition[playerNumber].rotation);
-           player.playerNumber = playerNumber;
-           manager.players.Add(player);
+        Vector3 spawnOffsetPosition = spawnPosition.position + (playerNumber * offset);
+
+        Player player = Instantiate(playerPrefab, spawnOffsetPosition, spawnPosition.rotation);
+        player.playerNumber = playerNumber;
+        GameManager.Instance.players.Add(player);
     }
 }

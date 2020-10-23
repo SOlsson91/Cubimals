@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4881557845238512}
   - component: {fileID: 95639156149104580}
-  - component: {fileID: 6483565599515160935}
+  - component: {fileID: -2235062226523476176}
   m_Layer: 0
   m_Name: Turtle
   m_TagString: Untagged
@@ -53,7 +53,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6483565599515160935
+--- !u!114 &-2235062226523476176
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,12 +65,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1d57edbc6ed9f2a907ff91f070705a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
-  movementSpeed: 2
+  jumpForce: 4
+  jumpGravityMulti: 2
+  movementSpeed: 4
   canSwim: 1
   canChargeJump: 0
   currentCharge: 0
   maxCharge: 10
+  ability: {fileID: 0}
 --- !u!1 &1101676031073298
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,8 +122,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.97338307, y: 1.0780075, z: 1}
-  m_Center: {x: -0.0044010123, y: 0.44289625, z: 0}
+  m_Size: {x: 0.6, y: 1.088928, z: 0.98652744}
+  m_Center: {x: -0.004182934, y: 0.3706956, z: -0.014602181}
 --- !u!1 &1166577598087798
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-
 /*
  * Following the player with a small smoothing/dampening on the camera
  * Important to change project settings to run SpawnPlayer before CameraController

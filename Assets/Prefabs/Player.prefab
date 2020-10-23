@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7538243698624899861}
   - component: {fileID: 2667823122874527282}
   - component: {fileID: 1902905168621801670}
-  - component: {fileID: -6492925156581515531}
   - component: {fileID: -6360215235358255144}
   - component: {fileID: 8866188666976817583}
+  - component: {fileID: -3003904034911980089}
   - component: {fileID: -2605146425332120041}
   m_Layer: 0
   m_Name: Player
@@ -68,6 +68,8 @@ MonoBehaviour:
   animator: {fileID: 0}
   animalSwapper: {fileID: 0}
   playerNumber: 0
+  currentAnimal: {fileID: 0}
+  currentAnimalNumber: 0
 --- !u!114 &1902905168621801670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,20 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df18802e81d50f30c8410e82e5668de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-6492925156581515531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2667823122874527283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1004472a95ae5946848f7a0df6b862c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  move: {fileID: 0}
-  player: {fileID: 0}
+  canJump: 0
 --- !u!114 &-6360215235358255144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,8 +101,6 @@ MonoBehaviour:
   - {fileID: -690350712913536014, guid: 56381cfa46e44335a689e99f2cf49b4c, type: 3}
   - {fileID: -4094050583211433832, guid: 1f7d832dd4d847fe9e6177ba21bcaf64, type: 3}
   - {fileID: 3246322756049759723, guid: db337cd6af3d4e7c8c9e6cc979897853, type: 3}
-  currentAnimal: {fileID: 0}
-  currentAnimalNumber: 0
 --- !u!114 &8866188666976817583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,6 +113,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 127263c87e8f9df6fa35ac7e0b246c96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-3003904034911980089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2667823122874527283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1004472a95ae5946848f7a0df6b862c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  move: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &-2605146425332120041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,9 +199,75 @@ MonoBehaviour:
     m_ActionId: 946801c7-eefd-47c7-aa9e-43ea3d8ae8fb
     m_ActionName: Player/Swap[/Gamepad/buttonNorth,/Keyboard/q]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8866188666976817583}
+        m_MethodName: OnAbility
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 7dee4dd4-086f-4400-8ecc-53fddf026bec
     m_ActionName: Player/Ability[/Gamepad/buttonWest,/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c6614c4d-038d-4702-8476-3a1ecb0b8066
+    m_ActionName: UI/Navigate[/Gamepad/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/Gamepad/dpad/up,/Gamepad/dpad/down,/Gamepad/dpad/left,/Gamepad/dpad/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 28fc7822-9cec-48e1-a84f-775ddb4019e5
+    m_ActionName: UI/Submit[/Gamepad/buttonSouth,/Keyboard/enter,/Gamepad/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fd3a145f-1f2c-434b-b1d6-54f8a75149ba
+    m_ActionName: UI/Cancel[/Gamepad/buttonEast,/Keyboard/escape,/Gamepad/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6d337369-d46d-4bee-ad94-c30feee91f80
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6999ec6a-10a0-4daa-824e-a42feb0bae9e
+    m_ActionName: UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 57999ec1-a508-45ab-b7ad-ccb35a980e84
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8c82ab0e-d8ae-4c85-a8a5-b59b519bd20b
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 42c98776-d616-4cea-bbc2-910e10da2f73
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 75b63da8-7c10-4483-afc7-765730572827
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b18b3f77-61b8-4a05-95be-c1f26bb37bcd
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8866188666976817583}
+        m_MethodName: OnInteract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f0554445-1b72-4cc3-bf53-2029a5a7df25
+    m_ActionName: Player/Interact[/Keyboard/f,/Gamepad/buttonEast]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

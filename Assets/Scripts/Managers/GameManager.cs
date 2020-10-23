@@ -26,15 +26,26 @@ public class GameManager : Singleton<GameManager>
 
     private GameState currentGameState = GameState.PREGAME; // <-- GameState default state is PREGAME
     LevelManager levelManager;
-    [SerializeField] string levelToBoot;
+    [SerializeField] string levelToBoot = string.Empty;
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        players = new List<Player>();
+        instancedSystems = new List<GameObject>();
+    }
 
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
         levelManager = GetComponent<LevelManager>();
         if (levelToBoot != string.Empty)
+        {
             LoadLevel(levelToBoot);
-        players = new List<Player>();
+            //UnloadLevel("Boot");
+        }
+
 
         InstantiateSystemPrefabs();
     }
