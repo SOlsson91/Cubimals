@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
-using UnityEngine.InputSystem;
+﻿using UnityEngine;
 
 /*
  * Class to spawn the player Prefab at a specific location
@@ -8,41 +6,25 @@ using UnityEngine.InputSystem;
 
 public class SpawnPlayer : MonoBehaviour
 {
-    [SerializeField] Player playerPrefab;
-    [SerializeField] Transform[] spawnPosition;
-    GameManager manager;
-    bool playersReady = false;
-
-    void Awake()
-    {
-        manager = GetComponent<GameManager>();
-    }
+    [SerializeField] Player playerPrefab = null;
+    [SerializeField] Transform spawnPosition = null;
+    public Vector3 offset = new Vector3(0.0f, 1.25f, 0.0f);
+    [Range(1,2), SerializeField] int playersToSpawn = 2;
 
     void Start()
     {
-        //StartCoroutine("WaitForPlayers");
-        for (int i = 0; i < spawnPosition.Length; ++i)
+        for (int i = 0; i < playersToSpawn; ++i)
         {
             Spawn(i);
         }
     }
-/*
-    IEnumerator WaitForPlayers()
-    {
-        while (!playersReady)
-        {
-           if (playersReady)
-              playersReady = true; 
-        }
-        yield return;
-    }
-*/
+
     public void Spawn(int playerNumber)
     {
-           Player player = Instantiate(playerPrefab, spawnPosition[playerNumber].position, 
-                                               spawnPosition[playerNumber].rotation);
-           //PlayerInput pi = player.GetComponent<PlayerInput>();
-           player.playerNumber = playerNumber;
-           manager.players.Add(player);
+        Vector3 spawnOffsetPosition = spawnPosition.position + (playerNumber * offset);
+
+        Player player = Instantiate(playerPrefab, spawnOffsetPosition, spawnPosition.rotation);
+        player.playerNumber = playerNumber;
+        GameManager.Instance.players.Add(player);
     }
 }

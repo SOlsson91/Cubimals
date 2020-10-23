@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Water
   - Pushable
+  - Interactable
   layers:
   - Default
   - TransparentFX

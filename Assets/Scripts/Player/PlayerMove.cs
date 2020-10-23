@@ -5,12 +5,14 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMove : MonoBehaviour
 {
-    Rigidbody rb;
+    public Rigidbody rb;
     Player player;
 
     Vector3 movement;
     [HideInInspector] public bool canJump;
     bool charing = false;
+
+    float jumpAnimTimer;
 
     public Vector3 Movement
     {
@@ -51,11 +53,17 @@ public class PlayerMove : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        canJump = true;
-        // If in water check if animal can swim. If not change to trigger
+        string currTag= other.gameObject.tag;
+
         if (other.gameObject.tag == "Water")
         {
             other.collider.isTrigger = !player.currentAnimal.canSwim ? true : false;
+        }
+
+        //use velocity margin .5 since the animation velocity is between 0 -.5
+        if (other.gameObject.tag == "Ground"&&rb.velocity.y <= .5)
+        {
+            canJump = true;
         }
     }
 
@@ -67,6 +75,13 @@ public class PlayerMove : MonoBehaviour
             player.UpdateAnimator();
             player.animator.SetBool("isJumping", true);
             rb.velocity = Vector3.up * player.currentAnimal.jumpForce;
+
+            //jumpAnimTimer = jumpAnimTimer > .7f ?
+            //    .7f : jumpAnimTimer;
+
+            player.animator.SetFloat("Speed", 2);
+
+            //jumpAnimTimer = 0;
         }
         else
         {
@@ -79,10 +94,18 @@ public class PlayerMove : MonoBehaviour
 
                 canJump = false;
                 charing = false;
+
+                //jumpAnimTimer = jumpAnimTimer > .7f ?
+                //.7f : jumpAnimTimer;
+
+                player.animator.SetFloat("Speed", 1);
+
+                ///jumpAnimTimer =0;
+
+                
             }
         }
     }
-
     public void StartCharging()
     {
         if (canJump)
@@ -91,6 +114,8 @@ public class PlayerMove : MonoBehaviour
 
     void Charging()
     {
+        jumpAnimTimer += Time.deltaTime;
+
         float currentCharge = player.currentAnimal.currentCharge;
         float maxCharge = player.currentAnimal.maxCharge;
         player.currentAnimal.currentCharge = currentCharge > maxCharge ? 
