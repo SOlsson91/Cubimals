@@ -24,8 +24,9 @@ public class Player : MonoBehaviour
         animalSwapper.ChangeAnimal(currentAnimalNumber);
     }
 
-    public void UpdateAnimator()
+    public Animator UpdateAnimator()
     {
         animator = GetComponentInChildren<Animator>();
+        return animator;
     }
 }

@@ -10,7 +10,7 @@ public class PlayerJumpState : PlayerBaseState
 
     public override void OnCollisionEnter(PlayerStateController controller)
     {
-        if (controller.move.canJump) 
+        if (controller.move.isJumping) 
         {
             if (controller.player.animator != null) 
             {
@@ -35,3 +35,4 @@ public class PlayerJumpState : PlayerBaseState
         }
     }
 }
+

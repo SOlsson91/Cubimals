@@ -13,6 +13,12 @@ public class DeadCollider : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            GameManager.Instance.lives--;
+            if (GameManager.Instance.lives <= 0)
+            {
+                Debug.LogWarning("[DeadCollider] Out of lives, GameOver!");
+                //GameManager.Instance.LoadLevel("GameOver");
+            }
             GameManager.Instance.players.ForEach(delegate(Player player) {
                 int playerNumber = other.gameObject.GetComponent<Player>().playerNumber;
 

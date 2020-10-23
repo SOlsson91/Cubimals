@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4850816309555572}
-  - component: {fileID: 4458366565881016109}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -39,19 +38,6 @@ Transform:
   m_Father: {fileID: 4679583636675608}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &4458366565881016109
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135053120641098}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.6, y: 1, z: 0.9894426}
-  m_Center: {x: 0, y: 0.5041319, z: 0}
 --- !u!1 &1166036472285628
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,6 +290,7 @@ GameObject:
   - component: {fileID: 4378556093580044}
   - component: {fileID: 95406166810733656}
   - component: {fileID: -690350712913536014}
+  - component: {fileID: 1358004289993846606}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Untagged
@@ -366,6 +353,20 @@ MonoBehaviour:
   currentCharge: 0
   maxCharge: 10
   ability: {fileID: 0}
+  interactDistance: 1
+--- !u!65 &1358004289993846606
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813571009131466}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9, y: 1.07, z: 0.9}
+  m_Center: {x: 0, y: 0.52, z: 0}
 --- !u!1 &1915509598824862
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,6 +20,7 @@ public class GameManager : Singleton<GameManager>
     public GameObject[] SystemPrefabs;
     public EventGameState OnGameStateChange;
     public List<Player> players;
+    public int lives = 3;
 
     private List<GameObject> instancedSystems;
     private List<AsyncOperation> loadOperations; // <-- Stacks operations that is being loaded additively

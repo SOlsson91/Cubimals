@@ -4,7 +4,7 @@ public class PlayerWalkingState : PlayerBaseState
 {
     public override void EnterState(PlayerStateController controller)
     {
-        Debug.Log("Walking state entered");
+        Debug.Log("[PlayerState] Enter Walking State");
         controller.player.UpdateAnimator();
         controller.player.animator.SetBool("isIdle", false);
     }
@@ -19,5 +19,11 @@ public class PlayerWalkingState : PlayerBaseState
         {
             controller.TransitionToState(controller.idleState);
         }
+
+        if (controller.move.isJumping)
+        {
+            controller.TransitionToState(controller.jumpState);
+        }
     }
 }
+

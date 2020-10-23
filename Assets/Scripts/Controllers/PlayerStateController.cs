@@ -29,6 +29,8 @@ public class PlayerStateController : MonoBehaviour
 
     void Update()
     {
+        if (player.animator == null)
+            player.UpdateAnimator();
         currentState.Update(this);
     }
 
@@ -39,8 +41,8 @@ public class PlayerStateController : MonoBehaviour
 
     public void TransitionToState(PlayerBaseState state) 
     {
-        
         currentState = state;
         CurrentState.EnterState(this);
     }
 }
+
