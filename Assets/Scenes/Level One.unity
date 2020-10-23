@@ -543,6 +543,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 43949020}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &48305495 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1485683931847496, guid: 5bf1f5551697a32479611dffbb0cbf2f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1137998507}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &48305498
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48305495}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6367229, y: 0.700237, z: 0.21548095}
+  m_Center: {x: 0.0000004917383, y: 0.3501185, z: 0.035858456}
 --- !u!1001 &49780187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -630,7 +649,7 @@ GameObject:
   - component: {fileID: 57704405}
   m_Layer: 0
   m_Name: Collider4
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -966,7 +985,7 @@ GameObject:
   - component: {fileID: 86690101}
   m_Layer: 0
   m_Name: Collider1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1159,7 +1178,7 @@ GameObject:
   - component: {fileID: 97651441}
   m_Layer: 0
   m_Name: Collider6
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1307,8 +1326,8 @@ GameObject:
   - component: {fileID: 103353803}
   - component: {fileID: 103353802}
   m_Layer: 0
-  m_Name: Collider8
-  m_TagString: Untagged
+  m_Name: PillarsColliders
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1320,7 +1339,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 103353801}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 7a7a06d7bc9cad14ca4e8301b92ea7b2, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1556,8 +1575,8 @@ GameObject:
   - component: {fileID: 148858517}
   - component: {fileID: 148858516}
   m_Layer: 0
-  m_Name: Collider11
-  m_TagString: Untagged
+  m_Name: PillarsColliders
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1569,7 +1588,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 148858515}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 7a7a06d7bc9cad14ca4e8301b92ea7b2, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1960,12 +1979,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4721099042904524, guid: e5fac62723232674aa487c9073f1ca07,
     type: 3}
   m_PrefabInstance: {fileID: 195492891}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &197406210 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2667823122874527283, guid: f1d24395a6810412a9aff4a8500961a9,
-    type: 3}
-  m_PrefabInstance: {fileID: 519397037}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &197406218 stripped
 Transform:
@@ -3143,7 +3156,7 @@ GameObject:
   - component: {fileID: 285373412}
   m_Layer: 0
   m_Name: Collider23
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4991,6 +5004,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collider19
       objectReference: {fileID: 0}
+    - target: {fileID: 5618952689735352480, guid: 3973fd9304286204aa7c4cf3de357f05,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 5618952689735352481, guid: 3973fd9304286204aa7c4cf3de357f05,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5560,8 +5578,8 @@ GameObject:
   - component: {fileID: 472576374}
   - component: {fileID: 472576373}
   m_Layer: 0
-  m_Name: Collider9
-  m_TagString: Untagged
+  m_Name: PillarsColliders
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5573,7 +5591,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472576372}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 7a7a06d7bc9cad14ca4e8301b92ea7b2, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -6245,6 +6263,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1495181503}
     m_Modifications:
+    - target: {fileID: -6360215235358255144, guid: f1d24395a6810412a9aff4a8500961a9,
+        type: 3}
+      propertyPath: animals.Array.data[0]
+      value: 
+      objectReference: {fileID: -2235062226523476176, guid: 3bfa1903a43b4fbc99884c26e254db8a,
+        type: 3}
     - target: {fileID: 2667823122874527283, guid: f1d24395a6810412a9aff4a8500961a9,
         type: 3}
       propertyPath: m_Name
@@ -6903,8 +6927,8 @@ GameObject:
   - component: {fileID: 557121385}
   - component: {fileID: 557121384}
   m_Layer: 0
-  m_Name: Collider10
-  m_TagString: Untagged
+  m_Name: PillarsColliders
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6916,7 +6940,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557121383}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 7a7a06d7bc9cad14ca4e8301b92ea7b2, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -9094,7 +9118,7 @@ GameObject:
   - component: {fileID: 702573402}
   m_Layer: 0
   m_Name: Collider7
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9348,7 +9372,7 @@ GameObject:
   - component: {fileID: 714537308}
   m_Layer: 0
   m_Name: Collider17
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9930,7 +9954,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741014467}
-  m_Material: {fileID: 13400000, guid: 38b43f8886b1fca4db34e35edc82a5fc, type: 2}
+  m_Material: {fileID: 13400000, guid: 7a7a06d7bc9cad14ca4e8301b92ea7b2, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -11195,6 +11219,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collider18
       objectReference: {fileID: 0}
+    - target: {fileID: 5618952689735352480, guid: 3973fd9304286204aa7c4cf3de357f05,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 5618952689735352481, guid: 3973fd9304286204aa7c4cf3de357f05,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11513,6 +11542,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 829231626}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &834706327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1485683931847496, guid: 5bf1f5551697a32479611dffbb0cbf2f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1895661050}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &834706330
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834706327}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6367229, y: 0.700237, z: 0.21548095}
+  m_Center: {x: 0.0000004917383, y: 0.3501185, z: 0.035858456}
 --- !u!1001 &842126403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13817,8 +13865,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4349599, z: 1}
-  m_Center: {x: 0.0000008583069, y: 0.21747994, z: -0.00000031789145}
+  m_Size: {x: 1, y: 0.49488878, z: 1}
+  m_Center: {x: 0.0000008583069, y: 0.24744439, z: -0.00000031789145}
 --- !u!1001 &1152106337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18173,7 +18221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02a098a1bea3f43a69dd50175f26b5c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothness: {x: 100, y: 2, z: 100}
+  smoothness: {x: 100, y: 65, z: 100}
 --- !u!1001 &1477537238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19744,7 +19792,7 @@ GameObject:
   - component: {fileID: 1549134079}
   m_Layer: 0
   m_Name: Collider15
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20688,7 +20736,7 @@ GameObject:
   - component: {fileID: 1618053056}
   m_Layer: 0
   m_Name: Collider26
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20981,8 +21029,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.43426037, z: 1}
-  m_Center: {x: -0.000000074505806, y: 0.21713018, z: -0.00000031789145}
+  m_Size: {x: 1.0562088, y: 0.6817192, z: 1}
+  m_Center: {x: -0.009315163, y: 0.3408596, z: -0.00000031789145}
 --- !u!1001 &1647004851
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22222,7 +22270,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754921348}
-  m_Material: {fileID: 13400000, guid: 38b43f8886b1fca4db34e35edc82a5fc, type: 2}
+  m_Material: {fileID: 13400000, guid: 7a7a06d7bc9cad14ca4e8301b92ea7b2, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -22597,7 +22645,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e6e6bb017162fc4e800adb969371fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 197406210}
   target: {fileID: 383736930}
   interactiveRadius: 1
 --- !u!1001 &1774332874
@@ -24569,7 +24616,7 @@ GameObject:
   - component: {fileID: 1865695463}
   m_Layer: 0
   m_Name: Collider16
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25413,7 +25460,7 @@ GameObject:
   - component: {fileID: 1912312202}
   m_Layer: 0
   m_Name: Collider24
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26429,7 +26476,7 @@ GameObject:
   - component: {fileID: 1976007553}
   m_Layer: 0
   m_Name: Collider25
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

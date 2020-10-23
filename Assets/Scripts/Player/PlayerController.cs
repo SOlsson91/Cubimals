@@ -13,8 +13,6 @@ public class PlayerController : MonoBehaviour
     Player player;
     PlayerInput input;
 
-    Vector2 movement;
-
     void Awake()
     {
         player = GetComponent<Player>();
