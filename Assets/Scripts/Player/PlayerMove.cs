@@ -10,7 +10,7 @@ public class PlayerMove : MonoBehaviour
 
     Vector3 movement;
     [HideInInspector] public bool canJump;
-    bool charing = false;
+    bool charging = false;
 
     float jumpAnimTimer;
 
@@ -46,7 +46,7 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         Move();
-        if (charing)
+        if (charging)
             Charging();
     }
 
@@ -69,23 +69,23 @@ public class PlayerMove : MonoBehaviour
 
     public void Jump()
     {
-        if (!player.currentAnimal.canChargeJump && canJump)
+        if (canJump)
         {
-            canJump = false;
-            player.UpdateAnimator();
-            player.animator.SetBool("isJumping", true);
-            rb.velocity = Vector3.up * player.currentAnimal.jumpForce;
+            if (!player.currentAnimal.canChargeJump)
+            {
+                canJump = false;
+                player.UpdateAnimator();
+                player.animator.SetBool("isJumping", true);
+                rb.velocity = Vector3.up * player.currentAnimal.jumpForce;
 
-            //jumpAnimTimer = jumpAnimTimer > .7f ?
-            //    .7f : jumpAnimTimer;
+                //jumpAnimTimer = jumpAnimTimer > .7f ?
+                //    .7f : jumpAnimTimer;
 
-            player.animator.SetFloat("Speed", 2);
+                player.animator.SetFloat("Speed", 2);
 
-            //jumpAnimTimer = 0;
-        }
-        else
-        {
-            if (canJump)
+                //jumpAnimTimer = 0;
+            }
+            else
             {
                 float currentCharge = player.currentAnimal.currentCharge;
                 float maxCharge = player.currentAnimal.maxCharge;
@@ -93,7 +93,7 @@ public class PlayerMove : MonoBehaviour
                 player.currentAnimal.currentCharge  = player.currentAnimal.jumpForce;
 
                 canJump = false;
-                charing = false;
+                charging = false;
 
                 //jumpAnimTimer = jumpAnimTimer > .7f ?
                 //.7f : jumpAnimTimer;
@@ -101,15 +101,14 @@ public class PlayerMove : MonoBehaviour
                 player.animator.SetFloat("Speed", 1);
 
                 ///jumpAnimTimer =0;
-
-                
             }
         }
     }
+
     public void StartCharging()
     {
         if (canJump)
-            charing = true;
+            charging = true;
     }
 
     void Charging()
