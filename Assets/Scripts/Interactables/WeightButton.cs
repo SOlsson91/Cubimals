@@ -45,11 +45,13 @@ public class WeightButton : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         isPressured = true;
+        target.GetComponent<Gate>().getActive = isPressured;
     }
 
     private void OnTriggerExit(Collider other)
     {
         isPressured = false;
+        target.GetComponent<Gate>().getActive = isPressured;
     }
 
     /*private Vector3 defualtPosition;
