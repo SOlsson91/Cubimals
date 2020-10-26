@@ -314,8 +314,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 0.4924429}
+  m_Center: {x: 2.825764e-17, y: 0, z: -0.12701872}
 --- !u!4 &25203898
 Transform:
   m_ObjectHideFlags: 0
@@ -33492,7 +33492,8 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 8
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 46d5c91e112d2294ab1c225cada888b6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 46d5c91e112d2294ab1c225cada888b6, type: 3}
 --- !u!1001 &1153077594
 PrefabInstance:
@@ -64723,26 +64724,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6091688788534096762, guid: 73f58fd3409d4df4aa172dfbe40eaadd,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6091688788534096762, guid: 73f58fd3409d4df4aa172dfbe40eaadd,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 8.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6091688788534096763, guid: 73f58fd3409d4df4aa172dfbe40eaadd,
-        type: 3}
-      propertyPath: orthographic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6091688788534096763, guid: 73f58fd3409d4df4aa172dfbe40eaadd,
-        type: 3}
-      propertyPath: field of view
-      value: 57
-      objectReference: {fileID: 0}
     - target: {fileID: 6091688789418470876, guid: 73f58fd3409d4df4aa172dfbe40eaadd,
         type: 3}
       propertyPath: minFOV

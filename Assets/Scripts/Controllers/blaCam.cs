@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class blaCam : MonoBehaviour
 {
     public float cameraSmoothTime = 0.2f; //Camera smooth time
-    public float screenPadding = 1f;   // Space between the top/bottom most target and the screen edge.
+    public float screenPadding = 2f;   // Space between the top/bottom most target and the screen edge.
     public float minCameraSize = 3f;  // The smallest orthographic size of the camera.
 
     public int minFOV = 10;
@@ -79,7 +79,7 @@ public class blaCam : MonoBehaviour
         } 
         else 
         {
-            camera.fieldOfView = Mathf.SmoothDamp(camera.fieldOfView, Mathf.Max(minFOV, Vector3.Distance(animalRef[0].transform.position, animalRef[1].transform.position)), ref zoomSpeed, cameraSmoothTime);
+            camera.fieldOfView = Mathf.SmoothDamp(camera.fieldOfView, Mathf.Max(minFOV, screenPadding* Mathf.Abs(Vector3.Distance(animalRef[0].transform.position, animalRef[1].transform.position))), ref zoomSpeed, cameraSmoothTime);
         }
         
     }
@@ -139,7 +139,7 @@ public class blaCam : MonoBehaviour
         }
         else 
         { 
-            camera.fieldOfView = Mathf.Max(minFOV, Mathf.Abs(Vector3.Distance(animalRef[0].transform.position, animalRef[1].transform.position))); 
+            camera.fieldOfView = Mathf.Max(minFOV, screenPadding*Mathf.Abs(Vector3.Distance(animalRef[0].transform.position, animalRef[1].transform.position))); 
         }
     }
 }
