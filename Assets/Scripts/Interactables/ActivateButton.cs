@@ -1,32 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ActivateButton : MonoBehaviour
 {
-    public GameObject player;
     public GameObject target;
-
-    public float interactiveRadius = 1;
-
     private bool isActive;
-
-    private void Start()
+    public bool IsActive
     {
-        isActive = false;
+        get { return isActive; }
+        set { isActive = value; }
     }
 
-    void Update()
+    void Start()
     {
-        if (Vector3.Distance(gameObject.transform.position, player.transform.position) <= interactiveRadius && Input.GetKeyDown(KeyCode.E) && isActive == false)
+        isActive = false;
+        if (target != null)
         {
-            isActive = true;
+            target.SetActive(isActive);
         }
-        else if (Vector3.Distance(gameObject.transform.position, player.transform.position) <= interactiveRadius && Input.GetKeyDown(KeyCode.E))
+        else
         {
-            isActive = false;
+            Debug.LogWarning("[ActivateButton]: Missing gameobject");
         }
+    }
 
+    public void ActivateTarget()
+    {
+        Debug.Log("ACTIVATED");
+        isActive = !isActive;
         target.SetActive(isActive);
     }
 }

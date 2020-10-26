@@ -3,12 +3,14 @@
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMove : MonoBehaviour
 {
-    Rigidbody rb;
+    public Rigidbody rb;
     Player player;
 
     Vector3 movement;
-    [HideInInspector] public bool canJump;
-    bool charing = false;
+    bool charging = false;
+    public bool isJumping = false;
+
+    float jumpAnimTimer;
 
     public Vector3 Movement
     {
@@ -18,8 +20,8 @@ public class PlayerMove : MonoBehaviour
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody>();
         player = GetComponent<Player>();
+        rb = GetComponent<Rigidbody>();
     }
 
     public void OnMove(Vector2 direction)
@@ -30,67 +32,77 @@ public class PlayerMove : MonoBehaviour
 
     public void Move()
     {
-        rb.position = Vector3.MoveTowards(transform.position, rb.position + movement * player.animalSwapper.currentAnimal.movementSpeed * Time.deltaTime, 1);
+        if (player.currentAnimal == null)
+            return;
+        rb.position = Vector3.MoveTowards(transform.position, rb.position + movement * player.currentAnimal.movementSpeed * Time.deltaTime, 1);
 
         if (movement != Vector3.zero)
         {
             transform.rotation = Quaternion.LookRotation(movement);
         }
     }
-
     void Update()
     {
         Move();
-        if (charing)
+        if (charging)
             Charging();
     }
 
 
     void OnCollisionEnter(Collision other)
     {
-        canJump = true;
-        // If in water check if animal can swim. If not change to trigger
+        string currTag= other.gameObject.tag;
+
         if (other.gameObject.tag == "Water")
         {
-            other.collider.isTrigger = !player.animalSwapper.currentAnimal.canSwim ? true : false;
+            other.collider.isTrigger = !player.currentAnimal.canSwim ? true : false;
         }
     }
 
     public void Jump()
     {
-        if (!player.animalSwapper.currentAnimal.canChargeJump && canJump)
+        if (CheckForGround())
         {
-            canJump = false;
-            player.UpdateAnimator();
-            player.animator.SetBool("isJumping", true);
-            rb.velocity = Vector3.up * player.animalSwapper.currentAnimal.jumpForce;
-        }
-        else
-        {
-            if (canJump)
+            isJumping = true;
+            if (!player.currentAnimal.canChargeJump)
             {
-                float currentCharge = player.animalSwapper.currentAnimal.currentCharge;
-                float maxCharge = player.animalSwapper.currentAnimal.maxCharge;
-                rb.velocity = Vector3.up * player.animalSwapper.currentAnimal.currentCharge;
-                player.animalSwapper.currentAnimal.currentCharge  = player.animalSwapper.currentAnimal.jumpForce;
+                rb.velocity = Vector3.up * player.currentAnimal.jumpForce;
+            }
+            else
+            {
+                float currentCharge = player.currentAnimal.currentCharge;
+                float maxCharge = player.currentAnimal.maxCharge;
 
-                canJump = false;
-                charing = false;
+                // Makes it so that the animal cannot jump less then its jumpForce
+                if (player.currentAnimal.currentCharge < player.currentAnimal.jumpForce)
+                    player.currentAnimal.currentCharge = player.currentAnimal.jumpForce;
+
+                rb.velocity = Vector3.up * player.currentAnimal.currentCharge;
+                player.currentAnimal.currentCharge  = player.currentAnimal.jumpForce;
+
+                charging = false;
             }
         }
     }
 
     public void StartCharging()
     {
-        if (canJump)
-            charing = true;
+        if (CheckForGround())
+            charging = true;
     }
 
     void Charging()
     {
-        float currentCharge = player.animalSwapper.currentAnimal.currentCharge;
-        float maxCharge = player.animalSwapper.currentAnimal.maxCharge;
-        player.animalSwapper.currentAnimal.currentCharge = currentCharge > maxCharge ? 
-            maxCharge : currentCharge + Time.deltaTime * player.animalSwapper.currentAnimal.jumpForce;
+        jumpAnimTimer += Time.deltaTime;
+
+        float currentCharge = player.currentAnimal.currentCharge;
+        float maxCharge = player.currentAnimal.maxCharge;
+        player.currentAnimal.currentCharge = currentCharge > maxCharge ? 
+            maxCharge : currentCharge + Time.deltaTime * player.currentAnimal.jumpForce;
+    }
+
+    public bool CheckForGround()
+    {
+        return Physics.Raycast(transform.position, Vector3.down, 0.1f);
     }
 }

@@ -20,21 +20,33 @@ public class GameManager : Singleton<GameManager>
     public GameObject[] SystemPrefabs;
     public EventGameState OnGameStateChange;
     public List<Player> players;
+    public int lives = 3;
 
     private List<GameObject> instancedSystems;
     private List<AsyncOperation> loadOperations; // <-- Stacks operations that is being loaded additively
 
     private GameState currentGameState = GameState.PREGAME; // <-- GameState default state is PREGAME
     LevelManager levelManager;
-    [SerializeField] string levelToBoot;
+    [SerializeField] string levelToBoot = string.Empty;
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        players = new List<Player>();
+        instancedSystems = new List<GameObject>();
+    }
 
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
         levelManager = GetComponent<LevelManager>();
         if (levelToBoot != string.Empty)
+        {
             LoadLevel(levelToBoot);
-        players = new List<Player>();
+            //UnloadLevel("Boot");
+        }
+
 
         InstantiateSystemPrefabs();
     }
