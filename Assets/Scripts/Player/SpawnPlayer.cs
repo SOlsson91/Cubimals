@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
-using UnityEngine.InputSystem;
+﻿using UnityEngine;
 
 /*
  * Class to spawn the player Prefab at a specific location
@@ -8,41 +6,13 @@ using UnityEngine.InputSystem;
 
 public class SpawnPlayer : MonoBehaviour
 {
-    [SerializeField] Player playerPrefab;
-    [SerializeField] Transform[] spawnPosition;
-    GameManager manager;
-    bool playersReady = false;
+    [SerializeField] Player playerPrefab = null;
 
-    void Awake()
-    {
-        manager = GetComponent<GameManager>();
-    }
-
-    void Start()
-    {
-        //StartCoroutine("WaitForPlayers");
-        for (int i = 0; i < spawnPosition.Length; ++i)
-        {
-            Spawn(i);
-        }
-    }
-/*
-    IEnumerator WaitForPlayers()
-    {
-        while (!playersReady)
-        {
-           if (playersReady)
-              playersReady = true; 
-        }
-        yield return;
-    }
-*/
     public void Spawn(int playerNumber)
     {
-           Player player = Instantiate(playerPrefab, spawnPosition[playerNumber].position, 
-                                               spawnPosition[playerNumber].rotation);
-           //PlayerInput pi = player.GetComponent<PlayerInput>();
-           player.playerNumber = playerNumber;
-           manager.players.Add(player);
+        Player player = Instantiate(playerPrefab, GameManager.Instance.transform);
+        player.gameObject.SetActive(false);
+        player.playerNumber = playerNumber;
+        GameManager.Instance.players.Add(player);
     }
 }

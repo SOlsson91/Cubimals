@@ -9,11 +9,11 @@ AnimatorOverrideController:
   m_Name: BirdCont
   m_Controller: {fileID: 9100000, guid: 070e6282f4c84fa49c09fb61f1f1bd44, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400010, guid: 3e1e4fc4087a46e69c0d339eb31e68e0, type: 3}
-    m_OverrideClip: {fileID: 7400010, guid: 3e1e4fc4087a46e69c0d339eb31e68e0, type: 3}
-  - m_OriginalClip: {fileID: 7400012, guid: 3e1e4fc4087a46e69c0d339eb31e68e0, type: 3}
-    m_OverrideClip: {fileID: 7400012, guid: 3e1e4fc4087a46e69c0d339eb31e68e0, type: 3}
   - m_OriginalClip: {fileID: 7400000, guid: 3e1e4fc4087a46e69c0d339eb31e68e0, type: 3}
     m_OverrideClip: {fileID: 7400000, guid: 3e1e4fc4087a46e69c0d339eb31e68e0, type: 3}
   - m_OriginalClip: {fileID: 7400002, guid: 3e1e4fc4087a46e69c0d339eb31e68e0, type: 3}
     m_OverrideClip: {fileID: 7400002, guid: 3e1e4fc4087a46e69c0d339eb31e68e0, type: 3}
+  - m_OriginalClip: {fileID: 7400008, guid: 3e1e4fc4087a46e69c0d339eb31e68e0, type: 3}
+    m_OverrideClip: {fileID: 7400008, guid: 3e1e4fc4087a46e69c0d339eb31e68e0, type: 3}
+  - m_OriginalClip: {fileID: 7400016, guid: 3e1e4fc4087a46e69c0d339eb31e68e0, type: 3}
+    m_OverrideClip: {fileID: 7400016, guid: 3e1e4fc4087a46e69c0d339eb31e68e0, type: 3}

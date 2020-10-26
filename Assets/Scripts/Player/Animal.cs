@@ -18,11 +18,18 @@ public class Animal : MonoBehaviour
     public float maxCharge = 10;
     [Header("Ability")]
     public Ability ability;
+    [Header("Interactions")]
+    public float interactDistance = 1.0f;
 
-    private Animator animator;
-
-    void Awake()
+    public void Interact()
     {
-        animator = GetComponent<Animator>();
+        foreach (Collider collider in Physics.OverlapSphere(transform.position, interactDistance))
+        {
+            if (collider.CompareTag("Interactable"))
+            {
+                collider.GetComponent<ActivateButton>().ActivateTarget();
+                return;
+            }
+        }
     }
 }

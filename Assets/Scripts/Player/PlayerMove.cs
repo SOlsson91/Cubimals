@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Linq;
-using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMove : MonoBehaviour
@@ -9,8 +7,8 @@ public class PlayerMove : MonoBehaviour
     Player player;
 
     Vector3 movement;
-    [HideInInspector] public bool canJump;
-    bool charing = false;
+    bool charging = false;
+    public bool isJumping = false;
 
     float jumpAnimTimer;
 
@@ -46,7 +44,7 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         Move();
-        if (charing)
+        if (charging)
             Charging();
     }
 
@@ -59,57 +57,38 @@ public class PlayerMove : MonoBehaviour
         {
             other.collider.isTrigger = !player.currentAnimal.canSwim ? true : false;
         }
-
-        //use velocity margin .5 since the animation velocity is between 0 -.5
-        if (other.gameObject.tag == "Ground"&&rb.velocity.y <= .5)
-        {
-            canJump = true;
-        }
     }
 
     public void Jump()
     {
-        if (!player.currentAnimal.canChargeJump && canJump)
+        if (CheckForGround())
         {
-            canJump = false;
-            player.UpdateAnimator();
-            player.animator.SetBool("isJumping", true);
-            rb.velocity = Vector3.up * player.currentAnimal.jumpForce;
-
-            //jumpAnimTimer = jumpAnimTimer > .7f ?
-            //    .7f : jumpAnimTimer;
-
-            player.animator.SetFloat("Speed", 2);
-
-            //jumpAnimTimer = 0;
-        }
-        else
-        {
-            if (canJump)
+            isJumping = true;
+            if (!player.currentAnimal.canChargeJump)
+            {
+                rb.velocity = Vector3.up * player.currentAnimal.jumpForce;
+            }
+            else
             {
                 float currentCharge = player.currentAnimal.currentCharge;
                 float maxCharge = player.currentAnimal.maxCharge;
+
+                // Makes it so that the animal cannot jump less then its jumpForce
+                if (player.currentAnimal.currentCharge < player.currentAnimal.jumpForce)
+                    player.currentAnimal.currentCharge = player.currentAnimal.jumpForce;
+
                 rb.velocity = Vector3.up * player.currentAnimal.currentCharge;
                 player.currentAnimal.currentCharge  = player.currentAnimal.jumpForce;
 
-                canJump = false;
-                charing = false;
-
-                //jumpAnimTimer = jumpAnimTimer > .7f ?
-                //.7f : jumpAnimTimer;
-
-                player.animator.SetFloat("Speed", 1);
-
-                ///jumpAnimTimer =0;
-
-                
+                charging = false;
             }
         }
     }
+
     public void StartCharging()
     {
-        if (canJump)
-            charing = true;
+        if (CheckForGround())
+            charging = true;
     }
 
     void Charging()
@@ -120,5 +99,10 @@ public class PlayerMove : MonoBehaviour
         float maxCharge = player.currentAnimal.maxCharge;
         player.currentAnimal.currentCharge = currentCharge > maxCharge ? 
             maxCharge : currentCharge + Time.deltaTime * player.currentAnimal.jumpForce;
+    }
+
+    public bool CheckForGround()
+    {
+        return Physics.Raycast(transform.position, Vector3.down, 0.1f);
     }
 }

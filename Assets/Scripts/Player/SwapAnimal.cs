@@ -25,6 +25,7 @@ public class SwapAnimal : MonoBehaviour
     {
         player.currentAnimalNumber = player.currentAnimalNumber + 1 > animals.Length - 1 ? 0 : player.currentAnimalNumber + 1;
         ChangeAnimal(player.currentAnimalNumber);
+        player.UpdateAnimator();
     }
 
     public void ChangeAnimal(int newAnimal)

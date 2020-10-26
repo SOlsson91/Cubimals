@@ -6,3 +6,4 @@
 
     public abstract void OnCollisionEnter(PlayerStateController controller);
 }
+
