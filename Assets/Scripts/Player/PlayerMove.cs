@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMove : MonoBehaviour
@@ -51,12 +52,18 @@ public class PlayerMove : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        string currTag= other.gameObject.tag;
-
         if (other.gameObject.tag == "Water")
         {
-            other.collider.isTrigger = !player.currentAnimal.canSwim ? true : false;
+            player.currentAnimal.GetComponent<Collider>().isTrigger = !player.currentAnimal.canSwim ? true : false;
+            StartCoroutine(ChangeBackWater(player));
         }
+    }
+
+    IEnumerator ChangeBackWater(Player player)
+    {
+        float startY = player.transform.position.y;
+        yield return new WaitUntil(() => player.transform.position.y > startY);
+        player.GetComponentInChildren<Collider>().isTrigger = false;
     }
 
     public void Jump()

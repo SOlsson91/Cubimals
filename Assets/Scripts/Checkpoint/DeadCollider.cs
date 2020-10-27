@@ -7,28 +7,35 @@
 
 public class DeadCollider : MonoBehaviour
 {
-    public Vector3 spawnOffset = new Vector3(0.0f, 1.25f, 0.0f);
+    public Vector3 spawnOffset = new Vector3(1.25f, 0.0f, 1.25f);
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        Debug.Log(other.GetComponentInParent<Player>().gameObject.tag);
+        if (other.GetComponentInParent<Player>().gameObject.CompareTag("Player"))
         {
-            GameManager.Instance.lives--;
-            if (GameManager.Instance.lives <= 0)
-            {
-                Debug.LogWarning("[DeadCollider] Out of lives, GameOver!");
-                //GameManager.Instance.LoadLevel("GameOver");
-            }
+            DecreaseALife();
             GameManager.Instance.players.ForEach(delegate(Player player) {
-                int playerNumber = other.gameObject.GetComponent<Player>().playerNumber;
+                int playerNumber = other.gameObject.GetComponentInParent<Player>().playerNumber;
 
                 // Only update the player that entered the collider and not both
                 if (player.playerNumber == playerNumber)
                 {
                     Vector3 respawnPoint = player.checkpoint.GetCheckpoint();
-                    other.transform.position = respawnPoint + (spawnOffset * playerNumber);
+                    player.transform.position = respawnPoint + (spawnOffset * playerNumber);
                 }
             });
+        }
+    }
+
+    void DecreaseALife()
+    {
+        EventManager.Instance.LivesLost(--GameManager.Instance.lives);
+
+        if (GameManager.Instance.lives <= 0)
+        {
+            Debug.LogWarning("[DeadCollider] Out of lives, GameOver!");
+            //GameManager.Instance.LoadLevel("GameOver");
         }
     }
 }

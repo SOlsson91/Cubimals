@@ -6,7 +6,7 @@ using UnityEngine.Events;
 // > Keep track of what state the game is in [DONE]
 // > Generate other persistent systems [DONE]
 
-[System.Serializable] public class EventGameState : UnityEvent<GameManager.GameState, GameManager.GameState> { }
+//[System.Serializable] public class EventGameState : UnityEvent<GameManager.GameState, GameManager.GameState> { }
 
 public class GameManager : Singleton<GameManager>
 {
@@ -18,14 +18,14 @@ public class GameManager : Singleton<GameManager>
     }
 
     public GameObject[] SystemPrefabs;
-    public EventGameState OnGameStateChange;
+    //public EventGameState OnGameStateChange;
     public List<Player> players;
     public int lives = 3;
 
-    private List<GameObject> instancedSystems;
-    private List<AsyncOperation> loadOperations; // <-- Stacks operations that is being loaded additively
+    List<GameObject> instancedSystems;
+    List<AsyncOperation> loadOperations; // <-- Stacks operations that is being loaded additively
 
-    private GameState currentGameState = GameState.PREGAME; // <-- GameState default state is PREGAME
+    GameState currentGameState = GameState.PREGAME; // <-- GameState default state is PREGAME
     LevelManager levelManager;
     [SerializeField] string levelToBoot = string.Empty;
 
@@ -44,10 +44,7 @@ public class GameManager : Singleton<GameManager>
         if (levelToBoot != string.Empty)
         {
             LoadLevel(levelToBoot);
-            //UnloadLevel("Boot");
         }
-
-
         InstantiateSystemPrefabs();
     }
 
@@ -81,7 +78,7 @@ public class GameManager : Singleton<GameManager>
                 break;
         }
 
-        OnGameStateChange.Invoke(currentGameState, previousGameState); // <-- This sends a message to those who listens to this method
+        //OnGameStateChange.Invoke(currentGameState, previousGameState); // <-- This sends a message to those who listens to this method
     }
 
     // -- Manager Handling -- //
