@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6091688788534096761}
   m_LocalRotation: {x: 0.103311576, y: -0.008057866, z: 0.00083591643, w: 0.9946161}
-  m_LocalPosition: {x: 2, y: 8.1, z: -20}
+  m_LocalPosition: {x: 1, y: 8.1, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6091688789418470879}
@@ -130,5 +130,5 @@ MonoBehaviour:
   cameraSmoothTime: 0.2
   screenPadding: 2
   minCameraSize: 3
-  minFOV: 10
+  minFOV: 20
   animalRef: []
