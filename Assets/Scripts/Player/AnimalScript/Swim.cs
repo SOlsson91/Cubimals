@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Swim : Ability
+public class Swim : MonoBehaviour
 {
     Rigidbody playerRigidbody;
     Animal animal;
@@ -21,10 +21,12 @@ public class Swim : Ability
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Water") 
-        {
-            animal.movementSpeed = 10;
-        }
         
+    }
+
+    public void SwimBuff() 
+    {
+        Debug.Log("Swimming");
+        animal.movementSpeed = 10;
     }
 }

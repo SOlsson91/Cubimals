@@ -5,6 +5,7 @@ public class PlayerMove : MonoBehaviour
 {
     public Rigidbody rb;
     Player player;
+    public Swim swim;
 
     Vector3 movement;
     bool charging = false;
@@ -55,7 +56,13 @@ public class PlayerMove : MonoBehaviour
 
         if (other.gameObject.tag == "Water")
         {
+            Debug.Log("In water");
+            if (player.currentAnimal.GetComponent<Animal>()!=null) { player.currentAnimal.GetComponent<Animal>().movementSpeed = 15; }
+
+            while (other.gameObject.tag == "Water") { player.currentAnimal.GetComponent<Animal>().movementSpeed = 15; if (other.gameObject.tag != "Water") { player.currentAnimal.GetComponent<Animal>().movementSpeed = 5; break;} }
+            
             other.collider.isTrigger = !player.currentAnimal.canSwim ? true : false;
+            
         }
     }
 
