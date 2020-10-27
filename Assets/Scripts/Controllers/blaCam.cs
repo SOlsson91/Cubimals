@@ -4,10 +4,10 @@ using System.Collections.Generic;
 public class blaCam : MonoBehaviour
 {
     public float cameraSmoothTime = 0.2f; //Camera smooth time
-    public float screenPadding = 2f;   // Space between the top/bottom most target and the screen edge.
+    public float screenPadding = 2.5f;   // Space between the top/bottom most target and the screen edge.
     public float minCameraSize = 3f;  // The smallest orthographic size of the camera.
 
-    public int minFOV = 10;
+    public int minFOV = 15;
 
 
     private Camera mainCamera;                  // Used for referencing the camera.
@@ -15,7 +15,7 @@ public class blaCam : MonoBehaviour
     private Vector3 cameraMoveVelocity;   // Reference velocity for the smooth damping of the position.
     private Vector3 desPos;              // The position the camera is moving towards.
 
-    public List<Player> animalRef;
+    private List<Player> animalRef;
 
     private void Awake()
     {
@@ -64,7 +64,7 @@ public class blaCam : MonoBehaviour
             averagePos /= numTargets;
 
         // Keep the same y value.
-        averagePos.y = transform.position.y;
+        //averagePos.y = transform.position.y;
 
         // The desired position is the average position;
         desPos = averagePos;

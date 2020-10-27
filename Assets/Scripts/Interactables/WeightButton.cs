@@ -8,6 +8,8 @@ public class WeightButton : MonoBehaviour
     private Vector3 defualtPosition = new Vector3();
     private bool isPressured;
 
+    public bool level1=false;//Can be removed later, just to help quikc fix
+
     public bool getActive
     {
         get { return isPressured; }
@@ -46,7 +48,10 @@ public class WeightButton : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         isPressured = true;
+
+        if (level1) {target.SetActive(true);}//Needs to be reworked, just a quick solution.
         target.GetComponent<SendActive>().TriggerUpdate();
+        
     }
 
     private void OnTriggerExit(Collider other)
