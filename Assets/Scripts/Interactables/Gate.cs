@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Gate : MonoBehaviour
 {
-    public Vector3 targetDestination;
+    public float travelDistance = 1;
+    public float moveSpeed = 1;
 
     private Vector3 defaultPosition;
 
@@ -23,6 +24,45 @@ public class Gate : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(travelDistance > 0) // UP
+        {
+            if(isActive && gameObject.transform.position.y < defaultPosition.y + travelDistance)
+            {
+                gameObject.transform.position += new Vector3(0, 1, 0) * Time.deltaTime * moveSpeed;
+            }
+            else if(gameObject.transform.position.y > defaultPosition.y)
+            {
+                gameObject.transform.position -= new Vector3(0, 1, 0) * Time.deltaTime * moveSpeed;
+            }
+            else
+            {
+                gameObject.transform.position = defaultPosition;
+            }
+        }
+        else if(travelDistance < 0) // DOWN
+        {
+            if(isActive && gameObject.transform.position.y > defaultPosition.y + travelDistance)
+            {
+                gameObject.transform.position -= new Vector3(0, 1, 0) * Time.deltaTime * moveSpeed;
+            }
+            else if(gameObject.transform.position.y < defaultPosition.y)
+            {
+                gameObject.transform.position += new Vector3(0, 1, 0) * Time.deltaTime * moveSpeed;
+            }
+            else
+            {
+                gameObject.transform.position = defaultPosition;
+            }
+        }
+        else
+        {
+            Debug.LogError("Target Destination set to 0");
+        }
+    }
+
+
+    /*private void FixedUpdate()
+    {
         if(isActive && gameObject.transform.position.y != targetDestination.y && gameObject.transform.position.y > targetDestination.y)
         {
             gameObject.transform.position -= new Vector3(0, 1, 0) * Time.deltaTime;
@@ -31,5 +71,5 @@ public class Gate : MonoBehaviour
         {
             gameObject.transform.position += new Vector3(0, 1, 0) * Time.deltaTime;
         }
-    }
+    }*/
 }
