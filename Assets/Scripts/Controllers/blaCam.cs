@@ -4,10 +4,10 @@ using System.Collections.Generic;
 public class blaCam : MonoBehaviour
 {
     public float cameraSmoothTime = 0.2f; //Camera smooth time
-    public float screenPadding = 2.5f;   // Space between the top/bottom most target and the screen edge.
+    public float screenPadding = 2f;   // Space between the top/bottom most target and the screen edge.
     public float minCameraSize = 3f;  // The smallest orthographic size of the camera.
 
-    public int minFOV = 15;
+    public int minFOV = 30;
 
 
     private Camera mainCamera;                  // Used for referencing the camera.
