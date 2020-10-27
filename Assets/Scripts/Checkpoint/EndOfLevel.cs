@@ -22,6 +22,7 @@ public class EndOfLevel : MonoBehaviour
                 {
                     Debug.Log("[EndOfLevel] Load Next Level");
                     string currentScene = GameManager.Instance.ActiveScene();
+                    GameManager.Instance.players.ForEach(delegate(Player player) { player.gameObject.SetActive(false); });
                     GameManager.Instance.UnloadLevel(currentScene);
                     GameManager.Instance.LoadLevel(nextLevel);
                 }
