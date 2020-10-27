@@ -5,7 +5,6 @@ public class PlayerMove : MonoBehaviour
 {
     public Rigidbody rb;
     Player player;
-    public Swim swim;
 
     Vector3 movement;
     bool charging = false;
@@ -15,8 +14,14 @@ public class PlayerMove : MonoBehaviour
 
     public Vector3 Movement
     {
-        get { return movement; }
-        set { movement = value; }
+        get
+        {
+            return movement;
+        }
+        set
+        {
+            movement = value;
+        }
     }
 
     void Awake()
@@ -33,8 +38,7 @@ public class PlayerMove : MonoBehaviour
 
     public void Move()
     {
-        if (player.currentAnimal == null)
-            return;
+        if (player.currentAnimal == null) return;
         rb.position = Vector3.MoveTowards(transform.position, rb.position + movement * player.currentAnimal.movementSpeed * Time.deltaTime, 1);
 
         if (movement != Vector3.zero)
@@ -45,24 +49,32 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         Move();
-        if (charging)
-            Charging();
+        if (charging) Charging();
     }
-
 
     void OnCollisionEnter(Collision other)
     {
-        string currTag= other.gameObject.tag;
+        string currTag = other.gameObject.tag;
 
         if (other.gameObject.tag == "Water")
         {
             Debug.Log("In water");
-            if (player.currentAnimal.GetComponent<Animal>()!=null) { player.currentAnimal.GetComponent<Animal>().movementSpeed = 15; }
-
-            while (other.gameObject.tag == "Water") { player.currentAnimal.GetComponent<Animal>().movementSpeed = 15; if (other.gameObject.tag != "Water") { player.currentAnimal.GetComponent<Animal>().movementSpeed = 5; break;} }
-            
+            if (player.currentAnimal.GetComponent<Animal>() != null && player.currentAnimal.canSwim)
+            {
+                player.currentAnimal.GetComponent<Animal>().movementSpeed += 4;
+            }
             other.collider.isTrigger = !player.currentAnimal.canSwim ? true : false;
-            
+
+        }
+    }
+    void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.tag == "Water")
+        {
+            if (player.currentAnimal.GetComponent<Animal>() != null && player.currentAnimal.canSwim)
+            {
+                player.currentAnimal.GetComponent<Animal>().movementSpeed -= 4;
+            }
         }
     }
 
@@ -81,11 +93,10 @@ public class PlayerMove : MonoBehaviour
                 float maxCharge = player.currentAnimal.maxCharge;
 
                 // Makes it so that the animal cannot jump less then its jumpForce
-                if (player.currentAnimal.currentCharge < player.currentAnimal.jumpForce)
-                    player.currentAnimal.currentCharge = player.currentAnimal.jumpForce;
+                if (player.currentAnimal.currentCharge < player.currentAnimal.jumpForce) player.currentAnimal.currentCharge = player.currentAnimal.jumpForce;
 
                 rb.velocity = Vector3.up * player.currentAnimal.currentCharge;
-                player.currentAnimal.currentCharge  = player.currentAnimal.jumpForce;
+                player.currentAnimal.currentCharge = player.currentAnimal.jumpForce;
 
                 charging = false;
             }
@@ -94,8 +105,7 @@ public class PlayerMove : MonoBehaviour
 
     public void StartCharging()
     {
-        if (CheckForGround())
-            charging = true;
+        if (CheckForGround()) charging = true;
     }
 
     void Charging()
@@ -104,8 +114,7 @@ public class PlayerMove : MonoBehaviour
 
         float currentCharge = player.currentAnimal.currentCharge;
         float maxCharge = player.currentAnimal.maxCharge;
-        player.currentAnimal.currentCharge = currentCharge > maxCharge ? 
-            maxCharge : currentCharge + Time.deltaTime * player.currentAnimal.jumpForce;
+        player.currentAnimal.currentCharge = currentCharge > maxCharge ? maxCharge : currentCharge + Time.deltaTime * player.currentAnimal.jumpForce;
     }
 
     public bool CheckForGround()
