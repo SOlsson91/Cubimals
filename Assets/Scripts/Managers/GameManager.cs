@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+//using UnityEngine.Events;
 
 //-- TODO --
 // > Keep track of what state the game is in [DONE]
@@ -118,10 +118,7 @@ public class GameManager : Singleton<GameManager>
         levelManager.UnloadLevel(levelName);
     }
 
-    public string ActiveScene()
-    {
-        return levelManager.ActiveScene;
-    }
+    public string ActiveScene() => levelManager.ActiveScene;
 
     // Clear the child players
     public void ClearPlayers()
@@ -133,8 +130,5 @@ public class GameManager : Singleton<GameManager>
         players.Clear();
     }
 
-    public void ResetLives()
-    {
-        lives = 3;
-    }
+    public void ResetLives() => lives = 3;
 }

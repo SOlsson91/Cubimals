@@ -10,7 +10,7 @@ public class blaCam : MonoBehaviour
     public int minFOV = 10;
 
 
-    private Camera camera;                  // Used for referencing the camera.
+    private Camera mainCamera;                  // Used for referencing the camera.
     private float zoomSpeed;               // Reference speed for the smooth damping of the orthographic size.
     private Vector3 cameraMoveVelocity;   // Reference velocity for the smooth damping of the position.
     private Vector3 desPos;              // The position the camera is moving towards.
@@ -19,7 +19,7 @@ public class blaCam : MonoBehaviour
 
     private void Awake()
     {
-        camera = GetComponentInChildren<Camera>();
+        mainCamera = GetComponentInChildren<Camera>();
         animalRef = GameManager.Instance.players;
     }
 
@@ -51,7 +51,7 @@ public class blaCam : MonoBehaviour
         {
             if (!animalRef[i].gameObject.activeSelf)
             {
-                camera.fieldOfView = minFOV;
+                mainCamera.fieldOfView = minFOV;
                 continue;
             }
             // Add to the average and increment the number of targets in the average.
@@ -76,13 +76,13 @@ public class blaCam : MonoBehaviour
         // Find the required size based on the desired position and smoothly transition to that size.
         float requiredSize = FindRequiredSize();
 
-        if (camera.orthographic) 
+        if (mainCamera.orthographic) 
         { 
-            camera.orthographicSize = Mathf.SmoothDamp(camera.orthographicSize, requiredSize, ref zoomSpeed, cameraSmoothTime); 
+            mainCamera.orthographicSize = Mathf.SmoothDamp(mainCamera.orthographicSize, requiredSize, ref zoomSpeed, cameraSmoothTime); 
         } 
         else 
         {
-            camera.fieldOfView = Mathf.SmoothDamp(camera.fieldOfView, Mathf.Max(minFOV, screenPadding* Mathf.Abs(Vector3.Distance(animalRef[0].transform.position, animalRef[1].transform.position))), ref zoomSpeed, cameraSmoothTime);
+            mainCamera.fieldOfView = Mathf.SmoothDamp(mainCamera.fieldOfView, Mathf.Max(minFOV, screenPadding* Mathf.Abs(Vector3.Distance(animalRef[0].transform.position, animalRef[1].transform.position))), ref zoomSpeed, cameraSmoothTime);
         }
         
     }
@@ -100,7 +100,7 @@ public class blaCam : MonoBehaviour
             // if they aren't active continue on to the next target. Doesnt Work as it should needs to be refined
             if (!animalRef[i].gameObject.activeSelf)
             {
-                camera.fieldOfView = minFOV;
+                mainCamera.fieldOfView = minFOV;
                 continue;
             }
 
@@ -114,7 +114,7 @@ public class blaCam : MonoBehaviour
                 size = Mathf.Max(size, Mathf.Abs(desiredPosToTarget.y));
 
                 // Choose the largest out of the current size and the calculated size based on the tank being to the left or right of the camera.
-                size = Mathf.Max(size, Mathf.Abs(desiredPosToTarget.x) / camera.aspect);
+                size = Mathf.Max(size, Mathf.Abs(desiredPosToTarget.x) / mainCamera.aspect);
             
         }
 
@@ -136,13 +136,13 @@ public class blaCam : MonoBehaviour
         transform.position = desPos;
 
         // Find and set the required size of the camera.
-        if (camera.orthographic)
+        if (mainCamera.orthographic)
         {
-            camera.orthographicSize = FindRequiredSize();
+            mainCamera.orthographicSize = FindRequiredSize();
         }
         else 
         { 
-            camera.fieldOfView = Mathf.Max(minFOV, screenPadding*Mathf.Abs(Vector3.Distance(animalRef[0].transform.position, animalRef[1].transform.position))); 
+            mainCamera.fieldOfView = Mathf.Max(minFOV, screenPadding*Mathf.Abs(Vector3.Distance(animalRef[0].transform.position, animalRef[1].transform.position))); 
         }
     }
 }

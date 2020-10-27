@@ -21,7 +21,7 @@ public class DeadCollider : MonoBehaviour
                 // Only update the player that entered the collider and not both
                 if (player.playerNumber == playerNumber)
                 {
-                    Vector3 respawnPoint = player.checkpoint.GetCheckpoint();
+                    Vector3 respawnPoint = player.checkpoint.Position;
                     player.transform.position = respawnPoint + (spawnOffset * playerNumber);
                 }
             });

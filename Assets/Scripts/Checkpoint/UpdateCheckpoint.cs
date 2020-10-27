@@ -26,7 +26,7 @@ public class UpdateCheckpoint : MonoBehaviour
         if (other.GetComponentInParent<Player>().CompareTag("Player"))
         {
             GameManager.Instance.players.ForEach(delegate(Player player){
-                player.checkpoint.UpdateCheckpoint(checkpointPosition);
+                player.checkpoint.Position = checkpointPosition;
             });
         }
     }

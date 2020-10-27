@@ -1,5 +1,10 @@
 ﻿using UnityEngine;
 
+/*
+ * Last Checkpoint of the level, will move you to the next level. However
+ * only when both players are in the trigger area
+ */
+
 public class EndOfLevel : MonoBehaviour
 {
     [SerializeField] string nextLevel = string.Empty;
@@ -15,7 +20,9 @@ public class EndOfLevel : MonoBehaviour
             {
                 if (nextLevel != string.Empty)
                 {
-                    Debug.Log("NEXT LEVEL");
+                    Debug.Log("[EndOfLevel] Load Next Level");
+                    string currentScene = GameManager.Instance.ActiveScene();
+                    GameManager.Instance.UnloadLevel(currentScene);
                     GameManager.Instance.LoadLevel(nextLevel);
                 }
                 else
@@ -30,9 +37,7 @@ public class EndOfLevel : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         if (other.GetComponentInParent<Player>().CompareTag("Player"))
-        {
             playersInGoal--;
-        }
     }
 
 }

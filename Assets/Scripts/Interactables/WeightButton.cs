@@ -1,15 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class WeightButton : MonoBehaviour
 {
     public GameObject target;
 
-    [SerializeField] private GameObject pressurePlate;
-
-    private Vector3 defualtPosition;
-
+    [SerializeField] private GameObject pressurePlate = null;
+    private Vector3 defualtPosition = new Vector3();
     private bool isPressured;
 
     private void Start()
