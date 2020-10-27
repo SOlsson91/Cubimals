@@ -46,8 +46,6 @@ public class PlayerMove : MonoBehaviour
         Move();
         if (charging)
             Charging();
-
-        ChangeMass();
     }
 
 
