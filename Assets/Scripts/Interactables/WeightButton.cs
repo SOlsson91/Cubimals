@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class WeightButton : MonoBehaviour
 {
-    public GameObject targetGo;
     public GameObject target;
 
     [SerializeField] private GameObject pressurePlate;
@@ -12,6 +11,11 @@ public class WeightButton : MonoBehaviour
     private Vector3 defualtPosition;
 
     private bool isPressured;
+
+    public bool getActive
+    {
+        get { return isPressured; }
+    }
 
     private void Start()
     {
@@ -45,16 +49,14 @@ public class WeightButton : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        targetGo.SetActive(true);
         isPressured = true;
-        target.GetComponent<Gate>().getActive = isPressured;
-        
+        target.GetComponent<SendActive>().TriggerUpdate();
     }
 
     private void OnTriggerExit(Collider other)
     {
         isPressured = false;
-        target.GetComponent<Gate>().getActive = isPressured;
+        target.GetComponent<SendActive>().TriggerUpdate();
     }
 
     /*private Vector3 defualtPosition;
