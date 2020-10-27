@@ -1254,6 +1254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1195982677}
   - component: {fileID: 1195982679}
+  - component: {fileID: 1195982678}
   m_Layer: 0
   m_Name: Menu
   m_TagString: Untagged
@@ -1278,6 +1279,21 @@ Transform:
   m_Father: {fileID: 1909645047}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1195982678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195982676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba719f02702064dc8ad409bdbaf5822f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPrefab: {fileID: 2667823122874527282, guid: f1d24395a6810412a9aff4a8500961a9,
+    type: 3}
+  playersToSpawn: 2
 --- !u!114 &1195982679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1290,6 +1306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e770ec93bc595d45bd931b30117b010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playersToSpawn: 2
 --- !u!1 &1214004138
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,7 +1566,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1195982679}
-        m_MethodName: LoadScene
+        m_MethodName: StartGame
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
