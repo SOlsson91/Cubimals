@@ -12,6 +12,11 @@ public class WeightButton : MonoBehaviour
 
     private bool isPressured;
 
+    public bool getActive
+    {
+        get { return isPressured; }
+    }
+
     private void Start()
     {
         isPressured = false;
@@ -45,13 +50,13 @@ public class WeightButton : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         isPressured = true;
-        target.GetComponent<Gate>().getActive = isPressured;
+        target.GetComponent<SendActive>().TriggerUpdate();
     }
 
     private void OnTriggerExit(Collider other)
     {
         isPressured = false;
-        target.GetComponent<Gate>().getActive = isPressured;
+        target.GetComponent<SendActive>().TriggerUpdate();
     }
 
     /*private Vector3 defualtPosition;

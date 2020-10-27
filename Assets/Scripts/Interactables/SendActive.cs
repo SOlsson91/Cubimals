@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class SendActive : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject[] triggers;
+    public Gate targetScript;
 
-    // Update is called once per frame
-    void Update()
+    private bool active;
+
+    public void TriggerUpdate()
     {
-        
+        int count = 0;
+
+        foreach(var trgs in triggers)
+        {
+            if(!trgs.GetComponent<WeightButton>().getActive)
+            {
+                count++;
+            }
+        }
+
+        if(count == triggers.Length)
+        {
+            active = false;
+        }
+        else
+        {
+            active = true;
+        }
+
+        targetScript.getActive = active;
     }
 }

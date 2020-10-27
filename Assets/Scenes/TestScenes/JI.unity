@@ -1265,7 +1265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4808fb13dc9e25842a62c1a7edb083f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetDestination: {x: 0, y: -5, z: 0}
+  travelDistance: 5
+  moveSpeed: 2
 --- !u!1 &1252491796
 GameObject:
   m_ObjectHideFlags: 0
@@ -1486,6 +1487,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02a098a1bea3f43a69dd50175f26b5c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}
+  cameraPosition: {x: 0, y: 0, z: 0}
   smoothness: {x: 3, y: 1, z: 3}
 --- !u!114 &1254249094
 MonoBehaviour:
