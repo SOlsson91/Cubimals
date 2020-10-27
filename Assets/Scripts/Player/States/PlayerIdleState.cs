@@ -6,7 +6,8 @@ public class PlayerIdleState : PlayerBaseState
     {
         Debug.Log("[PlayerState] Enter Idle State");
         controller.player.UpdateAnimator();
-        controller.player.animator.SetBool("isIdle", true);
+        if (controller.player.animator != null)
+            controller.player.animator.SetBool("isIdle", true);
         controller.player.animalSwapper.enabled = true;
         controller.move.isJumping = false;
     }

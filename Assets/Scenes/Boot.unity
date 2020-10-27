@@ -128,11 +128,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 460296302602590077, guid: 616bfb04bb576eba8bb04cef63c4427f,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4337406054006232580, guid: 616bfb04bb576eba8bb04cef63c4427f,
         type: 3}
       propertyPath: levelToBoot
