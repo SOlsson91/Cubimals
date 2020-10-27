@@ -61,7 +61,7 @@ public class blaCam : MonoBehaviour
             averagePos /= numTargets;
 
         // Keep the same y value.
-        averagePos.y = transform.position.y;
+        //averagePos.y = transform.position.y;
 
         // The desired position is the average position;
         desPos = averagePos;
