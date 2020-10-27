@@ -82,6 +82,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df18802e81d50f30c8410e82e5668de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  isJumping: 0
 --- !u!114 &-6360215235358255144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,6 +269,21 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: f0554445-1b72-4cc3-bf53-2029a5a7df25
     m_ActionName: Player/Interact[/Keyboard/f,/Gamepad/buttonEast]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8866188666976817583}
+        m_MethodName: OnPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 805409fe-b88e-4f72-858b-70b7b7540c36
+    m_ActionName: Player/Pause[/Keyboard/escape,/Gamepad/start]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

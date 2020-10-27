@@ -21,6 +21,7 @@ public class GameManager : Singleton<GameManager>
     //public EventGameState OnGameStateChange;
     public List<Player> players;
     public int lives = 3;
+    [HideInInspector] public bool isPaused = false;
 
     List<GameObject> instancedSystems;
     List<AsyncOperation> loadOperations; // <-- Stacks operations that is being loaded additively
