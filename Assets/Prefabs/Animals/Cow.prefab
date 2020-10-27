@@ -324,6 +324,7 @@ MonoBehaviour:
   jumpForce: 4
   jumpGravityMulti: 3
   movementSpeed: 5
+  animalMass: 100
   canSwim: 0
   canChargeJump: 0
   currentCharge: 0

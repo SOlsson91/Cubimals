@@ -46,6 +46,8 @@ public class PlayerMove : MonoBehaviour
         Move();
         if (charging)
             Charging();
+
+        ChangeMass();
     }
 
 
@@ -104,5 +106,10 @@ public class PlayerMove : MonoBehaviour
     public bool CheckForGround()
     {
         return Physics.Raycast(transform.position, Vector3.down, 0.1f);
+    }
+
+    public void ChangeMass()
+    {
+        rb.mass = player.currentAnimal.animalMass;
     }
 }

@@ -11,6 +11,7 @@ public class Animal : MonoBehaviour
     //Edited: makes the animals gravity higher to fall faster
     public float jumpGravityMulti=2.5f;
     public float movementSpeed;
+    public float animalMass = 1;
     public bool canSwim;
     [Header("Charge Jump")]
     public bool canChargeJump;
