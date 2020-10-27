@@ -116,4 +116,24 @@ public class GameManager : Singleton<GameManager>
     {
         levelManager.UnloadLevel(levelName);
     }
+
+    public string ActiveScene()
+    {
+        return levelManager.ActiveScene;
+    }
+
+    // Clear the child players
+    public void ClearPlayers()
+    {
+        List<GameObject> children = new List<GameObject>();
+        foreach (Transform child in transform) children.Add(child.gameObject);
+        children.ForEach(child => Destroy(child));
+
+        players.Clear();
+    }
+
+    public void ResetLives()
+    {
+        lives = 3;
+    }
 }

@@ -34,8 +34,11 @@ public class DeadCollider : MonoBehaviour
 
         if (GameManager.Instance.lives <= 0)
         {
+            GameManager.Instance.ClearPlayers();
             Debug.LogWarning("[DeadCollider] Out of lives, GameOver!");
-            //GameManager.Instance.LoadLevel("GameOver");
+            string currentScene = GameManager.Instance.ActiveScene();
+            GameManager.Instance.UnloadLevel(currentScene);
+            GameManager.Instance.LoadLevel("GameOver");
         }
     }
 }

@@ -17,6 +17,7 @@ public class Menu : MonoBehaviour
             spawner.Spawn(i);
             Debug.Log("Spawned");
         }
+        GameManager.Instance.ResetLives();
         GameManager.Instance.LoadLevel(sceneName);
     }
 

@@ -26,8 +26,11 @@ public class blaCam : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Move();
-        Zoom();
+        if (animalRef.Count > 0)
+        {
+            Move();
+            Zoom();
+        }
     }
 
 
