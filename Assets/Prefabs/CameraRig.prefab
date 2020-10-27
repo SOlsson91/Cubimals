@@ -130,4 +130,4 @@ MonoBehaviour:
   cameraSmoothTime: 0.2
   screenPadding: 2
   minCameraSize: 3
-  minFOV: 20
+  minFOV: 30
