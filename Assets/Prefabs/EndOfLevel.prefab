@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5568331593023717786}
   - component: {fileID: 5568331593023717787}
+  - component: {fileID: 1101258775}
   m_Layer: 0
   m_Name: EndOfLevel
   m_TagString: Untagged
@@ -39,8 +40,21 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5568331593023717784}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1101258775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5568331593023717784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1d95da74946487a08ca4a1670cdc978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextLevel: Level Two
