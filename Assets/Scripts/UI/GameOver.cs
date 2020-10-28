@@ -1,11 +1,7 @@
 ﻿using UnityEngine;
-using TMPro;
 
 public class GameOver : MonoBehaviour
 {
-    public TextMeshProUGUI mainMenuButton;
-    public TextMeshProUGUI quitButton;
-
     public void GoToMainMenu()
     {
         string currentScene = GameManager.Instance.ActiveScene();
