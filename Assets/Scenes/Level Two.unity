@@ -274,6 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &28356552
 PrefabInstance:
@@ -558,6 +559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!4 &57442514 stripped
 Transform:
@@ -1082,6 +1084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &127016282
 PrefabInstance:
@@ -1202,6 +1205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!4 &127067494 stripped
 Transform:
@@ -1428,6 +1432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &142658664
 PrefabInstance:
@@ -1623,6 +1628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &144513126
 PrefabInstance:
@@ -1743,6 +1749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &163888022
 PrefabInstance:
@@ -1863,6 +1870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &176468766
 PrefabInstance:
@@ -1983,6 +1991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &183112894
 PrefabInstance:
@@ -2103,6 +2112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &189918947
 PrefabInstance:
@@ -2367,6 +2377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &215554820
 PrefabInstance:
@@ -2487,6 +2498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &220066059
 PrefabInstance:
@@ -2688,6 +2700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &238708818
 PrefabInstance:
@@ -2808,6 +2821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &239823086
 PrefabInstance:
@@ -2928,6 +2942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1 &243318129 stripped
 GameObject:
@@ -3073,6 +3088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &254406000
 PrefabInstance:
@@ -3268,6 +3284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1 &263276720
 GameObject:
@@ -3653,6 +3670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &295728283
 PrefabInstance:
@@ -3773,6 +3791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &306705730
 PrefabInstance:
@@ -3968,6 +3987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1 &325324678
 GameObject:
@@ -4196,6 +4216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!4 &347128974 stripped
 Transform:
@@ -4389,6 +4410,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667823122874527283, guid: f1d24395a6810412a9aff4a8500961a9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2667823122874527285, guid: f1d24395a6810412a9aff4a8500961a9,
         type: 3}
@@ -4670,6 +4696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &369720541
 PrefabInstance:
@@ -4790,6 +4817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1 &377757537
 GameObject:
@@ -4994,6 +5022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &398895420
 PrefabInstance:
@@ -5183,6 +5212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &402361828
 PrefabInstance:
@@ -5453,6 +5483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &409946706
 PrefabInstance:
@@ -5573,6 +5604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1 &410253742
 GameObject:
@@ -5737,6 +5769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &419367270
 PrefabInstance:
@@ -6109,6 +6142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &439532101
 PrefabInstance:
@@ -6229,6 +6263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &441692282
 PrefabInstance:
@@ -6424,6 +6459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &444879518
 PrefabInstance:
@@ -6544,6 +6580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1 &447382981
 GameObject:
@@ -6698,6 +6735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1 &450699075
 GameObject:
@@ -7116,6 +7154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &483829026
 PrefabInstance:
@@ -7358,6 +7397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &495934633
 PrefabInstance:
@@ -7703,6 +7743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &515629286
 PrefabInstance:
@@ -7823,6 +7864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &517081266
 PrefabInstance:
@@ -8151,6 +8193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1 &527815285
 GameObject:
@@ -8347,6 +8390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &536515489
 PrefabInstance:
@@ -8467,6 +8511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &549759706
 PrefabInstance:
@@ -8756,6 +8801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!4 &564452255 stripped
 Transform:
@@ -8913,6 +8959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1 &581509094
 GameObject:
@@ -9067,6 +9114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1 &603513992
 GameObject:
@@ -9301,6 +9349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &621512132
 PrefabInstance:
@@ -9803,6 +9852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &674059051
 PrefabInstance:
@@ -9923,6 +9973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &680391126
 PrefabInstance:
@@ -10112,6 +10163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1 &692665991
 GameObject:
@@ -10276,6 +10328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!4 &700534007 stripped
 Transform:
@@ -10569,6 +10622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1 &721239597
 GameObject:
@@ -10772,6 +10826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &746056010
 PrefabInstance:
@@ -10892,6 +10947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1 &746597903
 GameObject:
@@ -11436,6 +11492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1 &790693021
 GameObject:
@@ -12096,6 +12153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &852342316
 PrefabInstance:
@@ -12216,6 +12274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!4 &858836920 stripped
 Transform:
@@ -12411,6 +12470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &874151743
 PrefabInstance:
@@ -12531,6 +12591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &874516460
 PrefabInstance:
@@ -13182,6 +13243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &918036521
 PrefabInstance:
@@ -13302,6 +13364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!4 &926375538 stripped
 Transform:
@@ -13428,6 +13491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &939853119
 PrefabInstance:
@@ -13698,6 +13762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!4 &970617667 stripped
 Transform:
@@ -13863,6 +13928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &989839626
 PrefabInstance:
@@ -14202,6 +14268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &997859422
 PrefabInstance:
@@ -14322,6 +14389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &998890372
 PrefabInstance:
@@ -14442,6 +14510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1002936551
 PrefabInstance:
@@ -14677,6 +14746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1049609484
 PrefabInstance:
@@ -14973,6 +15043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1063761252
 PrefabInstance:
@@ -15237,6 +15308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1082725672
 PrefabInstance:
@@ -15472,6 +15544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!4 &1123446327 stripped
 Transform:
@@ -15742,6 +15815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1159472253
 PrefabInstance:
@@ -16295,6 +16369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!4 &1177776654 stripped
 Transform:
@@ -16496,6 +16571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1195625418
 PrefabInstance:
@@ -16691,6 +16767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1203720318
 PrefabInstance:
@@ -16811,6 +16888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1233471371
 PrefabInstance:
@@ -17006,6 +17084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!4 &1244648367 stripped
 Transform:
@@ -17333,6 +17412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!4 &1270589515 stripped
 Transform:
@@ -17768,6 +17848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1314384251
 PrefabInstance:
@@ -17888,6 +17969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1349854783
 PrefabInstance:
@@ -18008,6 +18090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1 &1352507149
 GameObject:
@@ -18241,6 +18324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1376170721
 PrefabInstance:
@@ -18361,6 +18445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1383251946
 PrefabInstance:
@@ -18481,6 +18566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1 &1395081999
 GameObject:
@@ -18641,6 +18727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1428873268
 PrefabInstance:
@@ -18761,6 +18848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1431454352
 PrefabInstance:
@@ -18881,6 +18969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1437883883
 PrefabInstance:
@@ -19220,6 +19309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1 &1485878396
 GameObject:
@@ -19421,6 +19511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!4 &1505726071 stripped
 Transform:
@@ -19494,6 +19585,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337406054006232582, guid: 616bfb04bb576eba8bb04cef63c4427f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 616bfb04bb576eba8bb04cef63c4427f, type: 3}
@@ -20065,6 +20161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1564311263
 PrefabInstance:
@@ -20185,6 +20282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1564826467
 PrefabInstance:
@@ -20527,6 +20625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1587599542
 PrefabInstance:
@@ -20647,6 +20746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1591064895
 PrefabInstance:
@@ -20875,6 +20975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1611869718
 PrefabInstance:
@@ -21172,6 +21273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1636256992
 PrefabInstance:
@@ -21292,6 +21394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1640034353
 PrefabInstance:
@@ -21412,6 +21515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!4 &1642852632 stripped
 Transform:
@@ -21826,6 +21930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1673917240
 PrefabInstance:
@@ -22021,6 +22126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1690200342
 PrefabInstance:
@@ -22279,6 +22385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1704913054
 PrefabInstance:
@@ -22542,6 +22649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1714501597
 PrefabInstance:
@@ -22662,6 +22770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!4 &1718179959 stripped
 Transform:
@@ -22863,6 +22972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1720483882
 PrefabInstance:
@@ -23133,6 +23243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1 &1728347366
 GameObject:
@@ -24045,6 +24156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1810992543
 PrefabInstance:
@@ -24165,6 +24277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1820101202
 PrefabInstance:
@@ -24360,6 +24473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!4 &1840296141 stripped
 Transform:
@@ -24852,6 +24966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1857700203
 PrefabInstance:
@@ -25091,6 +25206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1870205777
 PrefabInstance:
@@ -25598,6 +25714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1906808526
 PrefabInstance:
@@ -25718,6 +25835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1907929854
 PrefabInstance:
@@ -26323,6 +26441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1936711103
 PrefabInstance:
@@ -26506,6 +26625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!4 &1939241088 stripped
 Transform:
@@ -26632,6 +26752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1954747000
 PrefabInstance:
@@ -26752,6 +26873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1971669088
 PrefabInstance:
@@ -27284,6 +27406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1994125448
 PrefabInstance:
@@ -27404,6 +27527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &1994960859
 PrefabInstance:
@@ -27524,6 +27648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1 &2001581183
 GameObject:
@@ -27965,6 +28090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &2037497954
 PrefabInstance:
@@ -28579,6 +28705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1001 &2069717760
 PrefabInstance:
@@ -28849,6 +28976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!4 &2108895270 stripped
 Transform:
@@ -29125,6 +29253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3
 --- !u!1 &2130678473
 GameObject:
@@ -29521,4 +29650,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 0}
   fallDelay: 0.3

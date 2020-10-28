@@ -9,11 +9,11 @@ public class FallingObject : MonoBehaviour
     [HideInInspector]public Vector3 defualtPosition;
 
     public float fallDelay = 0.3f;
+    public float rebuildDelay = 10;
 
     Rigidbody myRigidbody;
 
     private bool isFalling;
-    private float timer;
 
     private void Start()
     {
@@ -28,7 +28,6 @@ public class FallingObject : MonoBehaviour
         defualtPosition = gameObject.transform.position;
 
         isFalling = false;
-        timer = 4;
     }
 
     private void Update()
@@ -36,19 +35,7 @@ public class FallingObject : MonoBehaviour
         if(isFalling)
         {
             StartCoroutine(DelayFall());
-
-            /*fallDelay += Time.deltaTime;
-            timer -= Time.deltaTime;
-
-            if(fallDelay > 1.1f)
-            {
-                myRigidbody.isKinematic = false;
-            }
-
-            if(timer < 0)
-            {
-                //DestroyObject();
-            }*/
+            isFalling = false;
         }
     }
 
@@ -57,11 +44,11 @@ public class FallingObject : MonoBehaviour
         yield return new WaitForSeconds(fallDelay);
 
         myRigidbody.isKinematic = false;
-    }
 
-    private void DestroyObject()
-    {
-        Destroy(gameObject);
+        yield return new WaitForSeconds(rebuildDelay);
+
+        myRigidbody.isKinematic = true;
+        gameObject.transform.position = defualtPosition;
     }
 
     private void OnCollisionEnter(Collision collision)
