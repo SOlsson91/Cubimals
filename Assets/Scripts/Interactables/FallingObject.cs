@@ -8,7 +8,7 @@ public class FallingObject : MonoBehaviour
 {
     [HideInInspector]public Vector3 defualtPosition;
 
-    public float fallDelay = 1f;
+    public float fallDelay = 0.3f;
 
     Rigidbody myRigidbody;
 
@@ -35,7 +35,9 @@ public class FallingObject : MonoBehaviour
     {
         if(isFalling)
         {
-            fallDelay += Time.deltaTime;
+            StartCoroutine(DelayFall());
+
+            /*fallDelay += Time.deltaTime;
             timer -= Time.deltaTime;
 
             if(fallDelay > 1.1f)
@@ -46,8 +48,15 @@ public class FallingObject : MonoBehaviour
             if(timer < 0)
             {
                 //DestroyObject();
-            }
+            }*/
         }
+    }
+
+    IEnumerator DelayFall()
+    {
+        yield return new WaitForSeconds(fallDelay);
+
+        myRigidbody.isKinematic = false;
     }
 
     private void DestroyObject()
