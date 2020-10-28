@@ -49,7 +49,7 @@ public class WeightButton : MonoBehaviour
     {
         isPressured = true;
 
-        if (level1) {target.SetActive(true);}//Needs to be reworked, just a quick solution.
+        if (level1&&other.gameObject.tag=="Pushable") {target.SetActive(true);}//Needs to be reworked, just a quick solution.
         target.GetComponent<SendActive>().TriggerUpdate();
         
     }
