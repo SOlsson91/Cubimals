@@ -6,7 +6,7 @@ public class Pushables : MonoBehaviour
     {
         foreach(GameObject push in GameObject.FindGameObjectsWithTag("Pushable"))
         {
-            if (push.GetComponent<Rigidbody>() == null)
+            if (push.GetComponent<Rigidbody>() != null)
             {
                 continue;
             }
