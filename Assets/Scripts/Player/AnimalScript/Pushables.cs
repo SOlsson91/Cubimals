@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Pushables : MonoBehaviour
 {
@@ -8,9 +6,16 @@ public class Pushables : MonoBehaviour
     {
         foreach(GameObject push in GameObject.FindGameObjectsWithTag("Pushable"))
         {
-            push.AddComponent<Rigidbody>();
-            push.GetComponent<Rigidbody>().mass=100;
-            push.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+            if (push.GetComponent<Rigidbody>() != null)
+            {
+                continue;
+            }
+            else
+            {
+                push.AddComponent<Rigidbody>();
+                push.GetComponent<Rigidbody>().mass=100;
+                push.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+            }
         }
     }
 }

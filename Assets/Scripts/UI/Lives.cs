@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 /*
  * Update Lives in the GUI
@@ -7,7 +7,7 @@ using TMPro;
 
 public class Lives : MonoBehaviour
 {
-    public TextMeshProUGUI livesText;
+    public Image[] hearthImages;
 
     void Start()
     {
@@ -24,6 +24,24 @@ public class Lives : MonoBehaviour
 
     public void UpdateLives(int lives)
     {
-        livesText.text = "Lives: " + lives;
+        switch (lives)
+        {
+        case 1:
+            hearthImages[0].gameObject.SetActive(true);
+            hearthImages[1].gameObject.SetActive(false);
+            hearthImages[2].gameObject.SetActive(false);
+            break;
+        case 2:
+            hearthImages[0].gameObject.SetActive(true);
+            hearthImages[1].gameObject.SetActive(true);
+            hearthImages[2].gameObject.SetActive(false);
+            break;
+        case 3:
+            hearthImages[0].gameObject.SetActive(true);
+            hearthImages[1].gameObject.SetActive(true);
+            hearthImages[2].gameObject.SetActive(true);
+            break;
+        }
+
     }
 }
