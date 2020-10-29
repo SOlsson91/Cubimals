@@ -1306,6 +1306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playersToSpawn: 2
+  startGame: {fileID: 1446054609}
 --- !u!1 &1214004138
 GameObject:
   m_ObjectHideFlags: 0

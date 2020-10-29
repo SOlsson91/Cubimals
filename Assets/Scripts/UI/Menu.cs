@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
     SpawnPlayer spawner;
     [Range(1,2), SerializeField] int playersToSpawn = 2;
+
+    public GameObject startGame;//Edit: quick fix for double clicking start game and loadig 2 istances of the level
 
     void Start()
     {
@@ -17,9 +20,9 @@ public class Menu : MonoBehaviour
             spawner.Spawn(i);
             Debug.Log("Spawned");
         }
-
         GameManager.Instance.ResetLives();
         GameManager.Instance.LoadLevel(sceneName);
+        startGame.SetActive(false);//Edit: quick fix for double clicking start game and loadig 2 istances of the level
     }
 
     public void LoadScene(string sceneName)
