@@ -12,7 +12,7 @@ BlendTree:
     m_Motion: {fileID: 7400016, guid: 3e1e4fc4087a46e69c0d339eb31e68e0, type: 3}
     m_Threshold: 0.5
     m_Position: {x: 0, y: 0}
-    m_TimeScale: 1
+    m_TimeScale: 0.5
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
@@ -20,7 +20,7 @@ BlendTree:
     m_Motion: {fileID: 7400016, guid: 3e1e4fc4087a46e69c0d339eb31e68e0, type: 3}
     m_Threshold: 2
     m_Position: {x: 0, y: 0}
-    m_TimeScale: 1
+    m_TimeScale: 0.5
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
@@ -233,7 +233,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 'Idle '
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -3902151409142442332}

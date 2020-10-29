@@ -19,6 +19,10 @@ public class PlayerIdleState : PlayerBaseState
         if (Mathf.Abs(controller.move.Movement.x) > 0 || Mathf.Abs(controller.move.Movement.z) > 0) 
         {
             controller.TransitionToState(controller.walkingState);
-        }     
+        }
+        if (controller.move.isJumping)
+        {
+            controller.TransitionToState(controller.jumpState);
+        }
     }
 }
