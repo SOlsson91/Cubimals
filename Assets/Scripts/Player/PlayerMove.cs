@@ -6,12 +6,12 @@ public class PlayerMove : MonoBehaviour
 {
     public Rigidbody rb;
     Player player;
+    blaCam cam;
 
     Vector3 movement;
     bool charging = false;
     public bool isJumping = false;
 
-    float jumpAnimTimer;
 
     public Vector3 Movement
     {
@@ -29,12 +29,20 @@ public class PlayerMove : MonoBehaviour
     {
         player = GetComponent<Player>();
         rb = GetComponent<Rigidbody>();
+        cam = FindObjectOfType<blaCam>();
     }
 
     public void OnMove(Vector2 direction)
     {
         movement.x = direction.x;
         movement.z = direction.y;
+        if (cam.inCave)
+        {
+            Debug.Log("Inverted controlls");
+            movement.x = direction.y;
+            movement.z = -direction.x;
+        }
+
     }
 
     public void Move()
@@ -118,8 +126,6 @@ public class PlayerMove : MonoBehaviour
 
     void Charging()
     {
-        jumpAnimTimer += Time.deltaTime;
-
         float currentCharge = player.currentAnimal.currentCharge;
         float maxCharge = player.currentAnimal.maxCharge;
         player.currentAnimal.currentCharge = currentCharge > maxCharge ? maxCharge : currentCharge + Time.deltaTime * player.currentAnimal.jumpForce;

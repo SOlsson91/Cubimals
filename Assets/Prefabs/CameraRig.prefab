@@ -131,3 +131,6 @@ MonoBehaviour:
   screenPadding: 2
   minCameraSize: 3
   minFOV: 30
+  inCave: 0
+  yCavePadding: -2
+  xCavePadding: -8

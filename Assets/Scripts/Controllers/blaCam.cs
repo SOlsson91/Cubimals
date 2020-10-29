@@ -18,6 +18,10 @@ public class blaCam : MonoBehaviour
 
     private List<Player> animalRef;
 
+    public bool inCave;
+    public int yCavePadding;
+    public int xCavePadding;
+
     private void Awake()
     {
         mainCamera = GetComponentInChildren<Camera>();
@@ -38,11 +42,12 @@ public class blaCam : MonoBehaviour
 
     private void Move()
     {
+        
         FindAveragePosition();
         transform.position = Vector3.SmoothDamp(transform.position, desPos, ref cameraMoveVelocity, cameraSmoothTime);
+
+        
     }
-
-
     private void FindAveragePosition()
     {
         Vector3 averagePos = new Vector3();
@@ -67,9 +72,20 @@ public class blaCam : MonoBehaviour
 
         // Keep the same y value.
         //averagePos.y = transform.position.y;
-
+        
         // The desired position is the average position;
         desPos = averagePos;
+        if (inCave)
+        {  
+            Debug.Log("Incave");
+            desPos = new Vector3(desPos.x-xCavePadding,desPos.y+yCavePadding,transform.position.z);
+            transform.rotation = Quaternion.Euler(0, 90, 0);
+        }
+        if (!inCave)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+
     }
 
 
@@ -128,8 +144,6 @@ public class blaCam : MonoBehaviour
 
         return size;
     }
-
-
     public void SetStartPositionAndSize()
     {
         FindAveragePosition();
@@ -145,6 +159,14 @@ public class blaCam : MonoBehaviour
         else 
         { 
             mainCamera.fieldOfView = Mathf.Max(minFOV, screenPadding*Mathf.Abs(Vector3.Distance(animalRef[0].transform.position, animalRef[1].transform.position))); 
-        }
+        } 
+   
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("in cave");
+        if (other.gameObject.name =="Player") { Debug.Log("Player: "); }
+    }
+
+
 }
