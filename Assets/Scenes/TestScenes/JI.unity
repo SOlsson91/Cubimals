@@ -364,9 +364,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 215293587423788762, guid: b9291052ff483b446b12c2f7833cd0bf,
-    type: 3}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1 &223063365
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,7 +486,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252167281}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.45, y: 1.301652, z: -1.47}
+  m_LocalPosition: {x: -1.96, y: 1.301652, z: -1.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 929640490}
@@ -1439,6 +1438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   travelDistance: 5
   moveSpeed: 2
+  isItAGate: 0
 --- !u!1 &1252491796
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,9 +1487,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 215293587423788762, guid: b9291052ff483b446b12c2f7833cd0bf,
-    type: 3}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!54 &1252491799
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2586,9 +2585,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 215293587423788762, guid: b9291052ff483b446b12c2f7833cd0bf,
-    type: 3}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!54 &2069285739
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2754,7 +2752,7 @@ PrefabInstance:
     - target: {fileID: 215293587423788760, guid: b9291052ff483b446b12c2f7833cd0bf,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 215293587423788763, guid: b9291052ff483b446b12c2f7833cd0bf,
         type: 3}

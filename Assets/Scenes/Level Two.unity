@@ -274,8 +274,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &28356552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -559,8 +559,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!4 &57442514 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2769521228425536551, guid: a3f519f8e2a8e844294b3e8763a7f14d,
@@ -1084,8 +1084,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &127016282
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1205,8 +1205,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!4 &127067494 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2769521228425536551, guid: a3f519f8e2a8e844294b3e8763a7f14d,
@@ -1432,8 +1432,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &142658664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1628,8 +1628,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &144513126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1749,8 +1749,82 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
+--- !u!1001 &156129034
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 527815286}
+    m_Modifications:
+    - target: {fileID: 5288912755746096144, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_Name
+      value: PressurePlate (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 59.001644
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.8636055
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 120.60287
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096150, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 359834046}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fbb3b59c6755d294d8f02ad9d85d48bd, type: 3}
 --- !u!1001 &163888022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1870,8 +1944,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &176468766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1991,8 +2065,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &183112894
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2112,8 +2186,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &189918947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2377,8 +2451,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &215554820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2498,8 +2572,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &220066059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2700,8 +2774,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &238708818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2821,8 +2895,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &239823086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2942,8 +3016,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1 &243318129 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1379645051613606, guid: 2cb12feb62290af4ab4634e7ac62b956,
@@ -3088,8 +3162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &254406000
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3284,8 +3358,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1 &263276720
 GameObject:
   m_ObjectHideFlags: 0
@@ -3670,8 +3744,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &295728283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3791,8 +3865,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &306705730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3987,8 +4061,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1 &325324678
 GameObject:
   m_ObjectHideFlags: 0
@@ -4216,8 +4290,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!4 &347128974 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2769521228425536551, guid: a3f519f8e2a8e844294b3e8763a7f14d,
@@ -4314,7 +4388,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1989401929107402, guid: 0247930279caa4341ab23ddd2d4b69f8, type: 3}
       propertyPath: m_Name
-      value: FanceWooden2
+      value: CaveGate
       objectReference: {fileID: 0}
     - target: {fileID: 1989401929107402, guid: 0247930279caa4341ab23ddd2d4b69f8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4350,7 +4424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004810153341632, guid: 0247930279caa4341ab23ddd2d4b69f8, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4004810153341632, guid: 0247930279caa4341ab23ddd2d4b69f8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4399,6 +4473,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0000001, y: 0.48035094, z: 0.100000106}
   m_Center: {x: 0.000002077315, y: 0.24017568, z: 0.07586239}
+--- !u!114 &359834048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359834046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a132f87d6a79ac84aac5ade78cf7dd2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggers:
+  - {fileID: 627423464}
+  - {fileID: 960607228}
+  targetScript: {fileID: 359834049}
+--- !u!114 &359834049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359834046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4808fb13dc9e25842a62c1a7edb083f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  travelDistance: 1
+  moveSpeed: 1
+  isItAGate: 0
 --- !u!1001 &361577629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4414,7 +4519,7 @@ PrefabInstance:
     - target: {fileID: 2667823122874527283, guid: f1d24395a6810412a9aff4a8500961a9,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2667823122874527285, guid: f1d24395a6810412a9aff4a8500961a9,
         type: 3}
@@ -4539,11 +4644,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1866295466766154406, guid: 5850fa4cc36ba844bb558eb8538dcd3b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1866295466766154406, guid: 5850fa4cc36ba844bb558eb8538dcd3b,
         type: 3}
@@ -4701,8 +4801,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &369720541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4822,8 +4922,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1 &377757537
 GameObject:
   m_ObjectHideFlags: 0
@@ -5027,8 +5127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &398895420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5217,8 +5317,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &402361828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5488,8 +5588,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &409946706
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5609,8 +5709,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1 &410253742
 GameObject:
   m_ObjectHideFlags: 0
@@ -5774,8 +5874,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &419367270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6147,8 +6247,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &439532101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6268,8 +6368,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &441692282
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6464,8 +6564,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &444879518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6585,8 +6685,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1 &447382981
 GameObject:
   m_ObjectHideFlags: 0
@@ -6740,8 +6840,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1 &450699075
 GameObject:
   m_ObjectHideFlags: 0
@@ -7159,8 +7259,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &483829026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7402,8 +7502,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &495934633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7748,8 +7848,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &515629286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7869,8 +7969,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &517081266
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8198,8 +8298,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1 &527815285
 GameObject:
   m_ObjectHideFlags: 0
@@ -8227,9 +8327,9 @@ Transform:
   m_LocalPosition: {x: -43.996128, y: -29.097286, z: -107.98005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1936711104}
-  - {fileID: 1253335458}
   - {fileID: 359834045}
+  - {fileID: 627423467}
+  - {fileID: 960607229}
   - {fileID: 44934245}
   - {fileID: 1175505178}
   - {fileID: 1571730193}
@@ -8395,8 +8495,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &536515489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8516,8 +8616,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &549759706
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8806,8 +8906,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!4 &564452255 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2769521228425536551, guid: a3f519f8e2a8e844294b3e8763a7f14d,
@@ -8964,8 +9064,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1 &581509094
 GameObject:
   m_ObjectHideFlags: 0
@@ -9119,8 +9219,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1 &603513992
 GameObject:
   m_ObjectHideFlags: 0
@@ -9354,8 +9454,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &621512132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9425,6 +9525,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3f519f8e2a8e844294b3e8763a7f14d, type: 3}
+--- !u!1 &627423464 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5288912755746096144, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 899291092}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &627423467 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 899291092}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &629516337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9647,6 +9759,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraRig
       objectReference: {fileID: 0}
+    - target: {fileID: 6091688789418470877, guid: 73f58fd3409d4df4aa172dfbe40eaadd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6091688789418470879, guid: 73f58fd3409d4df4aa172dfbe40eaadd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9857,8 +9974,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &674059051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9978,8 +10095,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &680391126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10168,8 +10285,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1 &692665991
 GameObject:
   m_ObjectHideFlags: 0
@@ -10333,8 +10450,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!4 &700534007 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2769521228425536551, guid: a3f519f8e2a8e844294b3e8763a7f14d,
@@ -10627,8 +10744,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1 &721239597
 GameObject:
   m_ObjectHideFlags: 0
@@ -10831,8 +10948,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &746056010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10952,8 +11069,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1 &746597903
 GameObject:
   m_ObjectHideFlags: 0
@@ -11497,8 +11614,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1 &790693021
 GameObject:
   m_ObjectHideFlags: 0
@@ -12158,8 +12275,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &852342316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12279,8 +12396,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!4 &858836920 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2769521228425536551, guid: a3f519f8e2a8e844294b3e8763a7f14d,
@@ -12475,8 +12592,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &874151743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12596,8 +12713,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &874516460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12976,6 +13093,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3f519f8e2a8e844294b3e8763a7f14d, type: 3}
+--- !u!1001 &899291092
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 527815286}
+    m_Modifications:
+    - target: {fileID: 5288912755746096144, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_Name
+      value: PressurePlate
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 35.08964
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 21.118607
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 121.39187
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288912755746096150, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 359834046}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fbb3b59c6755d294d8f02ad9d85d48bd, type: 3}
 --- !u!4 &901075839 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2769521228425536551, guid: a3f519f8e2a8e844294b3e8763a7f14d,
@@ -13248,8 +13439,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &918036521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13369,8 +13560,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!4 &926375538 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2769521228425536551, guid: a3f519f8e2a8e844294b3e8763a7f14d,
@@ -13496,8 +13687,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &939853119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13767,8 +13958,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
+--- !u!1 &960607228 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5288912755746096144, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 156129034}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &960607229 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5288912755746096145, guid: fbb3b59c6755d294d8f02ad9d85d48bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 156129034}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &970617667 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2769521228425536551, guid: a3f519f8e2a8e844294b3e8763a7f14d,
@@ -13933,8 +14136,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &989839626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14273,8 +14476,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &997859422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14394,8 +14597,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &998890372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14515,8 +14718,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1002936551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14751,8 +14954,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1039588543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15128,8 +15331,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1063761252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15393,8 +15596,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1082725672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15629,8 +15832,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!4 &1123446327 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2769521228425536551, guid: a3f519f8e2a8e844294b3e8763a7f14d,
@@ -15900,8 +16103,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1159472253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15909,6 +16112,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1764092046, guid: 8a72caf48a1acd54b95eb2e344050807, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 485186711}
     - target: {fileID: 1745745854680214, guid: 8a72caf48a1acd54b95eb2e344050807, type: 3}
       propertyPath: m_Name
       value: MushroomYellow
@@ -16454,8 +16661,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!4 &1177776654 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2769521228425536551, guid: a3f519f8e2a8e844294b3e8763a7f14d,
@@ -16656,8 +16863,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1195625418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16852,8 +17059,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1203720318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16973,8 +17180,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1233471371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17169,8 +17376,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!4 &1244648367 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2769521228425536551, guid: a3f519f8e2a8e844294b3e8763a7f14d,
@@ -17315,69 +17522,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3f519f8e2a8e844294b3e8763a7f14d, type: 3}
---- !u!1001 &1253335457
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 527815286}
-    m_Modifications:
-    - target: {fileID: 1582625151665576, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_Name
-      value: Bag
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 35.00849
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 20.939438
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 121.50997
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
---- !u!4 &1253335458 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1253335457}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1262942743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17497,8 +17641,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!4 &1270589515 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2769521228425536551, guid: a3f519f8e2a8e844294b3e8763a7f14d,
@@ -17845,7 +17989,7 @@ Transform:
   - {fileID: 1039588544}
   - {fileID: 1491600846}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1302017985
 PrefabInstance:
@@ -17966,8 +18110,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1314384251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18087,8 +18231,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1349854783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18208,8 +18352,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1 &1352507149
 GameObject:
   m_ObjectHideFlags: 0
@@ -18442,8 +18586,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1376170721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18563,8 +18707,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1383251946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18684,8 +18828,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1 &1395081999
 GameObject:
   m_ObjectHideFlags: 0
@@ -18845,8 +18989,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1428873268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18966,8 +19110,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1431454352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19087,8 +19231,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1437883883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19427,8 +19571,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1 &1485878396
 GameObject:
   m_ObjectHideFlags: 0
@@ -19709,8 +19853,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!4 &1505726071 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2769521228425536551, guid: a3f519f8e2a8e844294b3e8763a7f14d,
@@ -19787,7 +19931,7 @@ PrefabInstance:
     - target: {fileID: 4337406054006232582, guid: 616bfb04bb576eba8bb04cef63c4427f,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 616bfb04bb576eba8bb04cef63c4427f, type: 3}
@@ -20359,8 +20503,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1564311263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20480,8 +20624,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1564826467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20823,8 +20967,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1587599542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20944,8 +21088,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1591064895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21173,8 +21317,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1611869718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21471,8 +21615,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1636256992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21592,8 +21736,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1640034353
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21713,8 +21857,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!4 &1642852632 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2769521228425536551, guid: a3f519f8e2a8e844294b3e8763a7f14d,
@@ -22128,8 +22272,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1673917240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22324,8 +22468,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1690200342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22583,8 +22727,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1704913054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22847,8 +22991,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1714501597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22968,8 +23112,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!4 &1718179959 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2769521228425536551, guid: a3f519f8e2a8e844294b3e8763a7f14d,
@@ -23170,8 +23314,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1720483882
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23441,8 +23585,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1 &1728347366
 GameObject:
   m_ObjectHideFlags: 0
@@ -24354,8 +24498,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1810992543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24475,8 +24619,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1820101202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24671,8 +24815,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!4 &1840296141 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2769521228425536551, guid: a3f519f8e2a8e844294b3e8763a7f14d,
@@ -25164,8 +25308,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1857700203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25404,8 +25548,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1870205777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25912,8 +26056,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1906808526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26033,8 +26177,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1907929854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26639,71 +26783,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
---- !u!1001 &1936711103
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 527815286}
-    m_Modifications:
-    - target: {fileID: 1582625151665576, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_Name
-      value: Bag (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 58.81
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 14.639437
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 120.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fb6ac7daa6c926e4eb40091f11f7fd1a, type: 3}
---- !u!4 &1936711104 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4055595016932654, guid: fb6ac7daa6c926e4eb40091f11f7fd1a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1936711103}
-  m_PrefabAsset: {fileID: 0}
+  rebuildDelay: 10
 --- !u!1001 &1938978648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26823,8 +26904,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!4 &1939241088 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2769521228425536551, guid: a3f519f8e2a8e844294b3e8763a7f14d,
@@ -26950,8 +27031,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1954747000
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27071,8 +27152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1971669088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27604,8 +27685,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1994125448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27725,8 +27806,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &1994960859
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27846,8 +27927,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1 &2001581183
 GameObject:
   m_ObjectHideFlags: 0
@@ -28288,8 +28369,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &2037497954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28903,8 +28984,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &2069717760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29174,8 +29255,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!4 &2108895270 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2769521228425536551, guid: a3f519f8e2a8e844294b3e8763a7f14d,
@@ -29451,8 +29532,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1 &2130678473
 GameObject:
   m_ObjectHideFlags: 0
@@ -29848,8 +29929,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defualtPosition: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 0}
   fallDelay: 0.3
+  rebuildDelay: 10
 --- !u!1001 &4662381462136665219
 PrefabInstance:
   m_ObjectHideFlags: 0

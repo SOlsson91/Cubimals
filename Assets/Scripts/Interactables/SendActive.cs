@@ -15,10 +15,14 @@ public class SendActive : MonoBehaviour
 
         foreach(var trgs in triggers)
         {
-            if(!trgs.GetComponent<WeightButton>().getActive)
+            if(trgs != null)
             {
-                count++;
+                if(!trgs.GetComponent<WeightButton>().getActive)
+                {
+                    count++;
+                }
             }
+
         }
 
         if(count == triggers.Length)
