@@ -3,16 +3,10 @@
 public class ActivateButton : MonoBehaviour
 {
     public GameObject target;
-    private bool isActive;
-    public bool IsActive
-    {
-        get { return isActive; }
-        set { isActive = value; }
-    }
+    public bool isActive = false;
 
     void Start()
     {
-        isActive = false;
         if (target != null)
         {
             target.SetActive(isActive);

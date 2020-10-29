@@ -64,7 +64,7 @@ public class PlayerMove : MonoBehaviour
             {
                 player.currentAnimal.GetComponent<Animal>().movementSpeed += 4;
             }
-            other.collider.isTrigger = !player.currentAnimal.canSwim ? true : false;
+            player.currentAnimal.GetComponent<Collider>().isTrigger = !player.currentAnimal.canSwim ? true : false;
             StartCoroutine(ChangeBackWater(player));
         }
     }

@@ -6,10 +6,14 @@ using UnityEngine;
 
 public class FallingObject : MonoBehaviour
 {
+    [HideInInspector]public Vector3 defualtPosition;
+
+    public float fallDelay = 0.3f;
+    public float rebuildDelay = 10;
+
     Rigidbody myRigidbody;
 
     private bool isFalling;
-    private float timer;
 
     private void Start()
     {
@@ -21,26 +25,30 @@ public class FallingObject : MonoBehaviour
         myRigidbody.useGravity = true;
         myRigidbody.freezeRotation = true;
 
+        defualtPosition = gameObject.transform.position;
+
         isFalling = false;
-        timer = 4;
     }
 
     private void Update()
     {
         if(isFalling)
         {
-            timer -= Time.deltaTime;
-
-            if(timer < 0)
-            {
-                DestroyObject();
-            }
+            StartCoroutine(DelayFall());
+            isFalling = false;
         }
     }
 
-    private void DestroyObject()
+    IEnumerator DelayFall()
     {
-        Destroy(gameObject);
+        yield return new WaitForSeconds(fallDelay);
+
+        myRigidbody.isKinematic = false;
+
+        yield return new WaitForSeconds(rebuildDelay);
+
+        myRigidbody.isKinematic = true;
+        gameObject.transform.position = defualtPosition;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -49,7 +57,6 @@ public class FallingObject : MonoBehaviour
 
         if(collision.gameObject.tag == "Player")
         {
-            myRigidbody.isKinematic = false;
             isFalling = true;
         }
     }

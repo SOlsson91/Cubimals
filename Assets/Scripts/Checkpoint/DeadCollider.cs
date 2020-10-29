@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 /*
  * If player hits collider respawn it at the latest checkpoint
@@ -7,6 +8,7 @@
 
 public class DeadCollider : MonoBehaviour
 {
+    bool isLosingLife = false;
     public Vector3 spawnOffset = new Vector3(1.25f, 0.0f, 1.25f);
 
     void OnTriggerEnter(Collider other)
@@ -14,7 +16,6 @@ public class DeadCollider : MonoBehaviour
         Debug.Log(other.GetComponentInParent<Player>().gameObject.tag);
         if (other.GetComponentInParent<Player>().gameObject.CompareTag("Player"))
         {
-            DecreaseALife();
             GameManager.Instance.players.ForEach(delegate(Player player) {
                 int playerNumber = other.gameObject.GetComponentInParent<Player>().playerNumber;
 
@@ -25,7 +26,19 @@ public class DeadCollider : MonoBehaviour
                     player.transform.position = respawnPoint + (spawnOffset * playerNumber);
                 }
             });
+            if (!isLosingLife)
+            {
+                isLosingLife = true;
+                DecreaseALife();
+                StartCoroutine("LifeTimer");
+            }
         }
+    }
+
+    IEnumerator LifeTimer()
+    {
+        yield return new WaitForSeconds(0.5f);
+        isLosingLife = false;
     }
 
     void DecreaseALife()
