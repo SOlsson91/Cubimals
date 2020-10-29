@@ -7,6 +7,8 @@ public class Gate : MonoBehaviour
     public float travelDistance = 1;
     public float moveSpeed = 1;
 
+    public bool isItAGate;
+
     private Vector3 defaultPosition;
 
     private bool isActive;
@@ -24,40 +26,42 @@ public class Gate : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(travelDistance > 0) // UP
-        {
-            if(isActive && gameObject.transform.position.y < defaultPosition.y + travelDistance)
+            if(travelDistance > 0) // UP
             {
-                gameObject.transform.position += new Vector3(0, 1, 0) * Time.deltaTime * moveSpeed;
+                if(isActive && gameObject.transform.position.y < defaultPosition.y + travelDistance)
+                {
+                    gameObject.transform.position += new Vector3(0, 1, 0) * Time.deltaTime * moveSpeed;
+                }
+                else if(gameObject.transform.position.y > defaultPosition.y)
+                {
+                    gameObject.transform.position -= new Vector3(0, 1, 0) * Time.deltaTime * moveSpeed;
+                }
+                else
+                {
+                    gameObject.transform.position = defaultPosition;
+                }
             }
-            else if(gameObject.transform.position.y > defaultPosition.y)
+            else if(travelDistance < 0) // DOWN
             {
-                gameObject.transform.position -= new Vector3(0, 1, 0) * Time.deltaTime * moveSpeed;
+                if(isActive && gameObject.transform.position.y > defaultPosition.y + travelDistance)
+                {
+                    gameObject.transform.position -= new Vector3(0, 1, 0) * Time.deltaTime * moveSpeed;
+                }
+                else if(gameObject.transform.position.y < defaultPosition.y)
+                {
+                    gameObject.transform.position += new Vector3(0, 1, 0) * Time.deltaTime * moveSpeed;
+                }
+                else
+                {
+                    gameObject.transform.position = defaultPosition;
+                }
             }
             else
             {
-                gameObject.transform.position = defaultPosition;
+                Debug.LogError("Target Destination set to 0");
             }
         }
-        else if(travelDistance < 0) // DOWN
-        {
-            if(isActive && gameObject.transform.position.y > defaultPosition.y + travelDistance)
-            {
-                gameObject.transform.position -= new Vector3(0, 1, 0) * Time.deltaTime * moveSpeed;
-            }
-            else if(gameObject.transform.position.y < defaultPosition.y)
-            {
-                gameObject.transform.position += new Vector3(0, 1, 0) * Time.deltaTime * moveSpeed;
-            }
-            else
-            {
-                gameObject.transform.position = defaultPosition;
-            }
-        }
-        else
-        {
-            Debug.LogError("Target Destination set to 0");
-        }
+
     }
 
 
@@ -72,4 +76,3 @@ public class Gate : MonoBehaviour
             gameObject.transform.position += new Vector3(0, 1, 0) * Time.deltaTime;
         }
     }*/
-}

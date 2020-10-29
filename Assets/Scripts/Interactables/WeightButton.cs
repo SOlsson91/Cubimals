@@ -51,7 +51,6 @@ public class WeightButton : MonoBehaviour
 
         if (level1&&other.gameObject.tag=="Pushable") {target.SetActive(true);}//Needs to be reworked, just a quick solution.
         target.GetComponent<SendActive>().TriggerUpdate();
-        
     }
 
     private void OnTriggerExit(Collider other)
