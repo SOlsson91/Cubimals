@@ -9,6 +9,7 @@ TagManager:
   - Water
   - Pushable
   - Interactable
+  - Cave
   layers:
   - Default
   - TransparentFX
