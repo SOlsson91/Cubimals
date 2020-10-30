@@ -6,12 +6,11 @@ public class PlayerMove : MonoBehaviour
 {
     public Rigidbody rb;
     Player player;
-    blaCam cam;
 
     Vector3 movement;
     bool charging = false;
     public bool isJumping = false;
-
+    blaCam cam;
 
     public Vector3 Movement
     {
@@ -29,16 +28,16 @@ public class PlayerMove : MonoBehaviour
     {
         player = GetComponent<Player>();
         rb = GetComponent<Rigidbody>();
-        cam = FindObjectOfType<blaCam>();
+        cam = Camera.main.GetComponentInParent<blaCam>();
     }
 
     public void OnMove(Vector2 direction)
     {
         movement.x = direction.x;
-        movement.z = direction.y;
-        
+        movement.z = direction.y; 
         if (cam == null)
             return;
+        
 
         if (cam.inCave)
         {
@@ -47,12 +46,14 @@ public class PlayerMove : MonoBehaviour
             movement.z = -direction.x;
         }
 
+            
     }
 
     public void Move()
     {
         if (player.currentAnimal == null) return;
         rb.position = Vector3.MoveTowards(transform.position, rb.position + movement * player.currentAnimal.movementSpeed * Time.deltaTime, 1);
+
 
         if (movement != Vector3.zero)
         {
