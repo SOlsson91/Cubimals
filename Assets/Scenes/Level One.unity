@@ -38393,7 +38393,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9999989, y: 0.100000046, z: 0.999998}
   m_Center: {x: -0.0000005364418, y: 0.049999993, z: -0.0000016845765}
---- !u!114 &1211097148
+--- !u!114 &1211097146
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -38407,6 +38407,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   travelDistance: 1
   moveSpeed: 1
+  isItAGate: 0
+--- !u!114 &1211097147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211097144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a132f87d6a79ac84aac5ade78cf7dd2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggers:
+  - {fileID: 126289295}
+  targetScript: {fileID: 1211097146}
 --- !u!1001 &1214193397
 PrefabInstance:
   m_ObjectHideFlags: 0

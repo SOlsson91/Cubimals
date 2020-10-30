@@ -34,6 +34,8 @@ public class FallingObject : MonoBehaviour
     {
         if(isFalling)
         {
+            myRigidbody.isKinematic = false;
+
             StartCoroutine(DelayFall());
             isFalling = false;
         }
@@ -42,8 +44,6 @@ public class FallingObject : MonoBehaviour
     IEnumerator DelayFall()
     {
         yield return new WaitForSeconds(fallDelay);
-
-        myRigidbody.isKinematic = false;
 
         yield return new WaitForSeconds(rebuildDelay);
 

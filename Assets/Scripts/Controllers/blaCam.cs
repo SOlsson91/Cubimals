@@ -11,6 +11,7 @@ public class blaCam : MonoBehaviour
 
 
     private Camera mainCamera;                  // Used for referencing the camera.
+    private Camera secondaryCamera;
     private float zoomSpeed;               // Reference speed for the smooth damping of the orthographic size.
     private Vector3 cameraMoveVelocity;   // Reference velocity for the smooth damping of the position.
     private Vector3 desPos;              // The position the camera is moving towards.
@@ -24,6 +25,7 @@ public class blaCam : MonoBehaviour
     private void Awake()
     {
         mainCamera = GetComponentInChildren<Camera>();
+        secondaryCamera = GetComponentInChildren<Camera>();
         animalRef = GameManager.Instance.players;
     }
 

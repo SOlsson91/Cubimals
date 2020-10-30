@@ -291,7 +291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 4
   jumpGravityMulti: 3
-  movementSpeed: 5.5
+  movementSpeed: 7
   animalMass: 1
   canSwim: 0
   canChargeJump: 0
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashSpeed: 1000
   dashTime: 0.2
-  cooldownValue: 2
+  cooldownValue: 0.5
 --- !u!65 &5090452420110112927
 BoxCollider:
   m_ObjectHideFlags: 0
