@@ -13,8 +13,11 @@ public class DeadCollider : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.GetComponentInParent<Player>().gameObject.tag);
-        if (other.GetComponentInParent<Player>().gameObject.CompareTag("Player"))
+        Player playerObject = other.GetComponentInParent<Player>();
+        if (playerObject == null)
+            return;
+
+        if (playerObject.gameObject.CompareTag("Player"))
         {
             GameManager.Instance.players.ForEach(delegate(Player player) {
                 int playerNumber = other.gameObject.GetComponentInParent<Player>().playerNumber;
