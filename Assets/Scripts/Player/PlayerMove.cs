@@ -6,12 +6,11 @@ public class PlayerMove : MonoBehaviour
 {
     public Rigidbody rb;
     Player player;
-    CaveCam cam;
 
     Vector3 movement;
     bool charging = false;
     public bool isJumping = false;
-
+    blaCam cam;
 
     public Vector3 Movement
     {
@@ -29,25 +28,25 @@ public class PlayerMove : MonoBehaviour
     {
         player = GetComponent<Player>();
         rb = GetComponent<Rigidbody>();
-        cam = FindObjectOfType<CaveCam>();
+        cam = Camera.main.GetComponentInParent<blaCam>();
     }
 
     public void OnMove(Vector2 direction)
     {
-        Debug.Log("cam val:" + cam.camera.inCave);
         movement.x = direction.x;
-        movement.z = direction.y;
-        if (cam.camera.inCave)
+        movement.z = direction.y; 
+        if (cam == null)
+            return;
+        
+
+        if (cam.inCave)
         {
             Debug.Log("Inverted controlls");
             movement.x = direction.y;
             movement.z = -direction.x;
         }
-        if (cam == null)
-            return;
 
-
-
+            
     }
 
     public void Move()
