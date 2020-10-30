@@ -32,6 +32,7 @@ public class blaCam : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // to avoid null reference
         if (animalRef.Count > 0)
         {
             Move();
