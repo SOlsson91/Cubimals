@@ -182,13 +182,13 @@ MonoBehaviour:
     got 3 lives to share between you. If you loose all of your lives it's game over
     and you'll have to start all over again. You control you character with [WASD]
     keys and [LS] on Controller.\n\nYou have 5 animals at your disposal which you
-    need to use to overcome certain obstacles. Use [Q] to switch between them or [Y]
-    on Xbox. You use the animalspecific ability with the [E] key or [X] on Controller.\n\nThe
+    need to use to overcome certain obstacles. Use [Q] to switch between them or
+    [Y] on Xbox. You use the animalspecific ability with the [E] key or [X] on Controller.\n\nThe
     animals have different traits which you'll need to either switch to or combine
-    to overcome the dangers ahead:\n  Rabbit - Can charge his jump into a bigger jump\n
-    \ Turtle - Slow on land but the only one that can cross water\n  Cow - Is strong
-    enough to push certain object others can't\n  Horse - Faster than the others and
-    can even dash forwards\n  Chicken - Can glide through the air"
+    to overcome the dangers ahead:\n  Rabbit - Can charge his jump into a bigger
+    jump\n Turtle - Slow on land but the only one that can cross water\n  Cow - Is
+    strong enough to push certain object others can't\n  Horse - Faster than the
+    others and can even dash forwards\n  Chicken - Can glide through the air"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1575,7 +1575,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level Two
+          m_StringArgument: Level One
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1195982679}
