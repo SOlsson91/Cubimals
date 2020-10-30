@@ -501,13 +501,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 7
-  jumpGravityMulti: 3
+  jumpGravityMulti: 2
   movementSpeed: 5
   animalMass: 1
   canSwim: 0
   canChargeJump: 1
   currentCharge: 0
-  maxCharge: 10
+  maxCharge: 12
   ability: {fileID: 0}
   interactDistance: 1
 --- !u!65 &6327250509016120185
