@@ -291,7 +291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 4
   jumpGravityMulti: 3
-  movementSpeed: 5.5
+  movementSpeed: 7
   animalMass: 1
   canSwim: 0
   canChargeJump: 0
