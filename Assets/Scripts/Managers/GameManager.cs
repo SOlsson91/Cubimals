@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 //using UnityEngine.Events;
 
 //-- TODO --
@@ -24,6 +25,7 @@ public class GameManager : Singleton<GameManager>
     [HideInInspector] public bool isPaused = false;
 
     List<GameObject> instancedSystems;
+    SpawnPlayer spawner;
     List<AsyncOperation> loadOperations; // <-- Stacks operations that is being loaded additively
 
     GameState currentGameState = GameState.PREGAME; // <-- GameState default state is PREGAME
@@ -35,6 +37,7 @@ public class GameManager : Singleton<GameManager>
         base.Awake();
 
         players = new List<Player>();
+        spawner = GetComponent<SpawnPlayer>();
         instancedSystems = new List<GameObject>();
     }
 
