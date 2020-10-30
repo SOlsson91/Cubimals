@@ -48,7 +48,8 @@ MonoBehaviour:
   - {fileID: 5651311445254039957, guid: 6b8422ead62379ae9a4716fcb0ad9fbe, type: 3}
   players: []
   lives: 3
-  levelToBoot: 
+  isPaused: 0
+  levelToBoot: MainMenu
 --- !u!114 &3278515486297592966
 MonoBehaviour:
   m_ObjectHideFlags: 0
