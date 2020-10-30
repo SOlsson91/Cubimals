@@ -19425,6 +19425,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1764092046, guid: 8a72caf48a1acd54b95eb2e344050807, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 485186711}
     - target: {fileID: 1745745854680214, guid: 8a72caf48a1acd54b95eb2e344050807, type: 3}
       propertyPath: m_Name
       value: MushroomYellow
