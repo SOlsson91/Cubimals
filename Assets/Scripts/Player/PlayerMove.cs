@@ -36,6 +36,10 @@ public class PlayerMove : MonoBehaviour
     {
         movement.x = direction.x;
         movement.z = direction.y;
+        
+        if (cam == null)
+            return;
+
         if (cam.inCave)
         {
             Debug.Log("Inverted controlls");

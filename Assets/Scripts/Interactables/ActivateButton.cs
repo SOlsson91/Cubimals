@@ -19,7 +19,11 @@ public class ActivateButton : MonoBehaviour
 
     public void ActivateTarget()
     {
-        Debug.Log("ACTIVATED");
+        if (target == null)
+        {
+            Debug.LogWarning("[ActivateButton] Target is null");
+            return;
+        }
         isActive = !isActive;
         target.SetActive(isActive);
     }
