@@ -15,4 +15,13 @@ public class EventManager : Singleton<EventManager>
             onLivesLost(lives);
         }
     }
+
+    public event Action onPause;
+    public void Pause()
+    {
+        if (onPause != null)
+        {
+            onPause();
+        }
+    }
 }
