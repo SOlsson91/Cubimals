@@ -1306,6 +1306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playersToSpawn: 2
+  startGame: {fileID: 1446054609}
 --- !u!1 &1214004138
 GameObject:
   m_ObjectHideFlags: 0
@@ -1572,7 +1573,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level One
+          m_StringArgument: Level Two
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1195982679}

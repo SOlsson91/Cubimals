@@ -9,6 +9,8 @@ TagManager:
   - Water
   - Pushable
   - Interactable
+  - Cave
+  - SecondaryCamera
   layers:
   - Default
   - TransparentFX
