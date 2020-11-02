@@ -1,57 +1,57 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Gate : MonoBehaviour
 {
-    public float travelDistance = 1;
-    public float moveSpeed = 1;
+    public float travelDistance = 1; // The distance the Gate is supposed to travel in one axis
+    public float moveSpeed = 1; // How fast the Gate is supposed to travel
 
-    public bool isItAGate;
-
-    private Vector3 defaultPosition;
+    private Vector3 defaultPosition; // Original Position of the Gate
 
     private bool isActive;
 
-    public bool getActive
+    // -- Accessors --
+
+    public bool getActive 
     {
         get { return isActive; }
         set { isActive = value; }
     }
 
+    // -- Methods --
+
     private void Start()
     {
-        defaultPosition = gameObject.transform.position;
+        defaultPosition = gameObject.transform.position; // Sets the original position
     }
 
     private void FixedUpdate()
     {
-            if(travelDistance > 0) // UP
+            if(travelDistance > 0) // Checks if the Gate is supposed to go UP
             {
-                if(isActive && gameObject.transform.position.y < defaultPosition.y + travelDistance)
-                {
+                if(isActive && gameObject.transform.position.y < defaultPosition.y + travelDistance) // Is the Gate not at it's destination then go UP
+            {
                     gameObject.transform.position += new Vector3(0, 1, 0) * Time.deltaTime * moveSpeed;
                 }
-                else if(gameObject.transform.position.y > defaultPosition.y)
+                else if(gameObject.transform.position.y > defaultPosition.y) // Is the Gate not active then go back to the defualt position
                 {
                     gameObject.transform.position -= new Vector3(0, 1, 0) * Time.deltaTime * moveSpeed;
                 }
-                else
+                else // Puts the Gate in it's original position if the position is a bit off
                 {
                     gameObject.transform.position = defaultPosition;
                 }
             }
-            else if(travelDistance < 0) // DOWN
+            else if(travelDistance < 0) // Checks if the Gate is supposed to go DOWN
+        {
+                if(isActive && gameObject.transform.position.y > defaultPosition.y + travelDistance) // Is the Gate not at it's destination then go DOWN
             {
-                if(isActive && gameObject.transform.position.y > defaultPosition.y + travelDistance)
-                {
                     gameObject.transform.position -= new Vector3(0, 1, 0) * Time.deltaTime * moveSpeed;
                 }
-                else if(gameObject.transform.position.y < defaultPosition.y)
-                {
+                else if(gameObject.transform.position.y < defaultPosition.y) // Is the Gate not active then go back to the defualt position
+            {
                     gameObject.transform.position += new Vector3(0, 1, 0) * Time.deltaTime * moveSpeed;
                 }
-                else
+                else // Puts the Gate in it's original position if the position is a bit off
                 {
                     gameObject.transform.position = defaultPosition;
                 }
@@ -63,16 +63,3 @@ public class Gate : MonoBehaviour
         }
 
     }
-
-
-    /*private void FixedUpdate()
-    {
-        if(isActive && gameObject.transform.position.y != targetDestination.y && gameObject.transform.position.y > targetDestination.y)
-        {
-            gameObject.transform.position -= new Vector3(0, 1, 0) * Time.deltaTime;
-        }
-        else if(gameObject.transform.position != defaultPosition)
-        {
-            gameObject.transform.position += new Vector3(0, 1, 0) * Time.deltaTime;
-        }
-    }*/

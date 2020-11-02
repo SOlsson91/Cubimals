@@ -2713,7 +2713,7 @@ MonoBehaviour:
   particles: {fileID: 5792021882148407026, guid: 4f643befe9bab4b42a6aebb0894b04e3,
     type: 3}
   isActive: 0
-  playParticle: 0
+  playParticle: 1
 --- !u!1001 &189918947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13553,7 +13553,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 65.247, y: -10.113001, z: -4.1600003}
 --- !u!1001 &713796458
 PrefabInstance:
