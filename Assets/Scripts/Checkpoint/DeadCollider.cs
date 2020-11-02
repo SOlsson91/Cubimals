@@ -44,6 +44,7 @@ public class DeadCollider : MonoBehaviour
         isLosingLife = false;
     }
 
+    // Go into the lives variable in GameManager and update the lives, also checks if lives <= 0
     void DecreaseALife()
     {
         EventManager.Instance.LivesLost(--GameManager.Instance.lives);

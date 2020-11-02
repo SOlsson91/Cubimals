@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 
 /*
- * Class to handle specific animal behaviours
+ * Class to handle specific animal behaviours, each animal has one and it defines the characteristics of that animal
  */
 
 public class Animal : MonoBehaviour
