@@ -8,12 +8,20 @@ public class CaveCam : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.name + " is in cAVe");
         camera.inCave = true;
+
+        foreach (Player player in GameManager.Instance.players)
+        {
+            player.GetComponent<PlayerMove>().inCave = true;
+        }
     }
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("out of cave");
         camera.inCave = false;
+
+        foreach (Player player in GameManager.Instance.players)
+        {
+            player.GetComponent<PlayerMove>().inCave = false;
+        }
     }
 }
