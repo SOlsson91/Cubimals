@@ -7250,7 +7250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1017400446050506, guid: d1c7c5afc8c18694fbc8a14a5af51540, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4681094195867122, guid: d1c7c5afc8c18694fbc8a14a5af51540, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20584,6 +20584,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1764092046, guid: 8a72caf48a1acd54b95eb2e344050807, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 485186711}
     - target: {fileID: 1745745854680214, guid: 8a72caf48a1acd54b95eb2e344050807, type: 3}
       propertyPath: m_Name
       value: MushroomYellow
