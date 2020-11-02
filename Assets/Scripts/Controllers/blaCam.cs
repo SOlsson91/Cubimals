@@ -82,7 +82,6 @@ public class blaCam : MonoBehaviour
         }
         if (!inCave)
         {
-            Debug.Log("RegularCamera");
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
 
