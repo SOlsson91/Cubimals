@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 /*
- * Class to spawn the player Prefab at a specific location
+ * Class to spawn the player Prefabs
  */
 
 public class SpawnPlayer : MonoBehaviour

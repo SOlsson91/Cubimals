@@ -14,6 +14,7 @@ public class UpdateCheckpoint : MonoBehaviour
         checkpointPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
     }
 
+    // Update for each player when one of them enter the checkpoint. Then turn off the checkpoint so we dont activate it again
     void OnTriggerEnter(Collider other)
     {
         if (other.GetComponentInParent<Player>().CompareTag("Player"))

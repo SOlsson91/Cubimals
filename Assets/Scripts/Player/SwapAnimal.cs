@@ -1,5 +1,9 @@
 ﻿using UnityEngine;
 
+/*
+ * Simple class to swap the animal that each player uses
+ */
+
 public class SwapAnimal : MonoBehaviour
 {
     //NOTE: Only to help out. Might use, not sure
@@ -29,6 +33,7 @@ public class SwapAnimal : MonoBehaviour
         player.UpdateAnimator();
     }
 
+    // Instatiate the animal on the same position as the previous one
     public void ChangeAnimal(int newAnimal)
     {
         if (newAnimal >= 0 && newAnimal <= animals.Length)

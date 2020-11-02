@@ -1,13 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-//using UnityEngine.Events;
-
-//-- TODO --
-// > Keep track of what state the game is in [DONE]
-// > Generate other persistent systems [DONE]
-
-//[System.Serializable] public class EventGameState : UnityEvent<GameManager.GameState, GameManager.GameState> { }
 
 public class GameManager : Singleton<GameManager>
 {
@@ -19,7 +12,6 @@ public class GameManager : Singleton<GameManager>
     }
 
     public GameObject[] SystemPrefabs;
-    //public EventGameState OnGameStateChange;
     public List<Player> players;
     public int lives = 3;
     [HideInInspector] public bool isPaused = false;
@@ -81,8 +73,6 @@ public class GameManager : Singleton<GameManager>
             default:
                 break;
         }
-
-        //OnGameStateChange.Invoke(currentGameState, previousGameState); // <-- This sends a message to those who listens to this method
     }
 
     // -- Manager Handling -- //

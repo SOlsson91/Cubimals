@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 /*
- * Class to handle the input from Unitys new input system.
+ * Class to handle the input from Unitys new input system. So pretty much
+ * all input is handled or called from here. 
  */
 
 public class PlayerController : MonoBehaviour
@@ -29,9 +30,8 @@ public class PlayerController : MonoBehaviour
     {
         if (!GameManager.Instance.isPaused)
         {
-            
+            mover.OnMove(ctx.ReadValue<Vector2>());
         }
-        mover.OnMove(ctx.ReadValue<Vector2>());
     }
 
     public void OnSwap(InputAction.CallbackContext ctx)
