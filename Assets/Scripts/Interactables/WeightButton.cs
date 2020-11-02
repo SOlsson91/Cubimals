@@ -58,43 +58,4 @@ public class WeightButton : MonoBehaviour
         isPressured = false;
         target.GetComponent<SendActive>().TriggerUpdate();
     }
-
-    /*private Vector3 defualtPosition;
-
-    private bool isPressed;
-    private void Start()
-    {
-        defualtPosition = gameObject.transform.position;
-        isPressed = false;
-    }
-
-    private void FixedUpdate()
-    {
-        if(isPressed)
-        {
-            gameObject.transform.position -= new Vector3(0, 1, 0) * Time.deltaTime;
-        }
-        else if(gameObject.transform.position.y < defualtPosition.y)
-        {
-            gameObject.transform.position += new Vector3(0, 1, 0) * Time.deltaTime;
-        }
-        else
-        {
-            gameObject.transform.position = defualtPosition;
-        }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.transform.position.y > gameObject.transform.position.y)
-        {
-            Debug.Log("Button Triggered");
-            isPressed = true;
-        }
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        isPressed = false;
-    }*/
 }
