@@ -4,7 +4,7 @@ public class PlayerIdleState : PlayerBaseState
 {
     public override void EnterState(PlayerStateController controller)
     {
-        Debug.Log("[PlayerState] Enter Idle State");
+        //Debug.Log("[PlayerState] Enter Idle State");
         controller.player.UpdateAnimator();
         if (controller.player.animator != null)
             controller.player.animator.SetBool("isIdle", true);
