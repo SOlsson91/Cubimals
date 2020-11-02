@@ -500,14 +500,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1d57edbc6ed9f2a907ff91f070705a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 7
+  jumpForce: 5
   jumpGravityMulti: 2
   movementSpeed: 5
   animalMass: 1
   canSwim: 0
   canChargeJump: 1
   currentCharge: 0
-  maxCharge: 12
+  maxCharge: 9
   ability: {fileID: 0}
   interactDistance: 1
 --- !u!65 &6327250509016120185

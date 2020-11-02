@@ -14,11 +14,15 @@ public class Menu : MonoBehaviour
 
     public void StartGame(string sceneName)
     {
-        for (int i = 0; i < playersToSpawn; ++i)
+        if (GameManager.Instance.players.Count < 2)
         {
-            spawner.Spawn(i);
-            Debug.Log("Spawned");
+            for (int i = 0; i < playersToSpawn; ++i)
+            {
+                spawner.Spawn(i);
+                Debug.Log("[Menu] Spawned player " + i );
+            }
         }
+
         GameManager.Instance.ResetLives();
         GameManager.Instance.LoadLevel(sceneName);
         startGame.SetActive(false);//Edit: quick fix for double clicking start game and loadig 2 istances of the level
@@ -27,18 +31,15 @@ public class Menu : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         GameManager.Instance.LoadLevel(sceneName);
-        Debug.Log("Start Game input Recieved");
     }
 
     public void UnloadScene(string sceneName)
     {
         GameManager.Instance.UnloadLevel(sceneName);
-        Debug.Log("Unload input Recieved");
     }
 
     public void QuitGame()
     {
         Application.Quit();
-        Debug.Log("Quit input Recieved");
     }
 }

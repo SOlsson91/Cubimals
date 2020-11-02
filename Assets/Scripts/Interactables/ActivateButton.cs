@@ -3,7 +3,11 @@
 public class ActivateButton : MonoBehaviour
 {
     public GameObject target;
+
+    public ParticleSystem particles = null;
+
     public bool isActive = false;
+    public bool playParticle = false;
 
     void Start()
     {
@@ -26,5 +30,11 @@ public class ActivateButton : MonoBehaviour
         }
         isActive = !isActive;
         target.SetActive(isActive);
+
+        if(playParticle)
+        {
+            //particles.Play();
+            Instantiate(particles, target.transform);
+        }
     }
 }
