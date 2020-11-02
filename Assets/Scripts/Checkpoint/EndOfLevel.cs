@@ -27,12 +27,7 @@ public class EndOfLevel : MonoBehaviour
                     GameManager.Instance.players.ForEach(delegate(Player player)
                     {
                         player.gameObject.SetActive(false);
-                        if (nextLevel == "Victory")
-                            Destroy(player);
                     });
-
-                    if (nextLevel == "Victory")
-                        GameManager.Instance.players.Clear();
 
                     string currentScene = GameManager.Instance.ActiveScene();
                     GameManager.Instance.UnloadLevel(currentScene);
