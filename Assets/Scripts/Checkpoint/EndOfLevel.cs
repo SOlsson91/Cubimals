@@ -24,8 +24,17 @@ public class EndOfLevel : MonoBehaviour
                 if (nextLevel != string.Empty)
                 {
                     Debug.Log("[EndOfLevel] Load Next Level");
+                    GameManager.Instance.players.ForEach(delegate(Player player)
+                    {
+                        player.gameObject.SetActive(false);
+                        if (nextLevel == "Victory")
+                            Destroy(player);
+                    });
+
+                    if (nextLevel == "Victory")
+                        GameManager.Instance.players.Clear();
+
                     string currentScene = GameManager.Instance.ActiveScene();
-                    GameManager.Instance.players.ForEach(delegate(Player player) { player.gameObject.SetActive(false); });
                     GameManager.Instance.UnloadLevel(currentScene);
                     GameManager.Instance.LoadLevel(nextLevel);
                 }
@@ -44,5 +53,4 @@ public class EndOfLevel : MonoBehaviour
         if (other.GetComponentInParent<Player>().CompareTag("Player"))
             playersInGoal--;
     }
-
 }

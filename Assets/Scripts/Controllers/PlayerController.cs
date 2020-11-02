@@ -29,8 +29,9 @@ public class PlayerController : MonoBehaviour
     {
         if (!GameManager.Instance.isPaused)
         {
-            mover.OnMove(ctx.ReadValue<Vector2>());
+            
         }
+        mover.OnMove(ctx.ReadValue<Vector2>());
     }
 
     public void OnSwap(InputAction.CallbackContext ctx)
@@ -65,7 +66,7 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    
+
     public void OnJump(InputAction.CallbackContext ctx)
     {
         if (!GameManager.Instance.isPaused)
