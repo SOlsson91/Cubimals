@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-// This script is supposed to be attached to the Object acting as the Gate along with the SendActive script
+// This script is supposed to be attached to the Object acting as the Gate
 
 public class Gate : MonoBehaviour
 {
@@ -9,7 +9,7 @@ public class Gate : MonoBehaviour
 
     private Vector3 defaultPosition; // Original Position of the Gate
 
-    private bool isActive;
+    private bool isActive; // As long as this one is true the gate will move to it's destination
 
     // -- Accessors --
 
