@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+// This script is supposed to be attached to the Object acting as the Gate along with the SendActive script
+
 public class Gate : MonoBehaviour
 {
     public float travelDistance = 1; // The distance the Gate is supposed to travel in one axis

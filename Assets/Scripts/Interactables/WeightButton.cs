@@ -5,10 +5,11 @@ public class WeightButton : MonoBehaviour
     public GameObject target;
 
     [SerializeField] private GameObject pressurePlate = null;
+
     private Vector3 defualtPosition = new Vector3();
     private bool isPressured;
 
-    public bool level1=false;//Can be removed later, just to help quikc fix
+    public bool StonePuzzle = false; //Can be removed later, just to help quikc fix
 
     public bool getActive
     {
@@ -40,22 +41,28 @@ public class WeightButton : MonoBehaviour
         }
         else
         {
-            Debug.LogError("URE: Not assigned a GameObject to target");
+            Debug.LogError("Not assigned a GameObject to target");
         }
-
     }
 
     private void OnTriggerEnter(Collider other)
     {
         isPressured = true;
 
-        if (level1&&other.gameObject.tag=="Pushable") {target.SetActive(true);}//Needs to be reworked, just a quick solution.
+        if (StonePuzzle && other.gameObject.tag == "Pushable") //Needs to be reworked, just a quick solution.
+        {
+            target.SetActive(true);
+        }
         target.GetComponent<SendActive>().TriggerUpdate();
+
+
     }
 
     private void OnTriggerExit(Collider other)
     {
         isPressured = false;
-        target.GetComponent<SendActive>().TriggerUpdate();
+
+            target.GetComponent<SendActive>().TriggerUpdate();
+
     }
 }
