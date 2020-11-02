@@ -3,6 +3,7 @@
 public class GameOver : MonoBehaviour
 {
     public GameObject pauseObject;
+    private bool pauseGame;
 
     void Start()
     {
