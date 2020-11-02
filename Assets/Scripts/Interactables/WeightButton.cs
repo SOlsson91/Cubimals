@@ -55,7 +55,7 @@ public class WeightButton : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        isPressured = false;       
+        isPressured = false;
         target.GetComponent<SendActive>().TriggerUpdate();
     }
 

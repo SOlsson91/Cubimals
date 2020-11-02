@@ -74,13 +74,15 @@ public class blaCam : MonoBehaviour
         // The desired position is the average position;
         desPos = averagePos;
         if (inCave)
-        {  
-            Debug.Log("Incave");
+        {
+            Debug.Log("CaveCamera");
             desPos = new Vector3(desPos.x-xCavePadding,desPos.y+yCavePadding,transform.position.z);
             transform.rotation = Quaternion.Euler(0, 90, 0);
+            
         }
         if (!inCave)
         {
+            Debug.Log("RegularCamera");
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
 
@@ -162,8 +164,6 @@ public class blaCam : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("in cave");
-        if (other.gameObject.name =="Player") { Debug.Log("Player: "); }
     }
 
 
