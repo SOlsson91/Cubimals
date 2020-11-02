@@ -76,13 +76,12 @@ public class blaCam : MonoBehaviour
         if (inCave)
         {
             Debug.Log("CaveCamera");
-            desPos = new Vector3(desPos.x-xCavePadding,desPos.y+yCavePadding,transform.position.z);
+            desPos = new Vector3(desPos.x-xCavePadding,desPos.y+yCavePadding,-6);
             transform.rotation = Quaternion.Euler(0, 90, 0);
             
         }
         if (!inCave)
         {
-            Debug.Log("RegularCamera");
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
 
