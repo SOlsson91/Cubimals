@@ -22,6 +22,7 @@ public class Lives : MonoBehaviour
             EventManager.Instance.onLivesLost -= UpdateLives;
     }
 
+    // Ugly hack, but well when time is short.
     public void UpdateLives(int lives)
     {
         switch (lives)
