@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
     {
         if (ctx.performed)
         {
-            //Time.timeScale = GameManager.Instance.isPaused ? 1 : 0;
+            Time.timeScale = GameManager.Instance.isPaused ? 1 : 0;
             GameManager.Instance.isPaused = !GameManager.Instance.isPaused;
             EventManager.Instance.Pause();
         }
