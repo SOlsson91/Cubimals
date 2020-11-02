@@ -4038,7 +4038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4808fb13dc9e25842a62c1a7edb083f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  travelDistance: -5
+  travelDistance: -8
   moveSpeed: 1
   isItAGate: 0
 --- !u!1 &143230531
@@ -61688,7 +61688,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1927602755}
+  particles: {fileID: 5792021882148407026, guid: 4f643befe9bab4b42a6aebb0894b04e3,
+    type: 3}
   isActive: 0
+  playParticle: 1
 --- !u!1001 &1868828041
 PrefabInstance:
   m_ObjectHideFlags: 0

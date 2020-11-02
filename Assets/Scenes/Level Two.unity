@@ -2642,7 +2642,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 485186711}
+  particles: {fileID: 5792021882148407026, guid: 4f643befe9bab4b42a6aebb0894b04e3,
+    type: 3}
   isActive: 0
+  playParticle: 0
 --- !u!1001 &189918947
 PrefabInstance:
   m_ObjectHideFlags: 0
