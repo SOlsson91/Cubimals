@@ -8,6 +8,9 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    string activeScene = string.Empty;
+
+    public string ActiveScene { get { return activeScene; } }
     public void LoadLevel(string levelName) => StartCoroutine(LoadAsync(levelName));
     public void UnloadLevel(string levelName) => StartCoroutine(UnloadAsync(levelName));
 
@@ -18,6 +21,7 @@ public class LevelManager : MonoBehaviour
         if (operation == null)
             Debug.LogErrorFormat("[LevelManager]: Unable to load level: {0}", levelName);
 
+        activeScene = levelName;
         while (!operation.isDone)
         {
             yield return null;

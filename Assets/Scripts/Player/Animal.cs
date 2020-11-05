@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 /*
- * Class to handle specific animal behaviours
+ * Class to handle specific animal behaviours, each animal has one and it defines the characteristics of that animal
  */
 
 public class Animal : MonoBehaviour
@@ -11,6 +12,7 @@ public class Animal : MonoBehaviour
     //Edited: makes the animals gravity higher to fall faster
     public float jumpGravityMulti=2.5f;
     public float movementSpeed;
+    public float animalMass = 1;
     public bool canSwim;
     [Header("Charge Jump")]
     public bool canChargeJump;

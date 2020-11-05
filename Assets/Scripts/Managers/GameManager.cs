@@ -1,31 +1,28 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
-//-- TODO --
-// > Keep track of what state the game is in [DONE]
-// > Generate other persistent systems [DONE]
-
-[System.Serializable] public class EventGameState : UnityEvent<GameManager.GameState, GameManager.GameState> { }
+// Game Manager that will handle the game
 
 public class GameManager : Singleton<GameManager>
 {
-    public enum GameState
+    public enum GameState // Different states the game could be in
     {
         PREGAME,
         ONGAME,
         PAUSED
     }
 
-    public GameObject[] SystemPrefabs;
-    public EventGameState OnGameStateChange;
-    public List<Player> players;
-    public int lives = 3;
+    public GameObject[] SystemPrefabs; // The array in which the sub-managers could be instantiated from; Not used
+    public List<Player> players; // Reference to the players
+    public int lives = 3; // Ammount of retries the players have 
+    [HideInInspector] public bool isPaused = false; // Handling the pause
 
-    private List<GameObject> instancedSystems;
-    private List<AsyncOperation> loadOperations; // <-- Stacks operations that is being loaded additively
+    List<GameObject> instancedSystems; // What systems are in progress to be loaded are in here; Not used
+    SpawnPlayer spawner;
+    List<AsyncOperation> loadOperations; // <-- Stacks operations that is being loaded additively
 
-    private GameState currentGameState = GameState.PREGAME; // <-- GameState default state is PREGAME
+    GameState currentGameState = GameState.PREGAME; // <-- GameState default state is PREGAME
     LevelManager levelManager;
     [SerializeField] string levelToBoot = string.Empty;
 
@@ -34,6 +31,7 @@ public class GameManager : Singleton<GameManager>
         base.Awake();
 
         players = new List<Player>();
+        spawner = GetComponent<SpawnPlayer>();
         instancedSystems = new List<GameObject>();
     }
 
@@ -44,16 +42,13 @@ public class GameManager : Singleton<GameManager>
         if (levelToBoot != string.Empty)
         {
             LoadLevel(levelToBoot);
-            //UnloadLevel("Boot");
         }
-
-
         InstantiateSystemPrefabs();
     }
 
     // -- Accessors -- //
 
-    public GameState getCurrentGameState
+    public GameState getCurrentGameState // The method to access the current state the game is in
     {
         get { return currentGameState; }
         private set { currentGameState = value; }
@@ -61,7 +56,7 @@ public class GameManager : Singleton<GameManager>
 
     // -- Game State Handling -- //
 
-    public void UpdateGameState(GameState newState)
+    public void UpdateGameState(GameState newState) // The method to switch the states of the game
     {
         GameState previousGameState = currentGameState;
         currentGameState = newState;
@@ -80,8 +75,6 @@ public class GameManager : Singleton<GameManager>
             default:
                 break;
         }
-
-        OnGameStateChange.Invoke(currentGameState, previousGameState); // <-- This sends a message to those who listens to this method
     }
 
     // -- Manager Handling -- //
@@ -110,13 +103,27 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    public void LoadLevel(string levelName)
+    public void LoadLevel(string levelName) // calls the LoadLevel method of the levelManager with the name of the level
     {
         levelManager.LoadLevel(levelName);
     }
 
-    public void UnloadLevel(string levelName)
+    public void UnloadLevel(string levelName) // calls the UnloadLevel method of the levelManager with the name of the level
     {
         levelManager.UnloadLevel(levelName);
     }
+
+    public string ActiveScene() => levelManager.ActiveScene;
+
+    // Clear the child players
+    public void ClearPlayers()
+    {
+        List<GameObject> children = new List<GameObject>();
+        foreach (Transform child in transform) children.Add(child.gameObject);
+        children.ForEach(child => Destroy(child));
+
+        players.Clear();
+    }
+
+    public void ResetLives() => lives = 3;
 }

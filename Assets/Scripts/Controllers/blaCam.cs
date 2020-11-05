@@ -7,15 +7,18 @@ public class blaCam : MonoBehaviour
     public float screenPadding = 2f;   // Space between the top/bottom most target and the screen edge.
     public float minCameraSize = 3f;  // The smallest orthographic size of the camera.
 
-    public int minFOV = 10;
-
+    public int minFOV = 30;
 
     private Camera camera;                  // Used for referencing the camera.
     private float zoomSpeed;               // Reference speed for the smooth damping of the orthographic size.
     private Vector3 cameraMoveVelocity;   // Reference velocity for the smooth damping of the position.
     private Vector3 desPos;              // The position the camera is moving towards.
 
-    public List<Player> animalRef;
+    private List<Player> animalRef;
+
+    public bool inCave;
+    public int yCavePadding;
+    public int xCavePadding;
 
     private void Awake()
     {
@@ -26,18 +29,23 @@ public class blaCam : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Move();
-        Zoom();
+        // to avoid null reference
+        if (animalRef.Count > 0)
+        {
+            Move();
+            Zoom();
+        }
     }
 
 
     private void Move()
     {
+        
         FindAveragePosition();
         transform.position = Vector3.SmoothDamp(transform.position, desPos, ref cameraMoveVelocity, cameraSmoothTime);
+
+        
     }
-
-
     private void FindAveragePosition()
     {
         Vector3 averagePos = new Vector3();
@@ -61,10 +69,22 @@ public class blaCam : MonoBehaviour
             averagePos /= numTargets;
 
         // Keep the same y value.
-        averagePos.y = transform.position.y;
-
+        //averagePos.y = transform.position.y;
+        
         // The desired position is the average position;
         desPos = averagePos;
+        if (inCave)
+        {
+            Debug.Log("CaveCamera");
+            desPos = new Vector3(desPos.x-xCavePadding,desPos.y+yCavePadding,-6);
+            transform.rotation = Quaternion.Euler(0, 90, 0);
+            
+        }
+        if (!inCave)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+
     }
 
 
@@ -73,7 +93,7 @@ public class blaCam : MonoBehaviour
         // Find the required size based on the desired position and smoothly transition to that size.
         float requiredSize = FindRequiredSize();
 
-        if (camera.orthographic) 
+        if ( camera.orthographic) 
         { 
             camera.orthographicSize = Mathf.SmoothDamp(camera.orthographicSize, requiredSize, ref zoomSpeed, cameraSmoothTime); 
         } 
@@ -123,8 +143,6 @@ public class blaCam : MonoBehaviour
 
         return size;
     }
-
-
     public void SetStartPositionAndSize()
     {
         FindAveragePosition();
@@ -140,6 +158,12 @@ public class blaCam : MonoBehaviour
         else 
         { 
             camera.fieldOfView = Mathf.Max(minFOV, screenPadding*Mathf.Abs(Vector3.Distance(animalRef[0].transform.position, animalRef[1].transform.position))); 
-        }
+        } 
+   
     }
+    private void OnTriggerEnter(Collider other)
+    {
+    }
+
+
 }

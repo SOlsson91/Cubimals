@@ -7,27 +7,23 @@
 
 public class UpdateCheckpoint : MonoBehaviour
 {
-    bool checkpointTriggered;
     Vector3 checkpointPosition;
 
     void Awake()
     {
-        checkpointTriggered = false;
-        checkpointPosition = new Vector3(transform.position.x,
-                                        transform.position.y / 2,
-                                        transform.position.z / 2);
+        checkpointPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
     }
 
+    // Update for each player when one of them enter the checkpoint. Then turn off the checkpoint so we dont activate it again
     void OnTriggerEnter(Collider other)
     {
-        if (checkpointTriggered)
-            return;
-
         if (other.GetComponentInParent<Player>().CompareTag("Player"))
         {
             GameManager.Instance.players.ForEach(delegate(Player player){
-                player.checkpoint.UpdateCheckpoint(checkpointPosition);
+                player.checkpoint.Position = checkpointPosition;
             });
         }
+
+        gameObject.SetActive(false);
     }
 }

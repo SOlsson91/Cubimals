@@ -8,18 +8,14 @@ public class Checkpoint
 {
     Vector3 position;
 
+    public Vector3 Position
+    {
+        get { return position; }
+        set { position = value; }
+    }
+
     public Checkpoint(Vector3 position)
     {
         this.position = position;
-    }
-
-    public void UpdateCheckpoint(Vector3 position)
-    {
-        this.position = position;
-    }
-
-    public Vector3 GetCheckpoint()
-    {
-        return this.position;
     }
 }

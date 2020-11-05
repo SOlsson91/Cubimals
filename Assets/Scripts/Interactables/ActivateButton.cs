@@ -3,16 +3,14 @@
 public class ActivateButton : MonoBehaviour
 {
     public GameObject target;
-    private bool isActive;
-    public bool IsActive
-    {
-        get { return isActive; }
-        set { isActive = value; }
-    }
+
+    public ParticleSystem particles = null;
+
+    public bool isActive = false;
+    public bool playParticle = false;
 
     void Start()
     {
-        isActive = false;
         if (target != null)
         {
             target.SetActive(isActive);
@@ -25,8 +23,18 @@ public class ActivateButton : MonoBehaviour
 
     public void ActivateTarget()
     {
-        Debug.Log("ACTIVATED");
+        if (target == null)
+        {
+            Debug.LogWarning("[ActivateButton] Target is null");
+            return;
+        }
         isActive = !isActive;
         target.SetActive(isActive);
+
+        if(playParticle)
+        {
+            //particles.Play();
+            Instantiate(particles, target.transform);
+        }
     }
 }
