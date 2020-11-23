@@ -84,6 +84,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   isJumping: 0
+  inCave: 0
 --- !u!114 &-6360215235358255144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,7 +100,6 @@ MonoBehaviour:
   animals:
   - {fileID: -2235062226523476176, guid: 3bfa1903a43b4fbc99884c26e254db8a, type: 3}
   - {fileID: -5673942757390107340, guid: d13ce7ccf91b4953b5dd864e3b497f2a, type: 3}
-  - {fileID: -690350712913536014, guid: 56381cfa46e44335a689e99f2cf49b4c, type: 3}
   - {fileID: -4094050583211433832, guid: 1f7d832dd4d847fe9e6177ba21bcaf64, type: 3}
   - {fileID: 3246322756049759723, guid: db337cd6af3d4e7c8c9e6cc979897853, type: 3}
 --- !u!114 &9184865777734175067
